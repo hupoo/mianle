@@ -41,16 +41,13 @@
                     <li class="tab-nav-item">
                         <a href="javascript:;">二级会员(2)</a>
                     </li>
-                    <li class="tab-nav-item">
-                        <a href="javascript:;">普通会员(3)</a>
-                    </li>
 
                 </ul>
-                <div class="tab-panel margin-t-10">
+                <div class="tab-panel margin-t-10 bg-empty">
                     <div class="tab-panel-item tab-active">
                         <table class="tables ">
-                            <thead class="border-b bg-light">
-                                <tr>
+                            <thead class=" bg-light">
+                                <tr class="border-b">
                                     <th>用户ID</th>
                                     <th>用户名</th>
                                     <th>推荐时间</th>
@@ -69,22 +66,54 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="no-view hidden ">
+                            <div class="box img-round flex-c-c">
+                                <img src="../img/no-edit.png" alt="">
+                            </div>
+                            <h2 class=" text-gray text-center font-size-16">您还没有推荐相关会员~</h2>
+                        </div>
 
-                       
                     </div>
-                    <div class="tab-panel-item">222222</div>
-                    <div class="tab-panel-item">333333</div>
+                    <div class="tab-panel-item ">
+                        <div class="no-view ">
+                            <div class="box img-round flex-c-c">
+                                <img src="../img/no-edit.png" alt="">
+                            </div>
+                            <h2 class=" text-gray text-center font-size-16">您还没有推荐相关会员~</h2>
+                        </div>
+                        <table class="tables hidden ">
+                            <thead class=" bg-light">
+                                <tr class="border-b">
+                                    <th>用户ID</th>
+                                    <th>用户名</th>
+                                    <th>推荐时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>123456</td>
+                                    <td>xxxx</td>
+                                    <td>2018-01-12</td>
+                                </tr>
+                                <tr>
+                                    <td>123456</td>
+                                    <td>xxxx</td>
+                                    <td>2018-01-12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
             </div>
 
-<!-- 没有会员相关信息   就显示 -->
-    <div class="no-view  hidden">
-        <div class="box img-round flex-c-c">
-            <img src="../img/no-member.png" alt="">
-        </div>
-        <h2 class="text text-gray font-size-16">没有相关记录明细~</h2>
-    </div>
+            <!-- 没有会员相关信息   就显示 -->
+            <div class="no-view  hidden">
+                <div class="box img-round flex-c-c">
+                    <img src="../img/no-member.png" alt="">
+                </div>
+                <h2 class="text text-gray font-size-16">没有相关记录明细~</h2>
+            </div>
 
         </div>
 

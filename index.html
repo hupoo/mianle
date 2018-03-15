@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="page-enter" content="revealtrans(duration=9,transtion=9)" />
+    <meta http-equiv="page-exit" content="revealtrans(duration=9,transtion=9)" />
     <title>percenter</title>
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0 minimal-ui">
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
     <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./ydui/build/js/ydui.flexible.js"></script>
-<style>
-    
-</style>
+    <style>
+    </style>
 </head>
+
 <body>
     <!-- 导航条 -->
     <header class="m-navbar navbar-fixed" id="navbar">
-            <a href="./setting.html" class="navbar-item">
-                <i class="iconfont icon-settings"></i>
-            </a>
-            <div class="navbar-center text-light m-">
-            </div>
-            <a href="./msgCenter.html" class="navbar-item pull-right">
-                <i class="iconfont icon-info trans-14"></i>
-            </a>
+        <a href="./setting.html" class="navbar-item">
+            <i class="iconfont icon-settings"></i>
+        </a>
+        <div class="navbar-center text-light m-">
+        </div>
+        <a href="./msgCenter.html" class="navbar-item pull-right">
+            <i class="iconfont icon-info trans-14"></i>
+        </a>
     </header>
     <!-- 内容 -->
     <div class="g-view">
-       <!-- 用户信息 -->
+        <!-- 用户信息 -->
         <article class="userHeader">
-           <div class="vator ">
-               <img src="https://dn-web-blued-cn.qbox.me/userfiles/000/000/119/22988!Head.jpg" alt="" class="img-round">
-           </div> 
-           <h3 class="name text-light margin-t-5 font-size-16"><span>用户名</span></h3>
-           <h4 class="uid text-light margin-t-5"><span class="margin-r-5">UID:</span><span>xxx</span></h4>
-           <div class="grade margin-t-10">
-               <!-- 等级等级 -->
-               <p ><i class="iconfont icon-crown1 "></i><span>普通会员</span></p>
-               <!-- <p ><i class="iconfont icon-crown2"></i> 银牌会员</p> -->
-               <!-- <p ><i class="iconfont icon-crown3"></i> 金牌会员</p> -->
-               <!-- <p ><i class="iconfont icon-crown4"></i> 钻石会员</p> -->
-              
-           </div>
-           <!-- 账户管理 -->
-           <div class="manage">
-               <a href="./accountManagement/accountManage.html">
-                   <span class="info-tag font-size-12">账户管理
+            <div class="vator ">
+                <img src="https://dn-web-blued-cn.qbox.me/userfiles/000/000/119/22988!Head.jpg" alt="" class="img-round">
+            </div>
+            <h3 class="name text-light margin-t-5 font-size-16">
+                <span>用户名</span>
+            </h3>
+            <h4 class="uid text-light margin-t-5">
+                <span class="margin-r-5">UID:</span>
+                <span>xxx</span>
+            </h4>
+            <div class="grade margin-t-10">
+                <!-- 等级等级 -->
+                <p>
+                    <i class="iconfont icon-crown1 "></i>
+                    <span>普通会员</span>
+                </p>
+                <!-- <p ><i class="iconfont icon-crown2"></i> 银牌会员</p> -->
+                <!-- <p ><i class="iconfont icon-crown3"></i> 金牌会员</p> -->
+                <!-- <p ><i class="iconfont icon-crown4"></i> 钻石会员</p> -->
+
+            </div>
+            <!-- 账户管理 -->
+            <div class="manage">
+                <a href="./accountManagement/accountManage.html">
+                    <span class="info-tag font-size-12">账户管理
                     </span>
                 </a>
-           </div>
-           <!-- 五个代理等级 -->
-                <div class="agent">
-                    <a href="./sellerIn/agencyRecruit.html">
-                        <img src="./img/memberCard/A.png" alt="">
-                    </a>
-                    <!-- <a href="javascript:;">
+            </div>
+            <!-- 五个代理等级 -->
+            <div class="agent">
+                <a href="./sellerIn/agencyRecruit.html">
+                    <img src="./img/memberCard/A.png" alt="">
+                </a>
+                <!-- <a href="javascript:;">
                         <img src="./img/memberCard/B.png" alt="">
                     </a>
                     <a href="javascript:;">
@@ -69,11 +94,11 @@
                     <a href="javascript:;">
                         <img src="./img/memberCard/E.png" alt="">
                     </a> -->
-                </div>
-           <div class="bow"></div>
+            </div>
+            <div class="bow"></div>
         </article>
-    <!-- 用户账户信息 -->
-        
+        <!-- 用户账户信息 -->
+
         <div class="m-grids-4 userInfo">
             <a href="./consumeIntegral/consumptionIntegral.html" class="grids-item">
                 <div class="grids-txt">
@@ -82,135 +107,135 @@
                 <div class="grids-txt">
                     <span>消费积分</span>
                 </div>
-        </a>
-        <a href="./myWallet/myWallet.html" class="grids-item ">
-            <div class="grids-txt">
-                <span>12</span>
-            </div>
-            <div class="grids-txt">
-                <span>我的钱包</span>
-            </div>
-            
-        </a>
-        <a href="./myRecommend/myRecommend.html" class="grids-item ">
-            <div class="grids-txt">
-                <span>12</span>
-            </div>
-            <div class="grids-txt">
-                <span>我的推荐</span>
-            </div>
-           
-        </a>
-        <a href="#" class="grids-item ">
-            <div class="grids-txt">
-                <span>12</span>
-            </div>
-            <div class="grids-txt">
-                <span>优惠券</span>
-            </div>
-           
-        </a>
-    </div>
-    <!-- 我的订单 -->
-    <section class="orderInfo">
-        <div class="m-gridstitle ">
-            我的订单
-        </div>
-        <div class="m-grids-4">
-            <a href="./myOrder/mallOrder/mallOrder.html" class="grids-item">
-                <div class="grids-icon">
-                <i class="iconfont icon-mall"></i>
-                </div>
-                <div class="grids-txt">
-                    <span>商城</span>
-                </div>
             </a>
-            <a href="#" class="grids-item">
-                <div class="grids-icon">
-                    <i class="iconfont icon-orders"></i>
-                </div>
-                <div class="grids-txt">
-                    <span>买单</span>
-                </div>
-            </a>
-            <a href="./myOrder/myEvaluate/myEvaluate.html" class="grids-item">
-                <div class="grids-icon">
-                    <i class="iconfont icon-msg"></i>
-                </div>
-                <div class="grids-txt">
-                    <span>评价</span>
-                </div>
-            </a>
-            <a href="./afterSale/afterSaleApply.html" class="grids-item">
-                <div class="grids-icon">
-                    <i class="iconfont icon-money"></i>
-                </div>
-                <div class="grids-txt">
-                    <span>退款/售后</span>
-                </div>
-            </a>
-        </div>
-    </section>
-<!-- 我的查看 -->
-    <section class="userView">
-        <div class="m-grids-4">
-            <a href="./myCollect/myCollect.html?val=goods" class="grids-item">
+            <a href="./myWallet/myWallet.html" class="grids-item ">
                 <div class="grids-txt">
                     <span>12</span>
                 </div>
-                <div class="grids-txt margin-t-10">
-                    <span>商品收藏</span>
+                <div class="grids-txt">
+                    <span>我的钱包</span>
                 </div>
-            </a>
-            <a href="./myCollect/myCollect.html?cal=shops" class="grids-item">
-               <div class="grids-txt">
-                    <span>22</span>
-                </div>
-                <div class="grids-txt margin-t-10">
-                    <span>店铺收藏</span>
-                </div>
-            </a>
-            <a href="#" class="grids-item">
-               <div class="grids-txt">
-                    <span>22</span>
-                </div>
-                <div class="grids-txt margin-t-10">
-                    <span>内容收藏</span>
-                </div>
-            </a>
-            <a href="./browseRecord.html" class="grids-item">
-               <div class="grids-txt">
-                    <span>12</span>
-                </div>
-                <div class="grids-txt margin-t-10">
-                    <span>浏览记录</span>
-                </div>
-            </a>
-        </div>
-    </section>
-    <section class="">
-        <div class="m-cell">
-         
-            <a class="cell-item" href="javascript:;">
-                <div class="cell-left">
-                    <i class="iconfont icon-ercode"></i>我的海报</div>
-                <div class="cell-right cell-arrow"></div>
-            </a>
-        </div>
 
-        <div class="m-cell">
-            <a class="cell-item" href="./sellerIn/settled.html">
-                <div class="cell-left">
-                    <i class="iconfont icon-mallin"></i>商家入驻</div>
-                <div class="cell-right cell-arrow"></div>
             </a>
-            <a class="cell-item" href="./serviceCenter/serviceCenter.html">
-                <div class="cell-left">
-                    <i class="iconfont icon-service"></i>客服中心</div>
-                <div class="cell-right cell-arrow"></div>
+            <a href="./myRecommend/myRecommend.html" class="grids-item ">
+                <div class="grids-txt">
+                    <span>12</span>
+                </div>
+                <div class="grids-txt">
+                    <span>我的推荐</span>
+                </div>
+
+            </a>
+            <a href="#" class="grids-item ">
+                <div class="grids-txt">
+                    <span>12</span>
+                </div>
+                <div class="grids-txt">
+                    <span>优惠券</span>
+                </div>
+
             </a>
         </div>
-    </section>
+        <!-- 我的订单 -->
+        <section class="orderInfo">
+            <div class="m-gridstitle ">
+                我的订单
+            </div>
+            <div class="m-grids-4">
+                <a href="./myOrder/mallOrder/mallOrder.html" class="grids-item">
+                    <div class="grids-icon">
+                        <i class="iconfont icon-mall"></i>
+                    </div>
+                    <div class="grids-txt">
+                        <span>商城</span>
+                    </div>
+                </a>
+                <a href="#" class="grids-item">
+                    <div class="grids-icon">
+                        <i class="iconfont icon-orders"></i>
+                    </div>
+                    <div class="grids-txt">
+                        <span>买单</span>
+                    </div>
+                </a>
+                <a href="./myOrder/myEvaluate/myEvaluate.html" class="grids-item">
+                    <div class="grids-icon">
+                        <i class="iconfont icon-msg"></i>
+                    </div>
+                    <div class="grids-txt">
+                        <span>评价</span>
+                    </div>
+                </a>
+                <a href="./afterSale/afterSaleApply.html" class="grids-item">
+                    <div class="grids-icon">
+                        <i class="iconfont icon-money"></i>
+                    </div>
+                    <div class="grids-txt">
+                        <span>退款/售后</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- 我的查看 -->
+        <section class="userView">
+            <div class="m-grids-4">
+                <a href="./myCollect/myCollect.html?val=goods" class="grids-item">
+                    <div class="grids-txt">
+                        <span>12</span>
+                    </div>
+                    <div class="grids-txt margin-t-10">
+                        <span>商品收藏</span>
+                    </div>
+                </a>
+                <a href="./myCollect/myCollect.html?cal=shops" class="grids-item">
+                    <div class="grids-txt">
+                        <span>22</span>
+                    </div>
+                    <div class="grids-txt margin-t-10">
+                        <span>店铺收藏</span>
+                    </div>
+                </a>
+                <a href="#" class="grids-item">
+                    <div class="grids-txt">
+                        <span>22</span>
+                    </div>
+                    <div class="grids-txt margin-t-10">
+                        <span>内容收藏</span>
+                    </div>
+                </a>
+                <a href="./browseRecord.html" class="grids-item">
+                    <div class="grids-txt">
+                        <span>12</span>
+                    </div>
+                    <div class="grids-txt margin-t-10">
+                        <span>浏览记录</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="">
+            <div class="m-cell">
+
+                <a class="cell-item" href="javascript:;">
+                    <div class="cell-left">
+                        <i class="iconfont icon-ercode"></i>我的海报</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+            </div>
+
+            <div class="m-cell">
+                <a class="cell-item" href="./sellerIn/settled.html">
+                    <div class="cell-left">
+                        <i class="iconfont icon-mallin"></i>商家入驻</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a class="cell-item" href="./serviceCenter/serviceCenter.html">
+                    <div class="cell-left">
+                        <i class="iconfont icon-service"></i>客服中心</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+            </div>
+        </section>
 
 
 
@@ -244,21 +269,22 @@
     </footer>
 
 </body>
-    <script src="./js/jquery.3.0.0.min.js"></script>
-    <script src="./ydui/build/js/ydui.js"></script>
+<script src="./js/jquery.3.0.0.min.js"></script>
+<script src="./ydui/build/js/ydui.js"></script>
 <script>
-     function isTop() {
-            var oNavbar = document.getElementById('navbar');
-            var oTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (oTop > 50) {
-                oNavbar.classList.add('change');
-            } else {
-                oNavbar.classList.remove('change');
-            }
-        };
-        window.onload = function () {
-            window.onscroll = isTop;
-            isTop();
-        };
+    function isTop() {
+        var oNavbar = document.getElementById('navbar');
+        var oTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (oTop > 50) {
+            oNavbar.classList.add('change');
+        } else {
+            oNavbar.classList.remove('change');
+        }
+    };
+    window.onload = function () {
+        window.onscroll = isTop;
+        isTop();
+    };
 </script>
+
 </html>

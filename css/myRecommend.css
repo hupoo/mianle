@@ -82,6 +82,6 @@
 .tab-nav-item.tab-active::after {
   border-color: currentColor;
 }
-.tab-nav-item:nth-child(3)::after {
+.tab-nav-item:nth-child(2)::after {
   border-color: #3199ff;
 }

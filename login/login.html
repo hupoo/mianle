@@ -30,7 +30,8 @@
                     </span>
                 </div>
                 <div class="cell-right">
-                    <input type="tel" pattern="[0-9]*" class="cell-input" placeholder="请输入手机号码" autocomplete="off" required maxlength="11" name="phone">
+                    <input type="tel" pattern="[0-9]*" autofocus class="cell-input" placeholder="请输入手机号码" autocomplete="off" required maxlength="11"
+                        name="phone">
                 </div>
             </div>
             <div class="cell-item pwd  ">
@@ -70,7 +71,6 @@
     })
 
     function login() {
-        // alert('login')
         var dialog = window.YDUI.dialog;
         var phone = $('[name="phone"]');
         var pwd = $('[name="password"]');
@@ -93,6 +93,21 @@
                     return true;
                 }
     }
+
+    login = {
+        init: function () {
+            this.checkPhone();
+            this.checkPwd();
+        },
+        checkPhone: function (obj) {
+
+        },
+        checkPwd: function (obj) {
+
+        },
+    }
+
+
 
 
 

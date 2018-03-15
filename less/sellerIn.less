@@ -1,36 +1,55 @@
-    @import 'base.less';
-    .m-tab {
-        .m-celltitle {
-            line-height: .88rem;
+        @import 'base.less';
+        .m-tab {
+            .m-celltitle {
+                line-height: .88rem;
+            }
         }
-    }
 
-    .b-select {
-        min-width: 2.5rem;
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-    .m-form {
-        .cell-left {
-            min-width: 1.5rem;
-            text-align: justify;
-        }
-    }
-
-    .js-selcet {
         .b-select {
-            min-width: 2rem;
+            min-width: 2.5rem;
+            background-color: rgba(0, 0, 0, 0);
         }
-    }
 
-    .g-scrollview:after {
-        height: 0;
-    }
+        .m-form {
+            .cell-left {
+                min-width: 1.5rem;
+                -moz-text-align-last: justify;
+                text-align-last: justify;
+            }
+        }
 
-    .map-container {
-        height: 2.5rem;
-    }
+        .person-info {
+            .cell-left {
+                min-width: 1.8rem;
+                -moz-text-align-last: justify;
+                text-align-last: justify;
+                display: inline-grid;
+                position: relative;
+                padding-right: .1rem;
+                &:after{
+                    position: absolute;
+                    content: ":";
+                    right: 0;
+                }
+            }
+            .cell-right{
+                margin-left: .1rem;
+            }
+        }
+        .js-selcet {
+            .b-select {
+                min-width: 2rem;
+            }
+        }
 
-    .btn-block{
-        border-radius: 0
-    }
+        .g-scrollview:after {
+            height: 0;
+        }
+
+        .map-container {
+            height: 2.5rem;
+        }
+
+        .btn-block {
+            border-radius: 0
+        }

@@ -35,7 +35,7 @@
         </header>
         <div class="g-scrollview border-no">
             <div class="m-cell margin-t-10 reset margin-b-0">
-                <a class="cell-item address flex-column " href="javascript:;">
+                <a class="cell-item address flex-column " href="./myaddress/myAddress.html">
                     <div class="cell-left ">
                         <span>李三</span>
                         <span>156****3524</span>
@@ -75,20 +75,20 @@
                     <div class="cell-left">商品金额</div>
                     <div class="cell-right ">
                         ¥
-                        <span>98.00</span>
+                        <span data-total-price>98.00</span>
                     </div>
                 </div>
                 <div class="cell-item">
                     <div class="cell-left">运费</div>
                     <div class="cell-right"> ¥
-                        <span>8.00</span>
+                        <span data-freight>8.00</span>
                     </div>
                 </div>
                 <!-- 免单显示 -->
-                <div class="cell-item">
+                <div class="cell-item hidden"  id="J_free">
                     <div class="cell-left">免单差价</div>
                     <div class="cell-right"> ¥
-                        <span>98.00</span>
+                        <span class="free-cash">0.00</span>
                     </div>
                 </div>
             </div>
@@ -97,45 +97,29 @@
                     <div class="cell-left font-size-14 text-gray">
                         <i class="m-icon icon-mian-red trans-12"></i>
                         只需支付
-                        <span class="text-default"> &yen;36.00</span>可参与三天免一天全免资格
+                        <span class="text-default" data-freecash> &yen;36.00</span>可参与三天免一天全免资格
                     </div>
-                    <label class="cell-right padded-r-10">
+                    <label class="cell-right padded-r-10" id="J_switch">
                         <input type="checkbox" class="m-switch-old">
                         <span class="m-switch trans-8"></span>
                     </label>
                 </div>
             </div>
+            </div>
 
 
 
-
-
-        </div>
         <footer class="m-tabbar padded-0 border-no settlement">
             <div class="tabbar-item flex-row flex-start padded-l-15 flex-2">
                 <p class="prompt">
                     <span class="text-dark font-size-14">实付款:</span>
-                    <span class="realcash text-default font-size-18"> ¥ 50.00 </span>
+                    <span class="realcash text-default font-size-18" data-accountprice > ¥ 0.00 </span>
                 </p>
             </div>
 
             <a href="#" class="tabbar-item bg-default  font-size-16 text-light  go" id="J_pay">
                 立即付款
             </a>
-        </footer>
-        <footer class="m-tabbar padded-15 hidden">
-            <div class="flex-1 font-size-14 text-gray">
-                <div class="checkbox margin-r-15">
-                    <input type="checkbox" name="checkbox" />
-                    <i class="cell-checkbox-icon margin-r-10"></i>
-                    全选
-                </div>
-            </div>
-            <div class="margin-l-15">
-                <a href="" pixel-border="all" class="btn  text-gray  btn-collect margin-r-15
-              ">收藏</a>
-                <a href="" pixel-border="all" class="btn text-default  btn-del">删除</a>
-            </div>
         </footer>
     </section>
 
@@ -271,6 +255,39 @@
             }
         })
     })
+    var $J_switch = $('#J_switch');  //是否开启免单
+    var $J_free = $('#J_free');  //免单显示 
+    var $freeshow = $J_free.find('.free-cash');  //免单显示的价格
+    var $totalPrice = $('span[data-total-price]');  //商品总额
+    var $freeCash = $('span[data-freecash]');  // 免单的金额
+    var $freight = $('span[data-freight]');  //运费
+    var $accountPrice = $('span[data-accountprice]'); //结算总额
+    var $total;
+    freeCash = {
+        calcTotal :function(){
+                $total = parseFloat($totalPrice.text())+parseFloat($freight.text());
+                $accountPrice.html('&yen;'+ parseFloat($total).toFixed(2));
+            },
+            freeSwitch:function(flag){
+               if(flag){
+                   $J_free.removeClass('hidden');
+                   var freeCashs;
+                   freeCashs = $freeCash.html().trim().substr(1, $freeCash.html().trim().length);
+                    console.log($total)
+                    $total = parseFloat($totalPrice.text()) + parseFloat($freight.text()) + parseFloat(freeCashs)  ;
+                    $accountPrice.html('&yen;' + parseFloat($total).toFixed(2));
+                    $freeshow.text(freeCashs)
+               }else{
+                   this.calcTotal();
+                   $J_free.addClass('hidden');
+                    $freeshow.text('0.00')
+                   
+               }
+            }
+    }
+    $J_switch.on('click',function(){
+            freeCash.freeSwitch($('.m-switch-old').is(':checked'))
+    })
 
 
     //弹出
@@ -311,6 +328,8 @@
     $(".J_back").click(function () {
         init();
         $('.inputPassword').removeClass('fadeIn');
+        $('input[name="radio"]').prop('checked',false)
+
     });
     //  密码样式显示
     function dot(pr) {

@@ -7,7 +7,24 @@
 }
 .m-form .cell-left {
   min-width: 1.5rem;
-  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+}
+.person-info .cell-left {
+  min-width: 1.8rem;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  display: inline-grid;
+  position: relative;
+  padding-right: .1rem;
+}
+.person-info .cell-left:after {
+  position: absolute;
+  content: ":";
+  right: 0;
+}
+.person-info .cell-right {
+  margin-left: .1rem;
 }
 .js-selcet .b-select {
   min-width: 2rem;

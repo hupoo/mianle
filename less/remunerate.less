@@ -1,10 +1,17 @@
+@import 'base.less';
+.rate-info {
+    background: rgb(255, 231, 204);
+    line-height: 1rem;
+    text-align: center;
+}
+
 .tables {
     width: 100%;
     font-size: .32rem;
     margin-top: .1rem;
     thead tr {
         height: .9rem;
-        background: #eee;
+        background: #fff;
         font-weight: 800;
     }
     tbody tr {
@@ -19,3 +26,40 @@
     }
 }
 
+#J_tab {
+    position: relative;
+    overflow: initial;
+}
+
+.input-tab-nav {
+    position: absolute;
+    width: 2rem;
+    top:1rem;
+   right: .2rem;
+    .m-cell {
+        -webkit-box-shadow: 0px 3px 6px 0px #808080;
+        box-shadow: 0px 3px 6px 0px #808080; 
+        border-radius: 2px;
+        position: relative;
+        &:before  {
+            position: absolute;
+            top: -3px;
+            right: 5px;
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            z-index: -1;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .cell-items {
+        line-height: .8rem;
+        height: .8rem;
+        text-align: center;
+        color: #000;
+    }
+}

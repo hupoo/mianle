@@ -32,7 +32,7 @@
                     <div class="cell-item ">
 
                         <div class="cell-right">
-                            <input type="tel" pattern="[0-9]*" class="cell-input" placeholder="请输入手机号码" autocomplete="off"  required maxlength="11" name="phone">
+                            <input type="tel" pattern="[0-9]*" class="cell-input" placeholder="请输入手机号码" autocomplete="off"  required maxlength="11" name="phone" autofocus minlength="11">
                         </div>
                     </div>
                     <div class="cell-items pwd">
@@ -54,7 +54,6 @@
             </p>
         </footer>
     </section>
-
     <div class="m-mask hidden">
         <div class="dialog">
             <div class="dialog-title">
@@ -82,6 +81,7 @@
         // createCode();
         var dialog = window.YDUI.dialog;
         var phone = $('input[name="phone"]');
+        var pwd = $('input[name="password"]');
 
         $('.js-ok').on('click', function () {
             var res = $('#code').val().toLowerCase();
@@ -102,8 +102,6 @@
             }
 
         });
-
-
         var $getCode = $('.getcode');
         /* 定义参数 */
         $getCode.sendCode({
@@ -137,7 +135,6 @@
                             dialog.loading.close();
                             $getCode.sendCode('start');
                             dialog.toast('已发送', 'success', 1500);
-                            
                         }, 1500);
                     }
                     });

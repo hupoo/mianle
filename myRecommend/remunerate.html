@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>合作入驻</title>
+    <title>分成明细</title>
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,13 +26,27 @@
             <div class="navbar-center">
                 <span class="navbar-title">分成明细</span>
             </div>
-            <a href="#" class="navbar-item pull-right">
+            <a href="#" class="navbar-item " id="J_tab">
                 <i class="icon-more"></i>
+                <div class="input-tab-nav hidden" id="J_TabNav">
+                    <ul class="m-cell margin-b-0">
+                        <li class="cell-items  border-b" data-type="0" >
+                            一级分成</li>
+                        <li class="cell-items  border-b" data-type="1" >
+                             二级分成</li>
+                        <li class="cell-items " data-type="2" >
+                            总分成</li>
+                    </ul>
+                </div>
             </a>
         </header>
 
         <div class="g-scrollview">
-            <table class="tables hidden">
+            <div class="rate-info text-default">
+                <span class="rate-name font-size-12">二级分成</span>
+                <span class="rate-cash font-size-18">&yen;325.25</span>
+            </div>
+            <table class="tables ">
                 <thead>
                     <tr>
                         <th>订单号</th>
@@ -53,22 +67,34 @@
                         <td>***23343</td>
                         <td> &yen; 50.00</td>
                         <td> &yen; 50.00</td>
+                        <td class="text-default">待分成</td>
+                    </tr>
+                    <tr>
+                        <td>***23343</td>
+                        <td> &yen; 50.00</td>
+                        <td> &yen; 50.00</td>
                         <td>
                             <!-- <span class="text-default"> 待分成</span> -->
                             <span>已分成</span>
-
-                         
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>***23343</td>
+                        <td> &yen; 50.00</td>
+                        <td> &yen; 50.00</td>
+                        <td>
+                            <!-- <span class="text-default"> 待分成</span> -->
+                            <span>已分成</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div class="no-view ">
+            <div class="no-view hidden">
                 <div class="box img-round flex-c-c">
                     <img src="../img/no-edit.png" alt="">
                 </div>
-                <h2 class=" text-gray font-size-16">没有相关记录明细~</h2>
+                <h2 class=" text-gray text-center font-size-16">没有相关记录明细~</h2>
             </div>
-
         </div>
 
     </section>
@@ -77,7 +103,27 @@
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script>
+    $(function () {
+        $('#J_tab').on('click', function () {
+            $('#J_TabNav').toggleClass('hidden');
+        });
+        $('body').on('click', function (e) {
+            if (!$(e.target).is($('.icon-more')) && !$(e.target).is($('.types'))) {
+                $('#J_TabNav').addClass('hidden');
+            }
 
+        });
+        $('#J_TabNav li').on('click', function (e) {
+            var type = $(this).attr('data-type');
+            var inner = $(this).text();
+            $('.rate-name').text(inner);
+
+            $.ajax({
+                // ...
+            })
+        });
+
+    })
 </script>
 
 </html>
