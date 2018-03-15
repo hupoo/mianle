@@ -30,27 +30,8 @@
         </header>
 
         <section class="g-scrollview">
-            <div class="m-cell ">
-                <a class="cell-item way" href="./chooseCard.html">
-                    <div class="cell-left ALIPAY">
-                        <span class="cell-icon">
-                        </span>
-                        <div class="info">
-                            <p class="cardname">
-                                <span>支付宝</span>
-                            </p>
-                            <p class="num">
-                                <span>1256565555</span>
-                                <span class="username">张三</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="cell-right cell-arrow ">
-                    </div>
-                </a>
-            </div>
             <form action="">
-                <div class="m-cell ">
+                <div class="m-cell margin-t-15 padded-b-15">
                     <div class="cell-item border-no">
                         <div class="cell-left font-size-16 text-gray">充值金额</div>
                         <div class="cell-right"></div>
@@ -58,26 +39,19 @@
                     <div class="cell-item margin-tb-15 ">
                         <div class="cell-left text-default rmb">&yen;</div>
                         <div class="cell-right border-b">
-                            <input type="number" class="cell-input money" autofocus id="money" />
+                            <input type="number" pattern="[0-9]*" class="cell-input money" autofocus id="money" />
                         </div>
-                    </div>
-                    <div class="cell-item">
-                        <div class="cell-left text-gray">当前余额
-                            <span>98.00</span>元</div>
-                       
                     </div>
                 </div>
                 <p class="subs">
-                    <input type="submit" class="btn-block bg-gray " value="立即充值" id="submit" />
+                    <input type="button" class="btn-block bg-gray "  value="立即充值" id="submit" />
                 </p>
             </form>
-
-
         </section>
 
     </section>
 
-    <div class="m-mask flex-c-c" id="mask">
+    <div class="m-mask  hidden" id="mask">
         <div class="alert">
             <div class="alert-title border-b font-size-16">验证码
                 <span class="close font-size-18" id="closeing">&times;</span>
@@ -138,33 +112,32 @@
     });
 
 
-    var omask = document.getElementById('mask');
-    var submit = document.getElementById('submit');
-    var close = document.getElementById('closeing');
+    var $omask =$('#mask');
+    var $submit =$('#submit');
+    var $close =$('#closeing');
     // 隐藏
-    close.onclick = function () {
-        omask.classList.add('hidden');
-    }
+  
+    $close.click(function(){
+        $omask.addClass('hidden')
+    })
+
     // 显示
-    submit.onclick = function () {
-        omask.classList.remove('hidden');
-    }
-
-
-    var money = document.getElementById('money');
-    money.oninput = function () {
-
-        if (this.value.length != 0) {
-            submit.disabled = false;
-            submit.classList.remove('btn-disabled');
-            submit.value = '确认';
+    $submit.click(function () {
+        $omask.removeClass('hidden')
+    })
+    var $money =$('#money');
+    $money.on('input', function () {
+        if ($(this).val().length != 0) {
+            $submit.css('pointer-events','')
+            $submit.removeClass('btn-disabled');
+            $submit.val('确认');
         }
         else {
-            submit.disabled = true;
-            submit.classList.add('btn-disabled');
-            submit.value = '立即充值';
+            $submit.css('pointer-events', 'none')
+            $submit.addClass('btn-disabled');
+            $submit.val('立即充值');
         }
-    }
+    })
 
 </script>
 

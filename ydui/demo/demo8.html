@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>InfiniteScroll</title>
-    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
-    <meta content="yes" name="apple-mobile-web-app-capable"/>
-    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-    <meta content="telephone=no" name="format-detection"/>
-    <link rel="stylesheet" href="../css/ydui.css?rev=@@hash"/>
-    <link rel="stylesheet" href="../css/demo.css"/>
-    <script src="../js/ydui.flexible.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商城分类</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/ydui.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/demo.css" />
+    <script src="./js/ydui.flexible.js"></script>
 </head>
+
 <body>
-<section class="g-flexview">
 
-    <header class="m-navbar">
-        <a href="list.html" class="navbar-item"><i class="back-ico"></i></a>
-        <div class="navbar-center"><span class="navbar-title">InfiniteScroll</span></div>
-    </header>
-
-    <section class="g-scrollview" id="J_List">
-        <div id="J_ListContent" class="m-list list-theme1"></div>
+    <section class="g-flexview">
+    
+        <header class="m-navbar">
+            <a href="list.html" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">InfiniteScroll</span>
+            </div>
+        </header>
+    
+        <section class="g-scrollview" id="J_List">
+            <div id="J_ListContent" class="m-list list-theme1"></div>
+        </section>
+    
     </section>
-
-</section>
-<script id="J_ListHtml" type="text/html">
+ <script id="J_ListHtml" type="text/html">
     {{each list as data}}
     <a href="{{data.url}}" class="list-item">
         <div class="list-img">
@@ -44,14 +52,14 @@
 </script>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://static.ydcss.com/libs/arttemplate/template.js"></script>
-<script src="../js/ydui.js"></script>
+<script src="./js/ydui.js"></script>
 <script>
     !function () {
 
         // 根据实际情况自定义获取数据方法
         var page = 1, pageSize = 10;
         var loadMore = function (callback) {
-           
+
         };
 
         $('#J_List').infiniteScroll({
@@ -61,7 +69,7 @@
             loadingHtml: '<img src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg"/>',
             loadListFn: function () {
                 var def = $.Deferred();
-                 $.ajax({
+                $.ajax({
                     url: 'http://list.ydui.org/getdata.php?type=backposition',
                     dataType: 'jsonp',
                     data: {
@@ -70,7 +78,7 @@
                     },
                     success: function (ret) {
                         // typeof callback == 'function' && callback(ret);
-                         var html = template('J_ListHtml', { list: ret });
+                        var html = template('J_ListHtml', { list: ret });
                         $('#J_ListContent').append(html).find('img').lazyLoad({ binder: '#J_List' });
                         def.resolve(ret);
                         ++page;
@@ -79,11 +87,11 @@
                 return def.promise();
 
                 // loadMore(function (ret) {
-                    // var html = template('J_ListHtml', {list: ret});
-                    // $('#J_ListContent').append(html).find('img').lazyLoad({binder: '#J_List'});
-                    // def.resolve(ret);
+                // var html = template('J_ListHtml', {list: ret});
+                // $('#J_ListContent').append(html).find('img').lazyLoad({binder: '#J_List'});
+                // def.resolve(ret);
 
-                    // ++page;
+                // ++page;
                 // });
                 // return def.promise();
             }
@@ -91,4 +99,5 @@
     }();
 </script>
 </body>
+
 </html>
