@@ -1,0 +1,231 @@
+    @import 'base.less';
+    .m-tab {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .back-ico:before {
+            color: #fff;
+        }
+        .navbar-item {
+            position: absolute;
+            z-index: 10;
+        }
+        .tab-nav {
+            padding: 0 30%;
+            background: @baseBgColor;
+            .tab-nav-item {
+                font-size: .28rem;
+                color: #99c0ff;
+                background: @baseBgColor;
+                &.tab-active {
+                    color: #fff;
+                    font-size: .36rem;
+                    &:before {
+                        width: 0;
+                    }
+                }
+                &:not(:last-child):after {
+                    height: 0;
+                }
+            }
+        }
+    }
+
+    .tab-panel {
+        padding-top: .2rem;
+        background: none;
+        min-height: -webkit-calc(100% - 1.2rem);
+        height: -webkit-calc(100% - 1.2rem);
+        height: calc(100% - 1.2rem);
+        .tab-panel-item {
+            padding: 0;
+            height: 100%;
+        }
+        .m-cell:after {
+            border: none;
+        }
+    }
+
+    .sub {
+        margin: .5rem .24rem 0 .24rem;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .bank-list {
+        width: 100%;
+        min-height: 100%;
+        background: #f5f5f5;
+        padding: 0 .24rem 1rem .24rem;
+        overflow-y: scroll;
+    }
+
+    .bankCard {
+        border-radius: 10px;
+        -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px 0px rgba(255, 255, 255, 0.4) inset;
+        box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px 0px rgba(255, 255, 255, 0.4) inset;
+        padding: .7rem .5rem;
+        margin-top: -.5rem;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .card-info {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .card-title {
+        margin-left: .2rem;
+        color: #fff;
+    }
+
+    .card-info {
+        .card-logo {
+            width: 1.2rem;
+            height: 1.2rem;
+            display: table;
+            border-radius: 50%;
+            background: #fff url(../img/bankbg/bank.svg) no-repeat;
+            background-size: 3.6rem;
+        }
+    }
+
+    #js-form {
+        .cell-item{
+            margin-right: 0;
+            padding-right: .24rem;
+        }
+    }.explain {
+        position: relative;
+        margin-top: -1rem;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+    }
+
+    .add-content {
+        height: 100%;
+        padding-top: .3rem;
+        background: #f5f5f5;
+        .add-button {
+            color: @baseColor;
+            width: 50%;
+            height: 3rem;
+            margin: 0 auto;
+            border-radius: 5px;
+            background: #fff;
+            text-align: center;
+            i {
+                font-size: 1.5rem;
+                font-weight: 800;
+                text-align: center;
+            }
+               
+        }
+    }
+
+    .ALIPAY,
+    .ABC,
+    .BCM,
+    .BOC,
+    .CCB,
+    .CITIC,
+    .CMB,
+    .ICBC,
+    .PBC,
+    .PSBC,
+    {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* 支付宝  */
+
+    .ALIPAY {
+        background-image: url(../img/bankbg/ALIPAY.png);
+        .card-logo {
+            background: #fff url(../img/bankbg/alilogo.png) 50% no-repeat;
+            background-size: 1.2rem;
+        }
+    }
+    /* 中国邮政 */
+
+    .PSBC {
+        background-image: url(../img/bankbg/PSBC.png);
+        .card-logo {
+            background-position: -2.4rem 0rem;
+        }
+    }
+    /* 建设银行 */
+
+    .CCB {
+        background-image: url(../img/bankbg/CCB.png);
+        .card-logo {
+            background-position: -1.2rem 0rem;
+        }
+    }
+    /* 中国银行 */
+
+    .BOC {
+        background-image: url(../img/bankbg/BOC.png);
+        .card-logo {
+            background-position: 0rem 0rem;
+        }
+    }
+    /* 中信银行 */
+
+    .CITIC {
+        background-image: url(../img/bankbg/CITIC.png);
+        .card-logo {
+            background-position: -3.6rem -3.6rem;
+        }
+    }
+    /* 人民银行 */
+
+    .PBC {
+        background-image: url(../img/bankbg/PBC.png);
+        .card-logo {
+            background-position: -1.2rem -2.4rem;
+        }
+    }
+    /* 招商银行 */
+
+    .CMB {
+        background-image: url(../img/bankbg/CMB.png);
+        .card-logo {
+            background-position: 0rem -1.2rem
+        }
+    }
+    /* 交通银行 */
+
+    .BCM {
+        background-image: url(../img/bankbg/BCM.png);
+        .card-logo {
+            background-position: 0rem -2.4rem;
+        }
+    }
+    /* 农业银行 */
+
+    .ABC {
+        background-image: url(../img/bankbg/ABC.png);
+        .card-logo {
+            background-position: -1.2rem -1.2rem;
+        }
+    }
+    /* 工商银行 */
+
+    .ICBC {
+        background-image: url(../img/bankbg/ICBC.png);
+        .card-logo {
+            background-position: -2.4rem -1.2rem;
+        }
+    }
+
+    .label {
+        background-image: url(http://www.dzapp.net/source/plugin/dzapp_shop/static/image/attend/arrow_down.png) 90% center no-repeat;
+    }

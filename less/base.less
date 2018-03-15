@@ -1,0 +1,26 @@
+  @baseColor: #3199ff; //默认字体颜色
+  @baseBgColor: #3199ff; //初始背景色
+  @opctiyBgColor: rgba(49, 152, 255, 0.3); //初始背景色
+  // 边距
+  @1xrem: 0.05rem;
+  @2xrem: 0.10rem;
+  @3xrem: 0.15rem; // 图标字体
+  @iconWidth: 0.4rem;
+  @barIconWidth: 0.5rem; // 字体大小
+  @5xbase: .2rem;
+  @6xbase: .24rem;
+  @7xbase: .28rem;
+  @8xbase: .32rem;
+  @9xbase: .36rem;
+  @10xbase: .4rem;
+  
+  .bg-linear() {
+      
+      background-image: -webkit-gradient( linear, left top, right top, from(rgb(49, 153, 255)), to(rgb(49, 136, 255)));
+      
+      background-image: -webkit-linear-gradient( left, rgb(49, 153, 255) 0%, rgb(49, 136, 255) 100%);
+      
+      background-image: -o-linear-gradient( left, rgb(49, 153, 255) 0%, rgb(49, 136, 255) 100%);
+      
+      background-image: linear-gradient( 90deg, rgb(49, 153, 255) 0%, rgb(49, 136, 255) 100%);
+  }

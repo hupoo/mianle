@@ -1,0 +1,59 @@
+    @import 'base.less';
+    
+
+    .lists {
+        margin-top: .12rem;
+        .cell-item {
+            &:not(:last-child):after,
+            &:after {
+                margin-left: 0;
+            }
+        }
+        .list-item-wrap {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            .checkbox {
+                margin-right: .15rem;
+            }
+        }
+    }
+
+    .m-list.list-theme4 {
+        padding: 0 .24rem;
+        .list-img {
+            width: 1.6rem;
+            padding: .8rem 0;
+        }
+        .count {
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+    }
+
+    .m-tabbar {
+        height: 1rem;
+        .go {
+            -webkit-align-self: stretch;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+        }
+        .prompt{
+            line-height: 1;
+        } .btn-collect,
+        .btn-del {
+            border-radius: 8px;
+            font-size: .28rem;
+            height: .45rem;
+            line-height: .45rem;
+        }
+        .btn-collect {
+            border-color: #808080;
+        }
+        .btn-del {
+            border-color: @baseColor;
+        }
+    }

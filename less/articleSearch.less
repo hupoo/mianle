@@ -1,0 +1,55 @@
+    @import 'base.less';
+    .g-flexview {
+        width: 100%;
+        &.history{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .m-navbar {
+        position: relative;
+        z-index: 2;
+        .right,
+        .left {
+            line-height: .88rem;
+            .m-icon {
+                vertical-align: middle;
+            }
+        }
+        .left {
+            min-width: 10%;
+            padding-left: .2rem;
+            .m-icon {
+                margin-left: -.1rem;
+            }
+        }
+        .right {
+            padding: 0 .2rem;
+            position: relative;
+            font-size: .28rem;
+        }
+        .flase-form {
+            height: .64rem;
+            width: 100%;
+            padding: 0 .1rem;
+            border-radius: .64rem;
+            line-height: .64rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            .cell-input {
+                line-height: .64rem;
+                height: .64rem;
+            }
+        }
+    }
+
+    .search-history {
+        .cell-left {
+            color: #808080;
+            line-height: .88rem;
+        }
+        .cell-item:not(:last-child):after {
+            margin-left: 0;
+        }
+    }

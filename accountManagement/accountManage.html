@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>账户管理</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/accountManage.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/common/DateSelector.css">
+
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+
+        <header class="m-navbar border-no">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">账户管理</span>
+            </div>
+        </header>
+
+        <div class="g-scrollview border-no">
+            <article id="myfans" class="grade">
+                <div class="m-box  flex-c flex-column bg-blue">
+                    <span class="m-header bg-blue">会员等级</span>
+                    <div class="num-box margin-t-10 text-center">
+                        普通会员
+                    </div>
+                    <div class="process-box flex-c-c">
+                        <label>普通会员</label>
+                        <!-- progress 进度值（取值：0-1） -->
+                        <div style="height: .15rem;" class="progress-bar margin-lr-15" data-ydui-progressbar="{type: 'line', strokeWidth:1, progress: .6, trailColor: '#3199ff'}"></div>
+                        <label>VIP会员</label>
+                    </div>
+                    <p class="margin-t-5 margin-b-15 text-light">您还差
+                        <span>100</span>积分升级至VIP会员</p>
+                </div>
+            </article>
+            <div class="m-cell">
+                <a class="cell-item" href="javascript:;">
+                    <div class="cell-left">
+                        头像</div>
+                    <div class=" cell-right cell-arrow " data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
+                        <img src="https://dn-web-blued-cn.qbox.me/userfiles/000/001/992/61479!Head.jpg" class="img-round vator"
+                            style="width:.4rem;height:.4rem;" alt="">
+                    </div>
+                </a>
+
+                <a class="cell-item" href="javascript:;">
+                    <div class="cell-left">
+                        绑定手机</div>
+                    <div class=" cell-right cell-arrow ">156****1562</div>
+                </a>
+                <a class="cell-item" href="javascript:;" >
+                    <div class="cell-left">
+                        性别</div>
+                    <div class=" cell-right cell-arrow " id="J_gender" data-ydui-actionsheet="{target:'#gender',closeElement:'.cancel'}" >男</div>
+                </a>
+                <a class="cell-item" href="javascript:;">
+                    <div class="cell-left">
+                        出生日期</div>
+                    <div class=" cell-right cell-arrow ">
+                        <input type="text" class="cell-input text-right" value="1997-12-14" readonly id="birthday">
+                    </div>
+                </a>
+            </div>
+            <div class="m-cell margin-t-10">
+                <a class="cell-item" href="../myaddress/myAddress.html">
+                    <div class="cell-left">
+                        收货地址</div>
+                    <div class=" cell-right cell-arrow "></div>
+                </a>
+                <a class="cell-item" href="./nameAuthenticate.html">
+                    <div class="cell-left">
+                        实名认证</div>
+                    <div class=" cell-right cell-arrow ">未认证</div>
+                </a>
+                <a class="cell-item" href="./setPassword.html">
+                    <div class="cell-left">
+                        密码设置</div>
+                    <div class=" cell-right cell-arrow ">
+                    </div>
+                </a>
+            </div>
+        </div>
+     
+    </section>
+    <!-- 弹出菜单 -->
+    <!-- 照片上传 -->
+    <div class="m-actionsheet" id="actionSheet">
+        <a href="#" class="actionsheet-item">
+            <input type="file" capture="camrea"> 拍照上传</a>
+        <a href="#" class="actionsheet-item">
+            <input type="file" accept="image/*"> 本地上传</a>
+        <a href="javascript:;" class="actionsheet-action" id="cancel">取消</a>
+    </div>
+    <!-- 性别选择 -->
+    <div class="m-actionsheet" id="gender">
+        <a href="javscript:;" class="actionsheet-item cell-item border-b">
+            <span class="cell-left">
+                <i class="lo-icon icon-man"></i>
+                男</span>
+            <label class="cell-right">
+                <input type="radio" value="1" name="radio">
+                <i class="cell-radio-icon"></i>
+            </label>
+            </a>
+        <a href="javscript:;" class="actionsheet-item cell-item">
+            <span class="cell-left"><i class="lo-icon icon-woman"></i>女</span>
+            <label class="cell-right">
+                <input type="radio" value="0" name="radio">
+                <i class="cell-radio-icon"></i>
+            </label>
+            </a>
+        <a href="javascript:;" class="actionsheet-action cancel"  >取消</a>
+    </div>
+
+    <div id="container"></div>
+</body>
+
+
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/DateSelector.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function(){
+        //---------------------函数调用开始---------------------
+        new DateSelector({
+            input: 'birthday',//点击触发插件的input框的id
+            container: 'container',//插件插入的容器id
+            type: 0,
+            //0：不需要tab切换，自定义滑动内容，建议小于三个；
+            //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+            param: [1, 1, 1],
+            //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+            beginTime: [1949, 10, 01],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+            endTime: [],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+            recentTime: [],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+            success: function (arr, arr2) {
+                 document.getElementById(this.input).value = arr2.toString().replace(/[,]/g, '-');
+            }//回调 Jophy0905
+        });
+  //---------------------函数调用结束---------------------
+    $('input[name="radio"]').change(function () {
+            $('#J_gender').text($(this).val()==1 ?"男":"女");
+           $('#gender').actionSheet('close');
+        });
+    })
+</script>
+
+</html>

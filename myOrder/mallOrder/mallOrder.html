@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商城订单</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+
+    <link rel="stylesheet" href="../../css/mallOrder.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">
+                    <div class="m-button" id="J_Button">
+                        <button type="button" class="btn btn-hollow tab-active">购物订单</button>
+                        <button type="button" class="btn btn-hollow">众支付订单</button>
+                    </div>
+                </span>
+            </div>
+            <a href="javascript:;" class="navbar-item ">
+                <i class="icon-more"></i>
+            </a>
+
+        </header>
+
+        <div class="g-scrollview ">
+            <div class="tab-order">
+                <div class="tab-order-item">
+
+                    <div class="swiper-container" id="swiper1">
+                        <div class="swiper-wrapper " id="tab">
+                            <div class="swiper-slide  tab-active">
+                                已免单
+                            </div>
+                            <div class=" swiper-slide ">
+                                待支付
+                            </div>
+                            <div class=" swiper-slide ">
+                                待发货
+                            </div>
+                            <div class=" swiper-slide  ">
+                                待收货
+                            </div>
+                            <div class=" swiper-slide ">
+                                已完成
+                            </div>
+                            <div class=" swiper-slide  ">
+                                全部
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel bg-empty margin-t-10">
+                        <div class="tab-panel-item ">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-panel-item">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel-item">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel-item">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel-item">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-panel-item tab-active">
+                            <!-- 已完成 -->
+                            <article class="m-list list-theme4 margin-t-10">
+                                <div class="cell-item ">
+                                    <a class="cell-left" href="">
+                                        xxx店
+                                        <i class="m-icon icon-rights trans-8">
+                                        </i>
+                                    </a>
+                                    <div class="cell-right">
+                                        <span class="text-default font-size-14">已完成</span>
+                                        <i class="m-icon icon-del margin-r-0">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                        <div class="list-mes-item        font-size-12">
+                                            <div>
+                                                <span>颜色分类:
+                                                    <em>黑色</em>;</span>
+                                                <span>尺码:
+                                                    <em>42</em>;</span>
+                                            </div>
+                                            <div>x
+                                                <span>1</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-mes-item  flex-end">
+                                            <span class="list-price font-size-12 text-dark ">
+                                                实付:
+                                                <span>34.7</span>元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        很遗憾！您的订单没有获得免单
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                                        <a href="" class="btn btn-hollow margin-l-15">评价晒单</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- 已免单 -->
+                            <article class="m-list list-theme4 margin-t-10">
+                                <div class="cell-item ">
+                                    <a class="cell-left" href="">
+                                        xxx店
+                                        <i class="m-icon icon-rights trans-8">
+                                        </i>
+                                    </a>
+                                    <div class="cell-right">
+                                        <span class="text-default font-size-14">已免单</span>
+                                        <i class="m-icon icon-del margin-r-0">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                    <div class="list-mes-item        font-size-12">
+                                        <div>
+                                            <span>颜色分类:
+                                                <em>黑色</em>;</span>
+                                            <span>尺码:
+                                                <em>42</em>;</span>
+                                        </div>
+                                        <div>x
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-mes-item  flex-end">
+                                        <span class="list-price font-size-12 text-dark ">
+                                            实付:
+                                            <span>34.7</span>元</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        恭喜您！您的订单已免单
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+                                    <div class="cell-right ">
+                                        <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                                        <a href="" class="btn btn-hollow margin-l-15">评价晒单</a>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- 待支付 -->
+                            <article class="m-list list-theme4 margin-t-10">
+                                <div class="cell-item ">
+                                    <a class="cell-left" href="">
+                                        xxx店
+                                        <i class="m-icon icon-rights trans-8">
+                                        </i>
+                                    </a>
+                                    <div class="cell-right">
+                                        <span class="text-default font-size-14">待支付</span>
+                                        <i class="m-icon icon-del margin-r-0">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                        <div class="list-mes-item        font-size-12">
+                                            <div>
+                                                <span>颜色分类:
+                                                    <em>黑色</em>;</span>
+                                                <span>尺码:
+                                                    <em>42</em>;</span>
+                                            </div>
+                                            <div>x
+                                                <span>1</span>
+                                            </div>
+                                        </div>
+                                        <div class="list-mes-item  flex-end">
+                                            <span class="list-price font-size-12 text-dark ">
+                                                实付:
+                                                <span>34.7</span>元</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        您的订单已获得免单权利,请等待免单结果
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+
+                                        <a href="" class="btn btn-hollow margin-l-15">去支付 </a>
+
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- 待发货 -->
+                            <article class="m-list list-theme4 margin-t-10">
+                                <div class="cell-item ">
+                                    <a class="cell-left" href="">
+                                        xxx店
+                                        <i class="m-icon icon-rights trans-8">
+                                        </i>
+                                    </a>
+                                    <div class="cell-right">
+                                        <span class="text-default font-size-14">待发货</span>
+                                        <i class="m-icon icon-del margin-r-0">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                    <div class="list-mes-item        font-size-12">
+                                        <div>
+                                            <span>颜色分类:
+                                                <em>黑色</em>;</span>
+                                            <span>尺码:
+                                                <em>42</em>;</span>
+                                        </div>
+                                        <div>x
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-mes-item  flex-end">
+                                        <span class="list-price font-size-12 text-dark ">
+                                            实付:
+                                            <span>34.7</span>元</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        您的订单已获得免单权利,请等待免单结果
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        <a href="" class="btn btn-hollow margin-l-15">提醒发货</a>
+
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- 待收货  -->
+                            <article class="m-list list-theme4 margin-t-10">
+                                <div class="cell-item ">
+                                    <a class="cell-left" href="">
+                                        xxx店
+                                        <i class="m-icon icon-rights trans-8">
+                                        </i>
+                                    </a>
+                                    <div class="cell-right">
+                                        <span class="text-default font-size-14">已完成</span>
+                                        <i class="m-icon icon-del margin-r-0">
+                                        </i>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="list-img">
+                                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                    </div>
+                                    <div class="list-mes">
+                                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                    <div class="list-mes-item        font-size-12">
+                                        <div>
+                                            <span>颜色分类:
+                                                <em>黑色</em>;</span>
+                                            <span>尺码:
+                                                <em>42</em>;</span>
+                                        </div>
+                                        <div>x
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-mes-item  flex-end">
+                                        <span class="list-price font-size-12 text-dark ">
+                                            实付:
+                                            <span>34.7</span>元</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        您的订单已获得免单权利,请等待免单结果
+                                    </div>
+                                </div>
+                                <div class="cell-item padded-l-0">
+
+                                    <div class="cell-right ">
+                                        <a href="" class="btn btn-hollow margin-l-15">查看物流</a>
+                                        <a href="" class="btn btn-hollow margin-l-15">确认收货</a>
+
+                                    </div>
+                                </div>
+                            </article>
+
+                            <div class="empty-content hidden">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看有哪些想购入的~</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-order-item hidden">
+                    <div class="swiper-container " id="swiper2">
+                        <div class="swiper-wrapper " id="tabs">
+                            <div class="swiper-slide flex-1 text-center tab-active">
+                                已免单
+                            </div>
+                            <div class=" swiper-slide text-center  flex-1 ">
+                                全部
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel  bg-empty margin-t-10">
+                        <div class="tab-panel-item tab-active">
+                            <!-- 已支付 -->
+                                <article class="m-list list-theme4 margin-t-10">
+                                    
+                                    <div class="cell-item ">
+                                        <a class="cell-left" href="">
+                                             xxx 湘菜馆
+                                            <i class="m-icon icon-rights trans-8">
+                                            </i>
+                                        </a>
+                                        <div class="cell-right">
+                                            <span class="text-default font-size-14">已支付</span>
+                                            <i class="m-icon icon-del margin-r-0">
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-img">
+                                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title less-2">线下消费</h3>
+                                
+                                            <div class="list-mes-item text-dark font-size-14 margin-t-15">
+                                                <div>
+                                                    消费时间:
+                                                    <span>2018-01-17 11:49:32</span>
+                                                </div>
+                                                <div>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-item">
+                                        <div class="cell-right text-dark font-size-16">
+                                            总计消费 
+                                            <span class="margin-lr-5">98.00</span>
+                                            元
+                                        </div>
+                                    </div>
+                                    <!-- 如果支付完成且晒单  则不显示 -->
+                                    <div class="cell-item padded-l-0">
+                                        <div class="cell-left padded-l-10">
+                                            您的订单已获得免单权利,请等待免单结果
+                                        </div>
+                                            <div class="cell-right ">
+                                                
+                                                <a href="" class="btn btn-hollow margin-l-15">评价晒单</a>
+                                            </div>
+                                    </div>
+                                  
+                                
+                                </article>
+                            <!-- 待分享 -->
+                                <article class="m-list list-theme4 margin-t-10">
+                                    
+                                    <div class="cell-item ">
+                                        <a class="cell-left" href="">
+                                             xxx 湘菜馆
+                                            <i class="m-icon icon-rights trans-8">
+                                            </i>
+                                        </a>
+                                        <div class="cell-right">
+                                            <span class="text-default font-size-14">待分享</span>
+                                            <i class="m-icon icon-del margin-r-0">
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-img">
+                                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title less-2">线下消费</h3>
+                                
+                                            <div class="list-mes-item text-dark font-size-14 margin-t-15">
+                                                <div>
+                                                    消费时间:
+                                                    <span>2018-01-17 11:49:32</span>
+                                                </div>
+                                                <div>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-item">
+                                        <div class="cell-right text-dark font-size-16">
+                                            总计消费 
+                                            <span class="margin-lr-5">98.00</span>
+                                            元
+                                        </div>
+                                    </div>
+                                    <div class="cell-item padded-l-0">
+                                            <div class="cell-right ">
+                                                <a href="" class="btn btn-hollow margin-l-15">分享免单</a>
+                                            </div>
+                                    </div>
+                                  
+                                
+                                </article>
+                            <!-- 已免单  -->
+                                <article class="m-list list-theme4 margin-t-10">
+                                    
+                                    <div class="cell-item ">
+                                        <a class="cell-left" href="">
+                                             xxx 湘菜馆
+                                            <i class="m-icon icon-rights trans-8">
+                                            </i>
+                                        </a>
+                                        <div class="cell-right">
+                                            <span class="text-default font-size-14">已免单</span>
+                                            <i class="m-icon icon-del margin-r-0">
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-img">
+                                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title less-2">线下消费</h3>
+                                
+                                            <div class="list-mes-item text-dark font-size-14 margin-t-15">
+                                                <div>
+                                                    消费时间:
+                                                    <span>2018-01-17 11:49:32</span>
+                                                </div>
+                                                <div>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-item">
+                                        <div class="cell-right text-dark font-size-16">
+                                            总计消费 
+                                            <span class="margin-lr-5">98.00</span>
+                                            元
+                                        </div>
+                                    </div>
+                                    <div class="cell-item padded-l-0">
+                                    
+                                            <div class="cell-right ">
+                                                <a href="javascript:;" class="btn btn-hollow margin-l-15">已免单</a>
+                                            </div>
+                                    </div>
+                                  
+                                
+                                </article>
+
+
+                            <div class="empty-content hidden">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看附近有哪些店铺</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-panel-item">
+                            <div class="empty-content ">
+                                <div class="no-collect">
+                                    <img src="../../img/no-order.png" alt="">
+                                    <h1>您还没有相关的订单</h1>
+                                    <h6>您可以去看看附近有哪些店铺</h6>
+                                </div>
+                                <div class="recommend-content">
+                                    <div class="recommenf-title ">
+                                        为您推荐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<div class="m-mask " style="top:-100%;"></div>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+<script>
+    // 导航滑动切换 
+    $(function () {
+    $('.m-mask').load('../../maskbar.html')
+        
+        var opt = {
+            initialSlide: 0,
+            slidesPerView: 'auto',
+            freeModeSticky: true,
+            slideToClickedSlide: true,
+            freeModeMomentumRatio: 1,
+        };
+        var swiper1 = new Swiper('#swiper1', opt);
+        var swiper2 = new Swiper('#swiper2', opt);
+
+        function tab(obj,index) {
+        // 显示切换
+           obj.parents('.tab-order-item').find('.tab-panel-item').eq(index).addClass('tab-active').siblings().removeClass('tab-active');
+        //    样式切换
+            obj.addClass('tab-active').siblings().removeClass('tab-active');
+        }
+
+        // 第一选项卡
+        $('#J_Button .btn').click(function () {
+            var i = $(this).index();
+          $(this).addClass('tab-active').siblings().removeClass('tab-active');
+        $('.tab-order-item').eq(i).removeClass('hidden').siblings().addClass('hidden');
+
+        })
+
+        // 第二选项卡
+        $('#tab .swiper-slide').click(function () {
+            var i = $(this).index();
+            tab($(this),i);
+
+        })
+        // 第二选项卡
+        $('#tabs .swiper-slide').click(function () {
+            var i = $(this).index();
+            tab($(this),i);
+
+        })
+    });
+    //提示框
+    var dialog = window.YDUI.dialog;
+    $('#js-copy').on('click', function () {
+        jsCopy('orderNum');
+        dialog.toast('复制成功！去粘贴吧', 'none', 1000);
+    });
+
+
+    $('.icon-del').on('click', function () {
+        dialog.confirm('', '是否删除当前订单！', [
+            {
+                txt: '取消',
+                color: false, /* false:黑色  true:绿色 或 使用颜色值 */
+                callback: function () {
+                    dialog.toast('你点了取消', 'none', 1000);
+                }
+            },
+            {
+                txt: '确认',
+                color: "#fff",
+                callback: function () {
+                    dialog.toast('你点了确定', 'none', 1000);
+                }
+            }
+        ]);
+    });
+</script>
+
+</html>

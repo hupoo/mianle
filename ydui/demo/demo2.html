@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common/DateSelector.css" />
+<style>
+    
+</style>
+</head>
+<body>
+    <input type="text" id="date-selector-input" >
+    <div id="targetContainer"></div>
+</body>
+    <script src="../../js/DateSelector.js"></script>
+<script>
+     //---------------------函数调用开始---------------------
+        new DateSelector({
+            input: 'date-selector-input',//点击触发插件的input框的id
+            container: 'targetContainer',//插件插入的容器id
+            type: 0,
+            //0：不需要tab切换，自定义滑动内容，建议小于三个；
+            //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+            param: [1, 1, 1,],
+            //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+            beginTime: [2017, 5, 7],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+            endTime: [2027, 5, 7],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+            recentTime: [2017, 5, 9],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+            success: function (arr, arr2) {
+                alert('打开控制台查看结果');
+                console.log(arr, '--- 数字结果');
+                console.log(arr2, '--- 字符串结果');
+            }//回调
+        });
+  //---------------------函数调用结束---------------------
+  //月份从1开始
+</script>
+</html>

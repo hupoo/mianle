@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单详情</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/orderDetail.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">订单详情</span>
+            </div>
+
+        </header>
+
+        <div class="g-scrollview ">
+            <article class="m-list list-theme4">
+                <div class="cell-item padded-l-0 margin-r-0">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-shop trans-14 margin-r-15" ></i>
+                        xxx 线下店
+                        <i class="m-icon icon-rights trans-8"></i>
+                    </div>
+                    <div class="cell-right">
+                        <i class="m-icon icon-del trans-12" id="js-del"></i>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-img">
+                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title less-2">线下消费</h3>
+                      
+                        <div class="list-mes-item text-dark font-size-14 margin-t-15">
+                            <div>
+                              消费时间: <span>2018-01-17 11:49:32</span>
+                            </div>
+                            <div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+            </article>
+            <div class="m-cell margin-t-10 order-price ">
+                <div class="cell-item">
+                    <div class="cell-left">总计消费:</div>
+                    <div class="cell-right">
+                        &yen;
+                        <span>98.00</span>
+                    </div>
+                </div>
+            
+                <!-- 免单显示 -->
+                <div class="cell-item">
+                    <div class="cell-left">免单:</div>
+                    <div class="cell-right"> &yen;
+                        <span>98.00</span>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left"></div>
+                    <div class="cell-right">实付款:
+                        <span class="text-default margin-l-10"> &yen;00.00 </span>
+                    </div>
+                </div>
+                <div class="cell-item ">
+                    <div class="cell-left ">
+                        <p class="text-default">恭喜您! 您的订单已免单</p>
+                        <!-- <p class="text-gray">您的订单已获得免单权利,请等待免单结果</p> 
+                                        <p class="text-gray">很遗憾! 您的订单没有获得免单</p>  -->
+                    </div>
+                    <div class="cell-right ">
+                        <a href="" class="btn btn-hollow share">分享</a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-cell margin-t-10 order-text">
+                <div class="cell-item">
+                    <div class="cell-left">订单编号:</div>
+                    <div class="cell-right ">
+                        <span id="orderNum" class="orderNum">121123876548842</span>
+                        <div class="btn btn-rds margin-l-15 " id="js-copy">复制</div>
+                    </div>
+                </div>
+               
+                <div class="cell-item">
+                    <div class="cell-left">支付方式:</div>
+                    <div class="cell-right">支付宝支付</div>
+                </div>
+              
+            </div>
+           
+        </div>
+       
+    </section>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+
+    });
+    // 文字复制  @prames  传入要复制的对象
+
+    function jsCopy(obj) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById(obj));
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            selection.removeAllRanges();
+        } else {
+            selection.addRange(range);
+        }
+        document.execCommand('copy');
+    }
+
+    var dialog = window.YDUI.dialog;
+    $('#js-copy').on('click', function () {
+        jsCopy('orderNum');
+        dialog.toast('复制成功！去粘贴吧', 'none', 1000);
+    });
+
+
+          $('#js-del').on('click', function () {
+                 dialog.confirm('', '是否删除当前订单！', [
+                  {
+                      txt: '取消',
+                      color: false, /* false:黑色  true:绿色 或 使用颜色值 */
+                      callback: function () {
+                          dialog.toast('你点了取消', 'none', 1000);
+                      }
+                  },
+                  {
+                      txt: '确认',
+                      color: "#fff",
+                      callback: function () {
+                          dialog.toast('你点了确定', 'none', 1000);
+                      }
+                  }
+              ]);
+            });
+</script>
+
+</html>

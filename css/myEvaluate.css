@@ -1,0 +1,6 @@
+.tab-nav .tab-nav-item.tab-active {
+  color: #3199ff;
+}
+.tab-nav .tab-nav-item:not(:last-child):after {
+  height: 0;
+}

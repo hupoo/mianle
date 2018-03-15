@@ -1,0 +1,204 @@
+    @import 'base.less';
+    .m-navbar {
+        position: relative;
+        z-index: 2;
+        -webkit-transition: all 100ms linear;
+        -o-transition: all 100ms linear;
+        transition: all 100ms linear;
+        &.scroll{
+            height: 0;
+        }
+        .right,
+        .left {
+            line-height: .88rem;
+            .m-icon {
+                vertical-align: middle;
+            }
+        }
+        .left {
+            min-width: 10%;
+            padding-left: .2rem;
+            .m-icon {
+                margin-left: -.1rem;
+            }
+        }
+        .right {
+            padding: 0 .2rem;
+            position: relative;
+        }
+        .flase-form {
+            height: .6rem;
+            width: 100%;
+            padding: 0 .1rem;
+            border-radius: .6rem;
+            line-height: .6rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            .cell-input {
+                line-height: .6rem;
+                height: .6rem;
+            }
+        }
+    }
+
+    .g-scrollview {
+        position: relative;
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 10;
+        top: 0;
+    }
+
+    .swiper-container {
+        background-color: #fff;
+        .swiper-wrapper {
+            height: 1rem;
+            .swiper-slide {
+                background: #f5f5f5;
+                padding: .05rem .2rem;
+                width: auto;
+                font-size: .24rem;
+                text-align: center;
+                &.tab-active {
+                    background: #fff;
+                    color: @baseColor;
+                    i {
+                        background-position-y: -.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .mall-icon {
+        width: .5rem;
+        height: .5rem;
+        display: inline-block;
+        background: url(../img/mall_icon.svg) no-repeat;
+        background-size: 10rem 5rem;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    } //all 零食 ，生鲜 ，女鞋， 裙子， 被子， 内衣， 奶瓶 ，项链， 茶杯 ，行李箱， 灯， 皮鞋 ，衬衫 ， 沐浴露 ，洗衣机 ， 杠铃 ， 书 ，办公 Snacks,
+    .ma-all {
+        background-position: 0 0;
+    }
+
+    .ma-snacks {
+        background-position: -.5rem 0;
+    }
+
+    .ma-fresh {
+        background-position: -1rem 0;
+    }
+
+    .ma-womenshoes {
+        background-position: -1.5rem 0;
+    }
+
+    .ma-skirts {
+        background-position: -2rem 0;
+    }
+
+    .ma-quilts {
+        background-position: -2.5rem 0;
+    }
+
+    .ma-underwear {
+        background-position: -3rem 0;
+    }
+
+    .ma-bottles {
+        background-position: -3.5rem 0;
+    }
+
+    .ma-necklaces {
+        background-position: -4rem 0;
+    }
+
+    .ma-teacups {
+        background-position: -4.5rem 0;
+    }
+
+    .ma-suitcases {
+        background-position: -5rem 0;
+    }
+
+    .ma-lights {
+        background-position: -5.5rem 0;
+    }
+
+    .ma-leathershoes {
+        background-position: -6rem 0;
+    }
+
+    .ma-shirts {
+        background-position: -6.5rem 0;
+    }
+
+    .ma-showerbaths {
+        background-position: -7rem 0;
+    }
+
+    .ma-washingmachines {
+        background-position: -7.5rem 0;
+    }
+
+    .ma-lipstick {
+        background-position: -8rem 0;
+    }
+
+    .ma-barbell {
+        background-position: -8.5rem 0;
+    }
+
+    .ma-books {
+        background-position: -9rem 0;
+    }
+
+    .ma-office {
+        background-position: -9.5rem 0;
+    }
+
+    .filter-bar {
+        border-bottom: none;
+    }
+
+    .m-list.list-theme4 {
+        .list-img {
+            width: 1.6rem;
+            padding: .8rem 0;
+        }
+    }
+
+    .shopcar {
+        width: .8rem;
+        height: .8rem;
+        position: fixed;
+        bottom: 1.2rem;
+        right: .24rem;
+        border-radius: 50%;
+        -webkit-transition: all 100ms linear;
+        -o-transition: all 100ms linear;
+        transition: all 100ms linear;
+        &.scroll{
+            -webkit-transform: translateX(100%);
+                -ms-transform: translateX(100%);
+                    transform: translateX(100%)
+        }
+        .m-icon {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2)
+        }
+        .badge {
+            position: absolute;
+            right: 0;
+            top: 2px;
+        }
+    }
+    .backTo{
+        bottom: 2.2rem;
+    }

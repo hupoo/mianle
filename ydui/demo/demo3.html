@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+</style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+<script>
+    window.onload = window.onresize = function(){
+
+    var canvas = document.getElementById('canvas');
+    canvas.width = canvas.parentNode.clientWidth;
+    canvas.height = canvas.parentNode.clientHeight;
+     var ctx = canvas.getContext('2d');
+     // Create context
+    
+        // Set waves opacities
+        const wavesOpacities = [0.5, 0.4, 0.3, 0.2, 0.1];
+
+        // Set parameters
+        const params = {
+            AMPLITUDE_WAVES: canvas.height, //波浪高度
+            AMPLITUDE_MIDDLE: canvas.height / 3, //波浪中间高度
+            AMPLITUDE_SIDES: canvas.height / 3, //波浪旁边高度
+            OFFSET_SPEED: 120,//波浪震动速度
+            SPEED: 3,//波浪震动速度
+            OFFSET_WAVES: 40,//波浪偏移量
+            NUMBER_WAVES: 3,//波浪个数
+            COLOR: ['red', 'green', 'blue'],//波浪颜色
+            NUMBER_CURVES: 3,//波峰个数
+            OFFSET_CURVE: true,//波浪是否偏移
+            RESET: false
+        };
+        let speedInc = 0;
+
+        // Render
+
+        const render = () => {
+            //画布大小
+            canvas.width = document.body.clientWidth;
+            canvas.height = document.body.clientHeight;
+
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // For each wave
+            for (let j = params.NUMBER_WAVES - 1; j >= 0; j--) {
+                // offset between waves
+                let offset = speedInc + j * Math.PI * params.OFFSET_WAVES;
+
+                // Color and increase gradually opacity
+                ctx.fillStyle = params.COLOR[j];
+
+                ctx.globalAlpha = wavesOpacities[j];
+
+
+                // 振荡
+                // 定义的高度cubicbezier振幅 
+                
+                // Speed amplitude variation between 0 and AMPLITUDE_SIDES ( half height window)
+                // Set height amplitude of borders points (left and right of the window) -> no offset here
+                let leftRange = ((Math.sin((offset / params.OFFSET_SPEED))) / 2 * params.AMPLITUDE_SIDES) + (canvas.height - params.AMPLITUDE_SIDES) / 2;
+                let rightRange = ((Math.sin((offset / params.OFFSET_SPEED))) / 2 * params.AMPLITUDE_SIDES) + (canvas.height - params.AMPLITUDE_SIDES) / 2;
+
+                // Speed amplitude variation between 0 and AMPLITUDE_WAVES ( height window)
+                // Set height amplitude of the first and second points of a curve
+                let leftCurveRange = (Math.sin((offset / params.OFFSET_SPEED) + 2) + 1) / 2 * params.AMPLITUDE_WAVES + (canvas.height - params.AMPLITUDE_WAVES) / 2;
+                let rightCurveRange = (Math.sin((offset / params.OFFSET_SPEED) + 1) + 1) / 2 * params.AMPLITUDE_WAVES + (canvas.height - params.AMPLITUDE_WAVES) / 2;
+
+                // Speed amplitude variation between 0 and AMPLITUDE_MIDDLE
+                // Set height amplitude of the last point of a curve
+                let endCurveRange = ((Math.sin((offset / params.OFFSET_SPEED) + 2) + 1) / 2 * params.AMPLITUDE_MIDDLE) + (canvas.height - params.AMPLITUDE_MIDDLE) / 2;
+
+                // Reverse amplitude of the first and second points of a curve (only needed with 3 curves or more)
+                let reverseLeftCurveRange = endCurveRange - rightCurveRange + endCurveRange;
+                let reverseRightCurveRange = endCurveRange - leftCurveRange + endCurveRange;
+
+                // Neutralise curves first and second point amplitude
+                if (params.OFFSET_CURVE === false) {
+
+                    leftCurveRange = rightCurveRange;
+                    reverseRightCurveRange = reverseLeftCurveRange;
+
+                }
+
+
+                // Draw and fill path
+                ctx.beginPath();
+
+                // Draw first point from Left
+                ctx.moveTo(0, leftRange);
+
+                // Draw bezier curves based on amplitude
+
+                // Draw each points of the first curve
+                // bezierCurveTo() see https://www.w3schools.com/TAGs/canvas_beziercurveto.asp
+                ctx.bezierCurveTo(canvas.width / (params.NUMBER_CURVES * 3), leftCurveRange, canvas.width / (params.NUMBER_CURVES * 3 / 2), rightCurveRange, canvas.width / params.NUMBER_CURVES, endCurveRange);
+
+                // Draw each points of other curves if needed
+                for (let i = 1; i < params.NUMBER_CURVES; i++) {
+
+                    // Reverse waves amplitude 1 / 2 times
+                    const finalRightCurveRange = i % 2 !== 0 ? rightCurveRange : reverseRightCurveRange;
+                    const finalLeftCurveRange = i % 2 !== 0 ? leftCurveRange : reverseLeftCurveRange;
+
+                    // Set points curve
+                    const secondPtX = canvas.width * (i / params.NUMBER_CURVES) + canvas.width / (params.NUMBER_CURVES * 3);
+                    const secondPtY = endCurveRange - finalRightCurveRange + endCurveRange;
+                    const thirdPtX = canvas.width * (i / params.NUMBER_CURVES) + canvas.width * (2 / (params.NUMBER_CURVES * 3));
+                    const thirdPtY = endCurveRange - finalLeftCurveRange + endCurveRange;
+                    const lastPtX = canvas.width * ((i + 1) / params.NUMBER_CURVES);
+                    const lastPtY = i === params.NUMBER_CURVES - 1 ? rightRange : endCurveRange;
+
+                    ctx.bezierCurveTo(secondPtX, secondPtY, thirdPtX, thirdPtY, lastPtX, lastPtY);
+
+                }
+
+                // Draw last lines
+
+                ctx.lineTo(canvas.width, canvas.height);
+                ctx.lineTo(0, canvas.height);
+                ctx.lineTo(0, rightRange);
+
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            // Speed
+            speedInc += params.SPEED;
+        };
+
+        // RAF
+
+        TweenMax.ticker.addEventListener('tick', render);
+
+    
+
+    }
+</script>
+</html>

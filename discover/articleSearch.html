@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>文章</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/articleSearch.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview articleList">
+        <header class="m-navbar ">
+            <a href="javascript:history.go(-1)" class="left">
+                <i class="m-icon icon-left-light"></i>
+            </a>
+            <div class="center flex-1 flex-c">
+                <div class="flase-form flex-c flex-c-between padded-l-15">
+                    <i class="m-icon icon-search-light "></i>
+                    <input type="text" class="cell-input text-light font-size-16" id="J_input" readonly placeholder="">
+                </div>
+            </div>
+            <a href="javascript:;" class="right">
+                <!-- 搜索 -->
+            </a>
+        </header>
+        <div class="g-scrollview border-no bg-gray  ">
+            <a href="./articleDetail.html" class="article-content theme2">
+                <div class="article-title">小米7曝光，性能怪兽+颜值小米7曝光，性能怪兽+颜值小米7曝光，性能怪兽+颜值报表</div>
+                <div class="article-img-wrap">
+                    <div class="img-item" data-title="小米7曝光，性能怪兽+颜值报表">
+                        <img src="http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg_220x220.jpg" alt="">
+                    </div>
+
+
+                </div>
+                <div class="article-author">
+                    <div class="author">
+                        <img src="#" class="vator" alt=""> 免了么妹
+                    </div>
+                    <div class="viewNum">
+                        198人浏览
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="article-content theme2">
+                <div class="article-title">小米7曝光，性能怪兽+颜值小米7曝光，性能怪兽+颜值小米7曝光，性能怪兽+颜值报表</div>
+                <div class="article-img-wrap">
+                    <div class="img-item" data-title="小米7曝光，性能怪兽+颜值报表">
+                        <img src="http://img1.shikee.com/try/2016/06/21/10172020923917672923.jpg_220x220.jpg" alt="">
+                    </div>
+
+
+                </div>
+                <div class="article-author">
+                    <div class="author">
+                        <img src="#" class="vator" alt=""> 免了么妹
+                    </div>
+                    <div class="viewNum">
+                        198人浏览
+                    </div>
+                </div>
+            </a>
+        </div>
+            <!-- 历史记录 -->
+        <section class="g-flexview history hidden">
+            <form action="">
+                <header class="m-navbar ">
+                    <a href="Javascript:;" id="backTo" class="left">
+                        <i class="m-icon icon-left-light"></i>
+                    </a>
+                    <div class="center flex-1 flex-c">
+                        <div class="flase-form flex-c flex-c-between padded-l-15">
+                            <i class="m-icon icon-search-light "></i>
+                            <input type="search" class="cell-input text-light font-size-16" id="">
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="right">
+                        搜索
+                    </a>
+                </header>
+            </form>
+            <div class="g-scrollview border-no bg-gray  ">
+                <div class="m-cell search-history">
+                    <div class="cell-item ">
+                        <div class="cell-left text-dark">历史搜索</div>
+                        <div class="cell-right">
+                            <i class="m-icon icon-del-gray"></i>
+                        </div>
+                    </div>
+                    <a class="cell-item" href="#">
+                        <div class="cell-left">历史记录</div>
+                    </a>
+                    <a class="cell-item" href="#">
+                        <div class="cell-left">历史记录</div>
+                    </a>
+                    <a class="cell-item" href="#">
+                        <div class="cell-left">历史记录</div>
+                    </a>
+                    <a class="cell-item" href="#">
+                        <div class="cell-left">历史记录</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+</body>
+<div class="m-mask hidden" style="z-index:2"></div>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+<script>
+    $(function () {
+        $('#J_input').click(function () {
+            toggleCls($('.history'), '.articleList', 'hidden', 'move');
+            $('input[type="search"]').focus();
+        })
+        $('#backTo').click(function () {
+            toggleCls($('.history'), '.articleList', 'hidden', 'add');
+        })
+        $('input[type="search"]').change(function () {
+             $('#J_input').attr('value',$(this).val());
+        })
+    })
+</script>
+
+</html>

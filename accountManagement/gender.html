@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>性别设置</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_535835_67j58s7fb2qbmx6r.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+        .cell-right input[type=radio]+.cell-radio-icon:after,
+        .cell-right input[type=checkbox]:not(.m-switch)+.cell-radio-icon:after {
+            color: #3199ff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar border-no">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">性别设置</span>
+            </div>
+        </header>
+
+        <div class="g-scrollview border-no">
+            <form action="">
+                <div class="m-cell margin-t-10">
+                    <label class="cell-item">
+                        <span class="cell-left">女</span>
+                        <label class="cell-right">
+                            <input type="radio" value="man" name="radio" checked="">
+                            <i class="cell-radio-icon"></i>
+                        </label>
+                    </label>
+                    <label class="cell-item">
+                        <span class="cell-left">男</span>
+                        <label class="cell-right">
+                            <input type="radio" value="woman" name="radio">
+                            <i class="cell-radio-icon"></i>
+                        </label>
+                    </label>
+                  
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+
+
+
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+        /* 顶部提示框 */
+         var dialog = window.YDUI.dialog;
+        $('.cell-right').on('click', function () {
+            dialog.notify('修改成功', 2000, function () {
+            //    修改之后 操作
+            });
+        });
+    });
+</script>
+
+</html>

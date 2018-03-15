@@ -1,0 +1,51 @@
+.g-flexview {
+  width: 100%;
+}
+.g-flexview.history {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.m-navbar {
+  position: relative;
+  z-index: 2;
+}
+.m-navbar .right,
+.m-navbar .left {
+  line-height: .88rem;
+}
+.m-navbar .right .m-icon,
+.m-navbar .left .m-icon {
+  vertical-align: middle;
+}
+.m-navbar .left {
+  min-width: 10%;
+  padding-left: .2rem;
+}
+.m-navbar .left .m-icon {
+  margin-left: -0.1rem;
+}
+.m-navbar .right {
+  padding: 0 .2rem;
+  position: relative;
+  font-size: .28rem;
+}
+.m-navbar .flase-form {
+  height: .64rem;
+  width: 100%;
+  padding: 0 .1rem;
+  border-radius: .64rem;
+  line-height: .64rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.m-navbar .flase-form .cell-input {
+  line-height: .64rem;
+  height: .64rem;
+}
+.search-history .cell-left {
+  color: #808080;
+  line-height: .88rem;
+}
+.search-history .cell-item:not(:last-child):after {
+  margin-left: 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>管理</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../../css/manage.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">管理</span>
+            </div>
+        </header>
+        <section class="g-scrollview">
+            <div class="m-cell unbind margin-t-10">
+                <div class="cell-item" href="javascript:;">
+                    <div class="cell-left">
+                        银行卡尾号 &nbsp;(1234)</div>
+                    <div class=" cell-right   text-danger font-size-16" id="unbind">解除绑定</div>
+                </div>
+            </div>
+        </section>
+    <div class="m-mask flex-c-c" id="mask">
+        <div class="alert">
+            <div class="alert-title border-b font-size-16">验证码
+                <span class="close font-size-18" id="closeing">&times;</span>
+            </div>
+            <form action="" method="post" name="myform2">
+                <div class="m-cell ">
+                    <div class="cell-item border-no">
+                        <div class="cell-left">手机号：</div>
+                        <div class="cell-right">
+                            <input type="tel" class="cell-input text-default" value="15616223547" readonly />
+                        </div>
+                    </div>
+                    <div class="cell-item border-b">
+    
+                        <div class="cell-right">
+                            <input type="number" pattern="[0-9]*" class="cell-input" placeholder="请输入验证码">
+                            <button type="button" class="btn text-default border-l getcode" >获取验证码</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-item flex-c-c margin-b-10">
+                    <input type="submit" class="btn bg-default" style="width:50%;" value="确定" />
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    // 倒计时
+     var $getCode = $('.getcode');
+
+        /* 定义参数 */
+        $getCode.sendCode({
+            disClass: 'disabled',
+            secs: 60,
+            run: false,
+            runStr: '{%s}秒后获取',
+            resetStr: '重新获取验证码'
+        });
+
+        $getCode.on('click', function () {
+            /* ajax 成功发送验证码后调用【start】 */
+            YDUI.dialog.loading.open('发送中');
+            setTimeout(function () {
+                YDUI.dialog.loading.close();
+                $getCode.sendCode('start');
+                YDUI.dialog.toast('已发送', 'success', 1500);
+            }, 1500);
+        });
+
+    var omask = document.getElementById('mask');
+    var unbind = document.getElementById('unbind');
+    var close = document.getElementById('closeing');
+    // 隐藏
+    close.onclick = function () {
+        omask.classList.add('hidden');
+    }
+    // 显示
+    unbind.onclick = function () {
+        omask.classList.remove('hidden');
+    }
+
+
+</script>
+
+</html>

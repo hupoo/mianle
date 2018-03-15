@@ -1,0 +1,134 @@
+.login,
+.reg {
+  padding-top: 1.35rem;
+}
+.logo {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+.logo img {
+  width: 100%;
+}
+.m-cell {
+  padding: 0.75rem 0.75rem 0;
+  color: #fff;
+}
+.m-cell i[class*='icon-'] {
+  color: #fff;
+}
+.m-cell .cell-item {
+  padding: 0;
+}
+.m-cell .cell-item:after {
+  margin-left: 0;
+}
+.m-cell .cell-input {
+  text-indent: .1rem;
+  color: #fff;
+  font-size: .36rem;
+}
+.m-cell .cell-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.m-cell .cell-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.m-cell .cell-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.m-cell .cell-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.forget {
+  line-height: .84rem;
+  color: #fff;
+  text-align: right;
+}
+.cell-item:not(:last-child):after {
+  border-color: #fff;
+}
+.btn-login {
+  height: .98rem;
+  border-radius: .49rem;
+  background: #fff;
+  color: #fff;
+  margin-top: .2rem;
+}
+.register {
+  border-radius: .49rem;
+  margin-top: .4rem;
+  border: 1px solid #fff;
+  background: none !important;
+  color: #fff;
+}
+.recommenf-title {
+  margin-top: .4rem;
+  height: .88rem;
+  line-height: .88rem;
+  font-size: .28rem;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.recommenf-title:after,
+.recommenf-title:before {
+  content: '';
+  position: absolute;
+  width: 27%;
+  height: 1px;
+  -webkit-transform: translateY(0.5);
+  -ms-transform: translateY(0.5);
+  transform: translateY(0.5);
+  top: 50%;
+  background: #e6e6e6;
+}
+.recommenf-title:before {
+  right: 62%;
+}
+.recommenf-title:after {
+  left: 62%;
+}
+.wechat-login {
+  color: #fff;
+  font-size: 1rem;
+}
+.wechat-login .wechat {
+  width: 0.8rem;
+  display: inline-block;
+}
+/* ====================注册获取验证码================== */
+.g-scrollview {
+  padding-top: 1.35rem;
+}
+.navbar-item {
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+}
+.navbar-item .back-ico::before {
+  color: #fff;
+}
+.next {
+  height: .98rem;
+  border-radius: .49rem;
+  background: #fff;
+  color: #fff;
+  margin-top: .4rem;
+}
+.code.border-b:after {
+  width: 60%;
+  border-color: #fff;
+}
+.tro {
+  width: 100%;
+  height: 1rem;
+  margin-top: -2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .24rem;
+}
+/* ===================注册========================= */
+.reg .btn-login {
+  margin-top: .9rem;
+}

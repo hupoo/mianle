@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单支付</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/orderDetail.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">订单支付</span>
+            </div>
+            <a href="" class="navbar-item pull-right">
+                <i class="m-icon icon-share trans-14"></i>
+            </a>
+
+        </header>
+
+        <div class="g-scrollview ">
+      
+            <div class="m-cell margin-t-10 reset">
+                <a class="cell-item address flex-column" href="javascript:;">
+                    <div class="cell-left text-dark">
+                        <i class="m-icon icon-local trans-14"></i>
+                        <span>李三</span>
+                        <span class="margin-l-10">15616223524</span>
+                    </div>
+                    <div class=" cell-right font-size-14 text-gray less-2">
+                        湖南省长沙市岳麓区麓谷街道中电软件园9栋 湖南省长沙市岳麓区麓谷街道中电软件园9栋
+                    </div>
+                </a>
+            </div>
+            <article class="m-list list-theme4">
+                <a href="" class="cell-item padded-l-0 margin-r-0">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-shop trans-14"></i>
+                        xxx店
+                        <i class="m-icon icon-rights trans-8"></i>
+                    </div>
+                    <div class="cell-right"></div>
+                </a>
+                <div class="list-item">
+                    <div class="list-img">
+                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                        <div class="list-mes-item">
+                            <div>
+                                <span>颜色分类:
+                                    <em>黑色</em>;</span>
+                                <span>尺码:
+                                    <em>42</em>;</span>
+                            </div>
+                            <div>x
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="list-mes-item text-default">
+                            <div>
+                                <span class="list-price font-size-16 text-default">
+                                    <em>¥</em>34.7</span>
+
+                            </div>
+                            <div>
+                                <!-- 等待发货 -->
+                               
+                                <a href="" class="btn btn-hollow margin-l-5">联系卖家</a>
+
+                                <!-- 运输中... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>
+                                                <a href="" class="btn btn-hollow margin-l-5" >确认收货</a> -->
+
+                                <!-- 免单... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>  -->
+
+                                <!-- 完成... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>
+                                                    <a href="" class="btn btn-hollow margin-l-5">评价晒单</a>
+                                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </article>
+            
+            <div class="m-cell margin-t-10 order-price ">
+                <div class="cell-item">
+                    <div class="cell-left">商品价格:</div>
+                    <div class="cell-right">
+                        &yen;
+                        <span>98.00</span>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">运费:</div>
+                    <div class="cell-right"> &yen;
+                        <span>8.00</span>
+                    </div>
+                </div>
+              
+                <div class="cell-item">
+                    <div class="cell-left"></div>
+                    <div class="cell-right">实付款:
+                        <span class="text-default margin-l-10"> &yen;106.00 </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="m-cell margin-t-10 order-text">
+                <div class="cell-item">
+                    <div class="cell-left">订单编号:</div>
+                    <div class="cell-right ">
+                        <span id="orderNum" class="orderNum">121123876548842</span>
+                        <div class="btn btn-rds margin-l-15 " id="js-copy">复制</div>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">下单时间:</div>
+                    <div class="cell-right">2018-01-16 14:54</div>
+                </div>
+               
+            </div>
+        </div>
+        <!-- <footer class="m-tabbar flex-around padded-lr-15">
+            <div class="cell-left ">
+                删除订单</div>
+            <div class="cell-right"> -->
+                <!-- 等待发货 -->
+                <!-- <a href="" class="btn btn-hollow margin-l-15">联系卖家</a> -->
+                <!-- 运输中... -->
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                <a href="" class="btn btn-hollow margin-l-15" >确认收货</a> -->
+                <!-- 免单... -->
+
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>  -->
+                <!-- 完成... -->
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                    <a href="" class="btn btn-hollow margin-l-15">评价晒单</a>
+                -->
+
+            <!-- </div>
+        </footer> -->
+
+        <footer class="m-tabbar padded-0 border-no payorder">
+            <div  class="tabbar-item self-start  padded-l-15 font-size-16">
+                 删除订单
+            </div>
+   
+            <div  class=" flex-c-c flex-2">       
+                 <span class="font-size-14 ">实际付款:</span> 
+                <span class="text-default font-size-18  padded-lr-10">
+                    &yen; 106.00
+                </span>
+            </div>
+            <div  class="tabbar-item ">
+               <a href="" class="btn-block btn-default">
+                   立即支付
+               </a>
+            </div>
+        </footer>
+    </section>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+
+    });
+    // 文字复制  @prames  传入要复制的对象
+
+    function jsCopy(obj) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById(obj));
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            selection.removeAllRanges();
+        } else {
+            selection.addRange(range);
+        }
+        document.execCommand('copy');
+    }
+
+    var dialog = window.YDUI.dialog;
+    $('#js-copy').on('click', function () {
+        jsCopy('orderNum');
+        dialog.toast('复制成功！去粘贴吧', 'none', 1000);
+    });
+
+</script>
+
+</html>

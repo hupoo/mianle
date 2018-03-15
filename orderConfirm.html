@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>确认订单</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_535835_vb6ccsrwfelmobt9.css">
+    <link rel="stylesheet" href="../../css/orderConfirm.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="m-icon icon-left-light "></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">
+                    确认订单
+                </span>
+            </div>
+            <a href="#" class="navbar-item js-edit" id="J_edit">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+        <div class="g-scrollview border-no">
+            <div class="m-cell margin-t-10 reset margin-b-0">
+                <a class="cell-item address flex-column " href="javascript:;">
+                    <div class="cell-left ">
+                        <span>李三</span>
+                        <span>156****3524</span>
+                        <span class="tag text-gray font-size-10" pixel-border="all">
+                            默认地址
+                        </span>
+                    </div>
+                    <div class=" cell-right font-size-14  flex-start cell-arrow">
+                        <i class="m-icon icon-local-green trans-14"></i>
+                        <p class="less-2">
+                            湖南省长沙市岳麓区麓谷街道中电软件园9栋
+                        </p>
+                    </div>
+                </a>
+                <div class="cell-item border-b">
+                    <div class="cell-left">订单编号:</div>
+                    <div class="cell-right flex-start font-size-14 padding-l-10">
+                        121123876548842
+                    </div>
+                </div>
+                <a class="cell-item border-b goods_img" href="./detailedList.html">
+                    <div class="cell-left">
+                        <div class="item-img">
+                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" alt="">
+                        </div>
+                        <div class="item-img">
+                            <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="cell-right font-size-14 cell-arrow text-gray">
+                        共 2 件
+                    </div>
+                </a>
+            </div>
+            <div class="m-cell order-price  margin-b-0">
+                <div class="cell-item">
+                    <div class="cell-left">商品金额</div>
+                    <div class="cell-right ">
+                        ¥
+                        <span>98.00</span>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">运费</div>
+                    <div class="cell-right"> ¥
+                        <span>8.00</span>
+                    </div>
+                </div>
+                <!-- 免单显示 -->
+                <div class="cell-item">
+                    <div class="cell-left">免单差价</div>
+                    <div class="cell-right"> ¥
+                        <span>98.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="m-cell ">
+                <div class="cell-item border-t padded-r-0">
+                    <div class="cell-left font-size-14 text-gray">
+                        <i class="m-icon icon-mian-red trans-12"></i>
+                        只需支付
+                        <span class="text-default"> &yen;36.00</span>可参与三天免一天全免资格
+                    </div>
+                    <label class="cell-right padded-r-10">
+                        <input type="checkbox" class="m-switch-old">
+                        <span class="m-switch trans-8"></span>
+                    </label>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <footer class="m-tabbar padded-0 border-no settlement">
+            <div class="tabbar-item flex-row flex-start padded-l-15 flex-2">
+                <p class="prompt">
+                    <span class="text-dark font-size-14">实付款:</span>
+                    <span class="realcash text-default font-size-18"> ¥ 50.00 </span>
+                </p>
+            </div>
+
+            <a href="#" class="tabbar-item bg-default  font-size-16 text-light  go" id="J_pay">
+                立即付款
+            </a>
+        </footer>
+        <footer class="m-tabbar padded-15 hidden">
+            <div class="flex-1 font-size-14 text-gray">
+                <div class="checkbox margin-r-15">
+                    <input type="checkbox" name="checkbox" />
+                    <i class="cell-checkbox-icon margin-r-10"></i>
+                    全选
+                </div>
+            </div>
+            <div class="margin-l-15">
+                <a href="" pixel-border="all" class="btn  text-gray  btn-collect margin-r-15
+              ">收藏</a>
+                <a href="" pixel-border="all" class="btn text-default  btn-del">删除</a>
+            </div>
+        </footer>
+    </section>
+
+
+
+</body>
+<!-- 遮罩 -->
+<div class="payMethods pos-f" id="j_payways">
+    <div class="">
+        <div class="m-celltitle text-gray font-siz-18 border-b bg-light padded-b-0 ">
+            选择支付方式
+            <i class="icon-close fr font-size-18">&times;</i>
+        </div>
+        <div class="m-cell margin-b-0">
+            <label class="cell-item" id="alipay">
+                <span class="cell-left">
+                    <i class="iconfont  icon-alipay"></i>支付宝支付</span>
+                <label class="cell-right">
+                    <input type="radio" value="" name="radio">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+            <label class="cell-item" id="wechat_pay">
+                <span class="cell-left">
+                    <i class="iconfont  icon-wechat"></i>微信支付</span>
+                <label class="cell-right">
+                    <input type="radio" value="" name="radio">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+            <label class="cell-item">
+                <span class="cell-left">
+                    <i class="iconfont icon-balance"></i> 余额支付</span>
+                <label class="cell-right">
+                    <input type="radio" value="" name="radio" class="J_balance">
+                    <i class="cell-checkbox-icon"></i>
+                </label>
+            </label>
+        </div>
+
+        <!--  -->
+
+    </div>
+    <p>
+        <a class="btn-block btn-primary js-pay margin-t-0">立即支付</a>
+
+    </p>
+</div>
+
+<div class="m-mask flex-c flex-column inputPassword">
+    <div class="password-content flex-1 flex-c-c">
+        <div id="payPassword_container" class="alieditContainer ">
+            <p class="text-center font-size-14" pixel-border="bottom">请输入6位数字支付密码</p>
+            <div class="i-block six-password">
+                <input class="i-text sixDigitPassword" id="" type="password" autocomplete="off" required value="" name="" maxlength="6" minlength="6"
+                    readonly>
+                <ul class="keyboard-password J_FillPwdBox">
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                    <li>
+                        <i style="display: none;"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="keyboard-content margin-t-0">
+        <div class="keyboard-title flex-c-around">
+            <span>
+                <i class="m-icon icon-safe trans-15"></i>
+            </span>
+            <span pixel-border="vertical" class="font-size-18 text-gray keboard-text">免了么安全键盘</span>
+            <span class="arrow J_back"></span>
+        </div>
+        <ul class="keyboard-numbers">
+            <li>
+                <a href="javascript:;" class="J_Nums">1</a>
+                <a href="javascript:;" class="J_Nums">2</a>
+                <a href="javascript:;" class="J_Nums">3</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="J_Nums">4</a>
+                <a href="javascript:;" class="J_Nums">5</a>
+                <a href="javascript:;" class="J_Nums">6</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="J_Nums">7</a>
+                <a href="javascript:;" class="J_Nums">8</a>
+                <a href="javascript:;" class="J_Nums">9</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="J_Cancel">取消</a>
+                <a href="javascript:;" class="J_Nums">0</a>
+                <a href="javascript:;" class="J_Backspace">
+                    <i class="m-icon icon-back trans-15"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+
+    // 立即付款操作
+    $(function () {
+        $('#J_pay').click(function () {
+            fadeIn();
+        });
+        $('.icon-close').click(function () {
+            fadeOut();
+        });
+
+        $('.J_balance').click(function () {
+            if ($(this).is(':checked')) {
+               $('.inputPassword').addClass('fadeIn');
+                $('#j_payways').removeClass('fadeIn');
+            }
+        })
+    })
+
+
+    //弹出
+    function fadeIn() {
+        $('#j_payways').addClass('fadeIn');
+    }
+    //回收
+    function fadeOut() {
+        $('#j_payways').removeClass('fadeIn');
+    }
+    // 键盘事件
+    $(".keyboard-numbers a").click(function (e) {
+        e.stopPropagation();
+    })
+    
+    var carNum = "";
+    $(".keyboard-numbers a").not('.J_Cancel,.J_Backspace').click(function () {
+        if (carNum.length < 6) {
+            carNum = carNum + $(this).html();
+            $(".sixDigitPassword").val(carNum);
+            dot(carNum);
+        }
+    });
+    // 回退
+    $(".keyboard-numbers a.J_Backspace").click(function () {
+        if (carNum.length != 0) {
+            var num = carNum.substr(0, carNum.length - 1);
+            $(".sixDigitPassword").val(num);
+            carNum = num;
+            dot(carNum);
+        }
+    });
+    // 取消按钮
+    $(".keyboard-numbers a.J_Cancel").click(function () {
+        init();
+           });
+        //    键盘回收
+    $(".J_back").click(function () {
+        init();
+        $('.inputPassword').removeClass('fadeIn');
+    });
+    //  密码样式显示
+    function dot(pr) {
+        var obj = $('.J_FillPwdBox i');
+        obj.css({ 'display': 'none' });
+        for (let i = 0; i < pr.length; i++) {
+            obj.eq(i).css({ 'display': 'block' });
+        }
+    }
+    // 初始化；
+    function init() {
+         carNum = "";
+        $(".sixDigitPassword").val('');
+        $('.J_FillPwdBox i').css({ 'display': 'none' });
+    }
+</script>
+
+</html>

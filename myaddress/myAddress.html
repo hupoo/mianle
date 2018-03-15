@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的收货地址</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/myAddress.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">我的收货地址</span>
+            </div>
+            <a href="javascript:void(0)" class="navbar-item pull-right" >
+                <span id="manage" >管理</span>  
+                <span id="done" class="hidden">完成</span>  
+                
+            </a>
+        </header>
+
+        <div class="g-scrollview">
+            <div class="m-cell padded-tb-10 bg-empty">
+                <div class="cell-item margin-b-15 bg-light">
+                    <div class="address-info flex-column">
+                        <div class="flex-c-c">
+                            <div class="cell-left padded-r-10">地址</div>
+                            <div class="cell-right text-dark less-1">
+                                湖南省 长沙市 岳麓区湖南省 长沙市 岳麓区湖南省 长沙市 岳麓区
+                            </div>
+                        </div>
+                        <div class="flex-c-c">
+                            <div class="cell-left padded-r-10 less-1">联系人</div>
+                            <div class="cell-right text-dark ">
+                               张三
+                            </div>
+                        </div>
+                        <div class="flex-c-c  phonenumber">
+                            <div class="cell-left padded-r-10">手机号码</div>
+                            <div class="cell-right text-dark ">
+                             15616223454 
+                            </div>
+                        </div>
+                            <div class="flex-c  default-address border-b hidden"> 
+                                <span class="checkbox  font-size-14" style="width:.5rem;">
+                                    <input type="radio" name="checkbox" checked="">
+                                    <i class="cell-checkbox-icon margin-r-10 "></i>
+                                </span>
+                                <span class="font-size-">设为默认</span>
+                            </div>
+                    </div>
+                    <div class="edit-cell flex-c-c ">
+                        <a href="./addOrEdit.html" class="text-center">
+                            <i class="icon-compose text-gray font-size-18"></i>
+                        </a>
+                        <a href="javascript:void(0)"  class="text-center delete">
+                            <i class="icon-delete text-gray font-size-18"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cell-item margin-b-15 bg-light">
+                    <div class="address-info flex-column">
+                        <div class="flex-c-c">
+                            <div class="cell-left padded-r-10">地址</div>
+                            <div class="cell-right">
+                                <span class="text-dark less-1 ">湖南省 长沙市 岳麓区湖南省 长沙市 岳麓区湖南省 长沙市 岳麓区</span>
+                            </div>
+                        </div>
+                        <div class="flex-c-c">
+                            <div class="cell-left padded-r-10">联系人</div>
+                            <div class="cell-right">
+                                <span class="text-dark less-1 ">张三</span>
+                            </div>
+                        </div>
+                        <div class="flex-c-c">
+                            <div class="cell-left padded-r-10">手机号码</div>
+                            <div class="cell-right">
+                                <span class="text-dark less-1 "> 15616223454 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-cell flex-c-c ">
+                        <a href="./addOrEdit.html" class="text-center">
+                            <i class="icon-compose text-gray font-size-18"></i>
+                        </a>
+                        <a href="javascript:void(0)"  class="text-center delete">
+                            <i class="icon-delete text-gray font-size-18"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- 没有地址就显示 当显示时 给 m-tabbar 添加 hidden-->
+            <div class="noaddress  flex-c-c flex-column hidden">
+                <a href="javascript:;">
+                    <i class="img-round plus"></i>
+                </a>
+                <p class="text-gray font-size-16 margin-t-15">添加收货地址</p>
+            </div>
+        </div>
+        <footer class="m-tabbar">
+            <a href="./addOrEdit.html" class="tabbar-item flex-row">
+                <i class=" icon-plus margin-r-10"></i>
+                <span class="font-size-16 text-dark ">添加收货地址</span>
+            </a>
+        </footer>
+    </section>
+
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function(){
+        // 地址编辑 开关
+        $('#manage').click(function(){
+            $(this).addClass('hidden').siblings('#done').removeClass('hidden');
+            $('.cell-item .edit-cell').addClass('fadeIn');
+
+             //  逻辑操作
+            // dosomething...
+        });
+          // 地址编辑 完成
+        $('#done').click(function(){
+            $(this).addClass('hidden').siblings('#manage').removeClass('hidden');
+            $('.cell-item .edit-cell').removeClass('fadeIn');
+            //  逻辑操作
+            // dosomething...
+        });
+
+        // 删除地址
+        $('.delete').click(function () {
+            YDUI.dialog.confirm('', '是否删除当前地址？', [
+                {
+                    txt: '取消',
+                    color: false, /* false:黑色 true:绿色 或 使用颜色值 */
+                    callback: function () { /* 按钮回调 */ }
+                },
+                {
+                    txt: '确认',
+                    color: '#fff',
+                    callback: function () { /* 按钮回调 */ }
+                }
+            ]);
+    });
+    })
+</script>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人信息设置</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/perInfoSetting.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">个人信息设置</span>
+            </div>
+            <a href="" class="navbar-item">
+                跳过
+            </a>
+        </header>
+
+        <div class="g-scrollview ">
+            <form action="">
+
+            <div class="m-cell margin-t-10 bg-empty">
+                <div class="cell-item avtor border-no" data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
+                    <div class="cell-left ">
+                        <span class="cell-icon img-round ">
+                            <img src="//static.ydcss.com/ydui/img/logo.png " />
+                        </span>头像设置</div>
+                    <div class="cell-right cell-arrow "></div>
+                </div>
+                <div class="cell-item margin-t-10 border-no">
+                    <div class="cell-left">昵称设置</div>
+                    <div class="cell-right padded-l-15">
+                        <input type="text" class="cell-input" placeholder="为您的帐号取个名字吧" autocomplete="off" maxlength="7" />
+                    </div>
+                </div>
+                <div class="cell-item margin-t-10 border-no flex-column ">
+                    <div class="cell-left padded-tb-15">性别</div>
+                    <div class="cell-right  ">
+                        <div class="rds-group flex-c-around">
+                            <label for="" class="rds-list-item ">
+                                <input type="radio" value="1" name="gender">
+                                <span pixel-border="all" class="man">
+                                    男<i class="lo-icon icon-man trans-8"></i>
+                                </span>
+                            </label>
+                            <label for="" class="rds-list-item">
+                                <input type="radio" value="2" name="gender">
+                                <span pixel-border="all" class="woman">
+                                    女<i class="lo-icon  icon-woman  trans-8"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <p class="sub">
+                    <input type="submit" class="btn-block" value="保存">
+                </p>
+            </form>
+        </div>
+    </section>
+<!-- 弹出菜单 -->
+<div class="m-actionsheet" id="actionSheet">
+    <a href="#" class="actionsheet-item">
+        <input type="file" capture="camrea"> 拍照上传</a>
+    <a href="#" class="actionsheet-item">
+        <input type="file" accept="image/*"> 本地上传</a>
+    <a href="javascript:;" class="actionsheet-action" id="cancel">取消</a>
+</div>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+        $('input[type="radio"]').click(function(){
+            $(this).siblings('span').find('i').toggleClass('icon-man_w icon-woman_w ');
+        })
+    });
+
+    var dialog = window.YDUI.dialog;
+
+
+
+</script>
+
+</html>

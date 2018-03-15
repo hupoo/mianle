@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>资金明细</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/fundsDetails.css">
+        <link rel="stylesheet" href="../css/common/DateSelector.css">
+
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar ">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">资金明细</span>
+            </div>
+            <a href="" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview ">
+            <div class="current text-default text-center">
+                <h1 class="font-size-16">1800.00 <em class="font-size-12">元</em>
+                </h1>
+                <h6 class="font-size-12 margin-t-15">账户余额</h6>
+            </div>
+            <div class="m-cell ">
+                <div class="cell-item ">
+                    <div class="cell-left font-size-16 ">
+                        分类选择
+                    <i class="m-icon icon-rights trans-8 margin-r-0"></i>
+                    <div class="rds-group">
+                        <label  class="rds-list-item">
+                            <input type="checkbox" name="">
+                            <span>收人</span>
+                        </label>
+                        <label  class="rds-list-item">
+                            <input type="checkbox" name="">
+                            <span >支出</span>
+                        </label>
+                    </div>
+                    </div>
+                    <div class="cell-right  font-size-16 flex-end">
+                        <span id="times">时间</span> 
+                        <i class="m-icon icon-rights trans-90d margin-r-0"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="m-cell fundslist">
+                <div class="cell-item ">
+                    <div class="cell-left text-gray  padded-tb-15">
+                        <span class="times font-size-12 "  >
+                            2018-01-22 11:47:32
+                        </span>
+                        <p class="detail less-1 font-size-14">
+                             您在xxx店铺的订单123566，使用余额支付
+                        </p>
+                    </div>
+                    <div class="cell-right ">
+                        <span class="tag">-</span>
+                       <span class="cash">500.00</span>
+                        元
+                    </div>
+                </div>
+                <div class="cell-item ">
+                    <div class="cell-left text-gray  padded-tb-15">
+                        <span class="times font-size-12 "  >
+                            2018-01-22 11:47:32
+                        </span>
+                        <p class="detail less-1 font-size-14">
+                            充值200元
+                        </p>
+                    </div>
+                    <div class="cell-right ">
+                        <span class="tag">+</span>
+                       <span class="cash">200.00</span>
+                        元
+                    </div>
+                </div>
+                
+                
+            </div>
+            <p class="text-gray text-center font-size-14 margin-t-10">没有更多了~</p>
+        </div>
+    </section>
+    <div id="contianer"></div>
+</body>
+<script src="../js/DateSelector.js"></script>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+ 
+    });
+       //---------------------函数调用开始---------------------
+        new DateSelector({
+            input: 'times',//点击触发插件的input框的id
+            container: 'contianer',//插件插入的容器id
+            type: 0,
+            //0：不需要tab切换，自定义滑动内容，建议小于三个；
+            //1：需要tab切换，【年月日】【时分】完全展示，固定死，可设置开始年份和结束年份
+            param: [1, 1, 1],
+            //设置['year','month','day','hour','minute'],1为需要，0为不需要,需要连续的1
+            beginTime: [2018, 01, 01],//如空数组默认设置成1970年1月1日0时0分开始，如需要设置开始时间点，数组的值对应param参数的对应值。
+            endTime: [],//如空数组默认设置成次年12月31日23时59分结束，如需要设置结束时间点，数组的值对应param参数的对应值。
+            recentTime: [],//如不需要设置当前时间，被为空数组，如需要设置的开始的时间点，数组的值对应param参数的对应值。
+            success: function (arr, arr2) {
+                document.getElementById(this.input).innerHTML = arr2.toString().replace(/[,]/g, '-');
+
+            }//回调
+        });
+  //---------------------函数调用结束---------------------
+
+</script>
+
+</html>

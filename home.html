@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar  flex-c-between">
+            <!-- <a href="#" class="left">
+                <span class="font-size-14" id="J_local">长沙</span>
+                <i class="m-icon icon-down-light trans-8"></i>
+            </a> -->
+            <div class="center flex-1 margin-l-15">
+                <a href="./search.html" class="flase-form flex-c flex-c-between">
+                    <span class="search font-size-14">
+                        <i class="m-icon icon-search-light"></i>搜索
+                    </span>
+                </a>
+            </div>
+            <a href="#" class="right">
+                <i class="m-icon icon-msg-light trans-15">
+                </i>
+                <span class="badge badge-danger trans-8">3</span>
+
+            </a>
+            <div class="bg"></div>
+        </header>
+        <div class="g-scrollview ">
+            <!-- //轮播 -->
+            <div class="m-slider nav-slider" id="J_Slider">
+                <div class="slider-wrapper">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/1.jpg">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/3.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-pagination flex-end padded-r-15"></div>
+                <!-- 分页标识 -->
+            </div>
+
+            <!-- 导航 -->
+            <section class="nav">
+                <div class="nav-group flex-c flex-c-around">
+
+                    <div class="nav-item">
+                        <a href="">
+                            <div class="img-wrap img-round pink">
+                                <img src="./img/home_img/freemall.png" />
+                            </div>
+                            <p class="font-size-12 text-center ">全免商城</p>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="javascript:;" onclick="(function(){alert('开发中尽请期待')})()">
+                            <div class="img-wrap img-round orange">
+                                <img src="./img/home_img/nearshop.png" />
+                            </div>
+                            <p class="font-size-12 text-center">附近店铺</p>
+                        </a>
+                    </div>
+                    <div class="nav-item-center ">
+                        <div class="freeDay m-slider" id="J_free">
+                            <div class="slider-wrapper">
+
+                                <div class="free-item slider-item">
+                                    <p class="title">
+                                        <span>107</span>期
+                                    </p>
+                                    <div class="free-wrap flex-c-around">
+                                        <span class="free-item-num active">12</span>
+                                        <span class="free-item-num">13</span>
+                                        <span class="free-item-num">14</span>
+                                    </div>
+                                </div>
+                                <div class="free-item slider-item">
+                                    <p class="title ">
+                                        <span>108</span>期</p>
+                                    <div class="free-wrap flex-c-around">
+                                        <span class="free-item-num active">15</span>
+                                        <span class="free-item-num">16</span>
+                                        <span class="free-item-num">17</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-size-12 text-center">免单日</p>
+                    </div>
+                    <div class="nav-item">
+                        <a href="">
+                            <div class="img-wrap img-round bg-default">
+                                <img src="./img/home_img/countmall.png" />
+                            </div>
+                            <p class="font-size-12 text-center">积分商城</p>
+
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="./sellerIn/sellerIn.html">
+                            <div class="img-wrap img-round purple">
+                                <img src="./img/home_img/sallerin.png" />
+                            </div>
+                            <p class="font-size-12 text-center">商家入驻</p>
+
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- 导航end -->
+
+            <!-- 热销产品 -->
+            <!-- 三一快报 -->
+            <div class="m-cell announcement margin-t-5 border-t">
+                <div class="cell-item">
+                    <div class="cell-left font-size-14 padded-r-15 ">
+                        三一
+                        <span class="text-wrapper padded-lr-5 margin-l-5">快报</span>
+                    </div>
+                    <div class=" cell-right font-size-14 flex-c ">
+                        <div id="new-wrap" class="new-wrap flex-1 margin-r-10 padded-lr-5" pixel-border="vertical">
+                            <ul class="news-list ">
+                                <li>
+                                    <a href="" class="less-1 aui-font-size-12">1大新闻其他</a>
+                                </li>
+                                <li>
+                                    <a href="" class="less-1 aui-font-size-12">2大新闻大新闻其他</a>
+                                </li>
+                                <li>
+                                    <a href="" class="less-1 aui-font-size-12">3重大新闻大新闻其他</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="">更多</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 广告 -->
+            <div class="ad">
+                <div class="m-slider " id="J_adSlider">
+                    <div class="slider-wrapper">
+                        <div class="slider-item">
+                            <a href="#">
+                                <img src="http://www.smsot.com/data/atc/topic/201801/29/E64B684722D21124C1F42F79DF3EB58D.jpg_600_200.jpg">
+                            </a>
+                        </div>
+                        <div class="slider-item">
+                            <a href="#">
+                                <img src="http://www.smsot.com/data/atc/topic/201801/29/E64B684722D21124C1F42F79DF3EB58D.jpg_600_200.jpg">
+                            </a>
+                        </div>
+                        <div class="slider-item">
+                            <a href="#">
+                                <img src="http://www.smsot.com/data/atc/topic/201801/29/E64B684722D21124C1F42F79DF3EB58D.jpg_600_200.jpg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend">
+                <div class="cell-item title">
+                    <div class="cell-left font-size-18 padded-r-15 ">
+                        <span class="line margin-r-15"></span>
+                        分类推荐
+                    </div>
+                    <div class=" cell-right cell-arrow  ">
+                        <a href="./mallSort.html" class="text-gray">更多</a>
+                    </div>
+                </div>
+                <div class="m-grids-2">
+                    <a href="#" class="grids-item">
+                        <h1 class="font-size-16 type">生鲜食品类</h1>
+                        <p class="font-size-14 text-gray slogan">健康生活，领先一步</p>
+
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item">
+                        <h1 class="font-size-16 type">养生保健类</h1>
+                        <p class="font-size-14 text-gray slogan">享受生活，养生有道</p>
+
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="m-grids-4">
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">饰品类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">零食类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">美妆类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">电器类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="m-grids-4">
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">饰品类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">零食类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">美妆类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">电器类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="m-grids-4">
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">饰品类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">零食类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">美妆类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">电器类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="m-grids-4">
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">饰品类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">零食类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">美妆类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">电器类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="m-grids-4">
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">饰品类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">零食类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">美妆类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+                    <a href="#" class="grids-item flex-c-between flex-column">
+                        <h1 class="font-size-16">电器类</h1>
+                        <div class="grids-icon">
+                            <img src="https://m.360buyimg.com/n1/s130x130_jfs/t9085/22/907696059/71305/93f88c62/59b85847N20776d8e.jpg!q70.jpg">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        <footer class="m-tabbar ">
+            <a href="./home.html" class="tabbar-item tabbar-active">
+                <span class="tabbar-icon">
+                    <i class="baricon icons-home"></i>
+                </span>
+                <span class="tabbar-txt">首页</span>
+            </a>
+          
+            <a href="./discover/discover.html" class="tabbar-item">
+                <span class="tabbar-icon">
+                    <i class="baricon icons-dicsover"></i>
+                </span>
+                <span class="tabbar-txt">发现</span>
+            </a>
+            <a href="./shopCar.html" class="tabbar-item">
+                <span class="tabbar-icon">
+                    <i class="baricon icons-cart"></i>
+                </span>
+                <span class="tabbar-txt">购物车</span>
+            </a>
+            <a href="./index.html" class="tabbar-item ">
+                <span class="tabbar-icon">
+                    <i class="baricon icons-user"></i>
+                </span>
+                <span class="tabbar-txt">个人中心</span>
+            </a>
+        </footer>
+    </section>
+          
+
+    <script type="text/javascript" src="./js/jquery.3.0.0.min.js"></script>
+    <script type="text/javascript" src="./ydui/build/js/ydui.js"></script>
+    <script>
+        $(function () {
+            // 轮播
+            $('#J_Slider').slider({
+                speed: 300,
+                autoplay: 3000,
+                lazyLoad: true
+            });
+            //   广告轮播
+            $('#J_adSlider').slider({
+                speed: 300,
+                autoplay: 5000,
+                lazyLoad: true
+            });
+            // 免单日轮播
+            $('#J_free').slider({
+                speed: 200,
+                autoplay: 5000,
+                lazyLoad: true
+            });
+            document.addEventListener('touchmove', function (e) {
+                e.returnValue = true;
+            }, false);
+            // 滚动条
+            setInterval('AutoScroll("#new-wrap")', 3000)
+        });
+        // 信息条滚动
+        function AutoScroll(obj) {
+            $(obj).find('ul:first').animate({
+                marginTop: - $(obj).find('ul:first li:first').height() + 'px'
+            }, 500,
+                function () {
+                    $(this).css({ marginTop: '0px' }).find("li:first").appendTo(this);
+                }
+            );
+        }
+
+
+        // 搜索栏位置
+        function isTop() {
+            var num = 200;
+            var $head =$('.bg');
+            var $form =$('.flase-form');
+            var  s = $('.g-scrollview').scrollTop()-$('.nav-slider').height();
+            if (s < 0){
+             $head.css( 'opacity', 0 );
+             $form.css( 'opacity', 0 );
+            }
+            else 
+            {
+             $head.css('opacity', s / num  )
+             $form.css('opacity', s / num  )
+            }
+            if (s > num) {
+             $form.css('opacity',1)
+            $head.css('opacity', 1)
+
+            } 
+};
+    $('.g-scrollview').scroll(function(){
+        isTop();
+    })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+        @import 'base.less';
+        .m-box {
+            height: 4.9rem;
+            background: #3199ff;
+            padding: 1rem .88rem 0;
+            background-image: -webkit-linear-gradient( 90deg, rgb(60, 122, 255) 0%, rgb(101, 184, 255) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(60, 122, 255) 0%, rgb(101, 184, 255) 100%);
+            position: relative;
+            .img-box {
+                width: 2.08rem;
+                height: 2.08rem;
+                border-radius: 3px;
+                img {
+                    width: 100%;
+                }
+            }
+            .box-right {
+                height: 100%;
+                .money {
+                    font-size: .54rem;
+                    margin-top: .3rem;
+                }
+            }
+            .wave {
+                height: 1rem;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        .tab-nav {
+            &::after {
+                width: 0;
+            }
+            .tab-nav-item {
+                padding: .3rem 0;
+                &:not(:last-child):after {
+                    height: 40%;
+                }
+                &.tab-active {
+                    color: #3199ff;
+                    position: relative;
+                }
+                .tab-txt {
+                    font-size: .30rem;
+                    line-height: .45rem;
+                    &:last-child {
+                        margin-top: .1rem;
+                    }
+                }
+            }
+        }
+
+        .tab-panel {
+            height: 100%;
+            color: #000;
+            .m-tabtitle {
+                font-size: .32rem;
+                margin-top: .6rem;
+            }
+            .m-textcontent {
+                text-indent: .5rem;
+                margin: 0 .8rem;
+                height: 4rem;
+                overflow-y: scroll;
+                letter-spacing: 1px;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+        }
+
+        .tab-nav-item.tab-active {
+            &::before {
+                width: 8px;
+                height: 8px;
+                border-bottom: 1px solid currentColor;
+                border-right: 1px solid currentColor;
+                -webkit-transform: rotate(-45deg) scale(.75);
+                -ms-transform: rotate(-45deg) scale(.75);
+                transform: rotate(-45deg) scale(.75);
+                left: -4px !important;
+                top: 50%;
+                margin-top: -2px;
+                margin-left: 0;
+                background: #fff;
+            }
+            &::after {
+                border-color: currentColor;
+            }
+        }
+
+        .tab-nav-item:nth-child(3) {
+            &::after {
+                border-color: #3199ff;
+            }
+        }

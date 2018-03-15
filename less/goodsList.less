@@ -1,0 +1,107 @@
+         @import 'base.less';
+         .m-navbar {
+             position: relative;
+             z-index: 2;
+             .navbar-item {
+                 min-width: 15%;
+                 -webkit-box-flex: 0;
+                 -webkit-flex: 0 0 15%;
+                 -ms-flex: 0 0 15%;
+                 flex: 0 0 15%;
+             }
+             .navbar-center {
+                 width: 80%;
+             }
+             .flase-form {
+                 height: .6rem;
+                 width: 100%;
+                 padding: 0 .1rem;
+                 border-radius: .6rem;
+                 line-height: .6rem;
+                 background-color: rgba(255, 255, 255, 0.2);
+                 .cell-input {
+                     line-height: .6rem;
+                 }
+             }
+         }
+
+         .search {
+             position: relative;
+             .m-icon {
+                 margin-top: -3px;
+                 vertical-align: middle;
+             }
+         }
+
+         .m-list.list-theme4 {
+             padding: 0;
+             .list-item {
+                 margin-top: .12rem;
+                 background: #fff;
+                 padding-left: .24rem;
+                 padding-right: .24rem;
+             }
+             .list-img {
+                 width: 1.6rem;
+                 padding: .8rem 0;
+             }
+             .list-mes {
+                 .list-title {
+                     -webkit-line-clamp: 2;
+                 }
+             }
+         }
+
+         .arrow {
+             position: absolute;
+             width: 0;
+             height: 0;
+             left: 66%;
+             border-right: 5px solid transparent;
+             border-top: 5px solid #808080;
+             border-left: 5px solid transparent;
+         }
+
+         .sort-tab {
+             height: .88rem;
+             li {
+                 width: 100%;
+                 text-align: center;
+                 font-size: .32rem;
+                 line-height: .88rem;
+                 position: relative;
+                 &.all {
+                     .arrow {
+                         top: 50%;
+                     }
+                 }
+                 &.price {
+                     .arrow {
+                         top: 40%;
+                     }
+                     .arrow:last-child {
+                         top: 55%;
+                     }
+                 }
+                 &.active {
+                     color: @baseColor;
+                     .arrow {
+                         border-top-color: @baseColor;
+                     }
+                 }
+             }
+         }
+
+         .filter-bar {
+             background: #fff;
+             border-bottom: solid 1px #ccc;
+             width: 100%;
+             z-index: 100;
+             position: relative;
+         }
+
+         .droplist {
+             position: absolute;
+             top: .88rem;
+             width: 100%;
+         }

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>实名认证</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/nameAuthenticate.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar border-no">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">实名认证</span>
+            </div>
+        </header>
+
+        <div class="g-scrollview border-no ">
+            <p class="text-center text-default font-size-16 alert-msg">请拍摄身份证正反面照片，系统自动识别</p>
+            <div class="camrea-wrap flex-c flex-c-around">
+                <div class="camrea-item"></div>
+                <div class="camrea-item"></div>
+            </div>
+            <p class="text-center text-gray font-size-16 alert-msg">请核对以下信息，如果内容有误，请进行修改
+            </p>
+            <div class="m-cell id-info">
+                <div class="cell-item">
+                    <div class="cell-left">姓名：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">身份证号：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">出生年月：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">名族：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">住址：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">签发机关：</div>
+                    <div class="cell-right"></div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">有效期：</div>
+                    <div class="cell-right"></div>
+                </div>
+            </div>
+
+            <p class="agreement font-size-16 flex-c">
+                <span class="checkbox  font-size-14" style="width:.5rem;">
+                    <input type="checkbox" name="checkbox" checked>
+                    <i class="cell-checkbox-icon margin-r-10 "></i>
+
+                </span>
+                <span>
+                    同意
+                    <a href="" class="text-default">《信息授权和使用协议》</a>
+                </span>
+            </p>
+
+            <p class="margin-t-15 text-center padded-lr-15">
+                <input type="submit" value="提交" class="btn-block btn-disabled" />
+            </p>
+
+        </div>
+        <!-- 提交后显示 -->
+        <div class="g-scrollview border-no  finish hidden">
+            <div class="background"></div> 
+            
+            <div class="complete-info pass"> 
+                <!-- 审核中 doing  已实名  pass -->
+                <div class="vator img-round">
+                    <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" alt="">
+                </div>
+                <p class="name f-weight-600 font-size-16 text-dark margin-tb-15"> 张三</p>
+                <p class="margin-tb-15  font-size-14 text-default"> 已实名</p>
+                <p class="tel margin-tb-15 font-size-16 text-gray"> 156****4562</p>
+                <p class="id-number margin-tb-15 font-size-16 text-gray"> 4***************5</p>
+
+            </div>
+            <div class="base-info" >
+                <a class="cell-item bg-light border-t" href="javascript:;" id="J_showIn">
+                    <div class="cell-left">
+                        基本信息</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a class="cell-item margin-t-15 bg-light" href="javascript:;">
+                    <div class="cell-left">
+                       证件照片</div>
+                    <div class="cell-right text-gray">已完善</div>
+                </a>
+            </div>
+            
+            <div class="safe ">
+                <i class="icon-shield text-default font-size-16"></i> 免了么将保障您的信息安全
+            </div>
+        </div>
+        <section class="g-flexview bg-gray baseInfoDetail">
+            <header class="m-navbar border-no">
+                <a href="#" class="navbar-item" id="J_back">
+                    <i class="back-ico"></i>
+                </a>
+                <div class="navbar-center">
+                    <span class="navbar-title">基本信息</span>
+                </div>
+            </header>
+        
+            <div class="g-scrollview border-no ">
+                <div class="m-cell info-detail">
+                    <div class="cell-item">
+                        <div class="cell-left">国籍(地区)</div>
+                        <div class="cell-right">中国大陆</div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">姓名</div>
+                        <div class="cell-right">张三</div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">性别</div>
+                        <div class="cell-right">男</div>
+                    </div>
+                </div>
+        
+                <div class="m-cell info-detail">
+                    <div class="cell-item">
+                        <div class="cell-left">证件类型</div>
+                        <div class="cell-right">身份证</div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">证件号码</div>
+                        <div class="cell-right">4***************8</div>
+                    </div>
+                </div>
+                <div class="safe ">
+                    <i class="icon-shield text-default font-size-16"></i> 免了么将保障您的信息安全
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $('#J_showIn').click(function(){
+        $('.baseInfoDetail').addClass('slideRight');
+    })
+    $('#J_back').click(function(){
+        $('.baseInfoDetail').removeClass('slideRight');
+    })
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+@import 'base.less';
+.m-switch-old:checked+.m-switch,
+.m-switch:checked {
+    border-color: @baseColor;
+    background: @baseBgColor;
+}
+
+.cell-right{
+    position: relative;
+    input[type=radio],
+    input[type=checkbox]:not(.m-switch){
+        left: 50%;;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 10;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                border:none;
+    }
+} 

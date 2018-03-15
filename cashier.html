@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>收银</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_535835_vb6ccsrwfelmobt9.css">
+    <link rel="stylesheet" href="./ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/cashier.css">
+    <script src="./ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">收银台</span>
+            </div>
+            <a href="" class="navbar-item">
+                订单中心
+            </a>
+        </header>
+
+        <div class="g-scrollview">
+            <div class="m-cell margin-t-10">
+                <div class="cell-item" href="javascript:;">
+                    <div class="cell-left text-gray">
+                        支付金额:</div>
+                    <div class="cell-right text-default font-size-16">
+                        176 元
+                    </div>
+                </div>
+                    <div class="m-celltitle text-gray font-siz-18 border-no bg-gray padded-b-0">
+                        选择支付方式
+                    </div>
+                <div class="m-cell">
+                    <label class="cell-item">
+                        <span class="cell-left"> <i class="iconfont icon-balance"></i> 余额支付</span>
+                        <label class="cell-right">
+                            <input type="radio" value="man" name="radio" checked="">
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+                    <label class="cell-item">
+                        <span class="cell-left"><i class="iconfont  icon-alipay"></i>支付宝支付</span>
+                        <label class="cell-right">
+                            <input type="radio" value="" name="radio">
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+                    <label class="cell-item">
+                        <span class="cell-left"><i class="iconfont  icon-wechat"></i>微信支付</span>
+                        <label class="cell-right">
+                            <input type="radio" value="" name="radio">
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+                    <label class="cell-item">
+                        <span class="cell-left"><i class="iconfont   icon-bank-card"></i>银行卡支付</span>
+                        <label class="cell-right">
+                            <input type="radio" value="" name="radio">
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+                </div>
+            </div>
+            <p> <a class="btn-block btn-primary js-pay">立即支付</a></p>
+
+        </div>
+
+       
+    </section>
+
+</body>
+<script src="./js/jquery.3.0.0.min.js"></script>
+<script src="./ydui/build/js/ydui.js"></script>
+<script>
+
+</script>
+
+</html>

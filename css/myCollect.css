@@ -1,0 +1,32 @@
+.tab-mask {
+  width: 100%;
+  height: .9rem;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.m-list.list-theme4 .list-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: .8rem 0;
+}
+.m-list.list-theme4 .btn {
+  height: .5rem;
+  line-height: .5rem;
+  border-radius: 5px;
+  color: #3199ff;
+}
+.m-list.list-theme4 .btn:after {
+  border-color: #3199ff;
+  border-radius: 10px;
+}
+.shoplist .cell-arrow:after {
+  color: #000;
+  margin-left: 0;
+  display: inline-block;
+}
+.shoplist .btn.js-shop-del {
+  line-height: .4rem;
+  height: .4rem;
+}

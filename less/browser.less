@@ -1,0 +1,47 @@
+@import "base.less";
+
+.m-list {
+    .m-gridstitle {
+        &:after {
+            width: 0;
+        }
+    }
+}
+
+.list-theme4 {
+    background: none;
+    padding: 0;
+}
+
+.m-list {
+    margin-top: .1rem;
+    &:last-child {
+        margin-top: 0;
+    }
+}
+
+.list-theme4 .list-item {
+    padding: .2rem;
+    background: #fff;
+    margin-bottom: .1rem;
+    &:not(:last-child):after {
+        width: 0;
+    }
+    .list-img {
+        width: 1.8rem;
+        padding: .9rem 0;
+    }
+    .list-mes {
+        .list-mes-item {
+            padding-top: 0;
+            margin-top: .3rem;
+        }
+        .list-title {
+            -webkit-line-clamp: 2;
+        }
+    }
+    .list-price {
+        font-size: .36rem;
+        color: @baseColor;
+    }
+}

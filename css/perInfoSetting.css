@@ -1,0 +1,53 @@
+.avtor .cell-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  overflow: hidden;
+  margin-right: .2rem;
+  background-color: #ccc;
+}
+.avtor .cell-icon img {
+  width: 100%;
+  height: 100%;
+}
+.avtor .cell-left {
+  font-size: .36rem;
+}
+.avtor .cell-right {
+  height: 1.6rem;
+}
+.m-cell .cell-item {
+  background: #fff;
+}
+.rds-group {
+  width: 100%;
+}
+.rds-group .rds-list-item span {
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .32rem;
+  border-radius: .6rem;
+  padding: 0 .3rem;
+  background: none;
+}
+.rds-group .rds-list-item .man {
+  border-color: #3199ff;
+  color: #3199ff;
+}
+.rds-group .rds-list-item .woman {
+  border-color: #ff70f0;
+  color: #ff70f0;
+}
+.rds-group .rds-list-item i {
+  display: inline-block;
+  margin-top: 3px;
+  vertical-align: top;
+}
+.rds-group .rds-list-item input[type='radio']:checked + .woman,
+.rds-group .rds-list-item input[type='checkbox']:checked + .woman {
+  color: #fff;
+  background: #ff70f0;
+}
+.sub {
+  padding: 0 .24rem;
+  margin-top: .4rem;
+}

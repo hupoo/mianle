@@ -1,0 +1,176 @@
+        @import 'base.less';
+        .order-status,
+        .order-notice {
+            text-align: center;
+            color: #fff;
+            background: @opctiyBgColor;
+            font-size: .36rem;
+            position: relative;
+            .wave {
+                position: absolute;
+                height: .6rem;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .order-status {
+            height: 1.6rem;
+            position: relative;
+            .status-txt {
+                padding-top: .3rem;
+            }
+        }
+
+        .order-notice {
+            padding-top: .3rem;
+            height: 2rem;
+        }
+
+        .reset {
+            .cell-item {
+                padding-top: .2rem;
+                padding-bottom: .2rem;
+            }
+            .cell-right {
+                overflow: hidden;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: start;
+                -webkit-align-items: flex-start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                text-align: left;
+                color: #000;
+                &.cell-arrow:after {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -.17rem;
+                    right: .24rem;
+                }
+            }
+        }
+
+        .m-celltitle{
+            line-height: .88rem;
+        } .express {
+            .cell-right {
+                height: .8rem;
+                line-height: .4rem;
+                padding-right: .4rem;
+            }
+        }
+
+        .address {
+            .cell-right {
+                padding-left: .6rem;
+            }
+        }
+
+        .m-list.list-theme4 {
+            .list-img {
+                width: 1.6rem;
+                padding: .8rem 0;
+            }
+        }
+
+        .share {
+            background-color: @baseColor;
+            color: #fff !important;
+            padding: 0 .2rem;
+        }
+
+        .btn-rds {
+            height: .4rem;
+            line-height: .4rem;
+            &:after {
+                content: '';
+                width: 200%;
+                height: 200%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                -webkit-transform: scale(0.5);
+                -ms-transform: scale(0.5);
+                transform: scale(0.5);
+                -webkit-transform-origin: 0 0;
+                -ms-transform-origin: 0 0;
+                transform-origin: 0 0;
+                border: 1px solid #808080;
+                border-radius: 6px;
+            }
+        }
+
+         ::-moz-selection {
+            background: transparent;
+        }
+
+         ::selection {
+            background: transparent;
+        }
+
+        .btn-hollow {
+            border-radius: .4rem;
+            padding: 0 .15rem;
+            color: @baseColor;
+            height: .4rem;
+            line-height: .4rem;
+            &:after {
+                border-radius: .4rem;
+                border-color: @baseColor;
+            }
+        }
+
+        .order-text {
+            .cell-item {
+                div {
+                    color: #808080 !important;
+                }
+                margin-right: 0;
+            }
+            .cell-right {
+                font-size: .28rem;
+                height: .44rem;
+                -webkit-box-pack: start;
+                -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                margin-left: .1rem;
+            }
+        }
+
+        .order-price {
+            .cell-item {
+                margin-right: 0;
+                padding-right: .24rem;
+            }
+            .cell-right {
+                font-size: .32rem;
+            }
+        }
+
+        .g-scrollview:after {
+            height: .1rem;
+        }
+
+        .ercode-box {
+            padding-top: .4rem;
+            height: 4rem;
+            background: #fff;
+            .ercode-self {
+                width: 1.8rem;
+                height: 1.8rem;
+                display: inline-block;
+                margin: .2rem 0;
+            }
+        }
+        /* ----------------------payorder------------------ */
+
+        .payorder .tabbar-item {
+            .btn-block {
+                width: 2rem;
+            }
+        }

@@ -1,0 +1,18 @@
+.m-gridstitle {
+  line-height: .6rem;
+}
+.cell-item {
+  margin-right: 0;
+  padding-right: .24rem;
+}
+.cell-item .cell-left {
+  min-width: .7rem;
+}
+::-webkit-input-placeholder {
+  font-family: sans-serif;
+  color: #ccc;
+}
+.dress::-webkit-input-placeholder {
+  text-align: right;
+  padding-right: .2rem;
+}

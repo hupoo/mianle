@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>更换手机号码</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/telUnbund.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_535835_67j58s7fb2qbmx6r.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar border-no">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">更换手机号码</span>
+            </div>
+        </header>
+
+        <div class="g-scrollview border-no">
+            <form action="">
+                <div class="m-cell margin-t-10">
+                    <div class="cell-item">
+                        <div class="cell-left">
+                            <i class="icon-phone3"></i>
+                            <input type="tel" class="cell-input  font-size-16" name="" id="" value="121354865">
+                        </div>
+                        <div class=" cell-right ">
+
+                        </div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">
+                            <i class="icon-feedback"></i>
+                        </div>
+                        <div class="cell-right">
+                            <input type="number" class="cell-input font-size-16" placeholder="请输入验证码">
+                            <a href="javascript:;" class="btn getcode font-size-16 text-dark">获取验证码</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <p class="margin-t-15 errormsg font-size-14 text-danger padded-lr-15">
+                    <!-- 错误提示在这里显示 -->
+                </p>
+                <p class=" text-center btn-box">
+                    <input type="submit" value="确定" class="btn-block block-center" style="width:50%;">
+                </p>
+            </form>
+
+          
+        </div>
+    </section>
+</body>
+<div class="m-mask ">
+    <div class="dialog">
+        <div class="dialog-title">
+            图形验证码
+            <!-- <i class="icon-close">&times;</i> -->
+        </div>
+        <div class="dialog-body">
+            <div class="dialog-form flex-c-c">
+                <input type="text" class=" border-input  font-size-16 margin-r-15 bg-gray" name="" id="validate" value="">
+                <input type="button" value="1s4d" onclick="createCode()" class=" border-input bg-gray   code " id="code">
+    
+            </div>
+        </div>
+        <p class="margin-t-15 text-center">
+            <input type="submit" value="确定" class="btn bg-default btn-sub js-ok">
+        </p>
+    </div>
+</div>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script src="../js/index.js"></script>
+<script>
+     $(function () {
+            createCode();
+            var dialog = window.YDUI.dialog;
+            $('.js-ok').on('click', function () {
+                var res = $('#code').val().toLowerCase();
+                switch ($("#validate").val()) {
+                    case res:
+                        dialog.toast('验证成功', 'none', 1000);
+                        $('.m-mask').addClass('hidden');
+                        break;
+                    case '':
+                        dialog.toast('请输入图形验证码', 'none', 1000);
+                        createCode();
+                        break;
+                    default:
+                        dialog.toast('验证错误', 'none', 1000);
+                        $("#validate").val('');
+                        createCode();
+                        break;
+                }
+
+            });
+            var $getCode = $('.getcode');
+
+            /* 定义参数 */
+            $getCode.sendCode({
+                disClass: 'btn-disabled',
+                secs: 60,
+                run: false,
+                runStr: '{%s}秒后获取',
+                resetStr: '重新获取验证码'
+            });
+
+            $getCode.on('click', function () {
+                /* ajax 成功发送验证码后调用【start】 */
+                dialog.loading.open('发送中');
+                setTimeout(function () {
+
+                    dialog.loading.close();
+
+                    $getCode.sendCode('start');
+                    dialog.toast('已发送', 'success', 1500);
+
+                }, 1500);
+            });
+        })
+</script>
+
+</html>

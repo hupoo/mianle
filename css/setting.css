@@ -1,0 +1,19 @@
+.m-switch-old:checked + .m-switch,
+.m-switch:checked {
+  border-color: #3199ff;
+  background: #3199ff;
+}
+.cell-right {
+  position: relative;
+}
+.cell-right input[type=radio],
+.cell-right input[type=checkbox]:not(.m-switch) {
+  left: 50%;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+}

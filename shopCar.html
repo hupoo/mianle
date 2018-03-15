@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>购物车</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="./css/shopCar.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="m-icon icon-left-light "></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">
+                    购物车
+                </span>
+            </div>
+            <a href="#" class="navbar-item ">
+                <span id="J_edit">编辑</span>
+                <span id="done" class="hidden">完成</span>
+            </a>
+        </header>
+        <div class="g-scrollview border-no">
+            <!-- <div class="m-cell lists">
+                <label class="cell-item ">
+                    <span class="cell-left">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox"  class="shop_check"/>
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                    </span>
+                    <a href="#" class="cell-right flex-c-between cell-arrow">
+                        店铺名
+                    </a>
+                </label>
+                <article class="m-list list-theme4 bg-empty">
+                    <div class="list-item-wrap">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="son_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                        <div class="list-item">
+                            <a class="list-img" href="#">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </a>
+                            <div class="list-mes">
+                                <a class="list-title " href="">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</a>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        颜色： 黑色; 尺码： 39码;
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default  count">
+                                    <div class="text-gray ">
+                                        &yen;
+                                        <span class="text-default font-size-16 price" >
+                                            34.7</span>
+                                    </div>
+                                    <div >
+                                        <span class="m-spinner " >
+                                            <a href="javascript:;" class="J_Del"></a>
+                                            <input type="number" class="J_Input" value="1" placeholder="" />
+                                            <a href="javascript:;" class="J_Add"></a>
+                                        </span>
+                                    </div>
+                                    <div class="hidden ">
+                                        <input type="number" hidden class="price_total">
+                                    </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </article>
+            </div> -->
+            <!-- <div class="m-cell lists">
+                <label class="cell-item ">
+                    <span class="cell-left">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="shop_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                    </span>
+                    <a href="#" class="cell-right flex-c-between cell-arrow">
+                        店铺名
+                    </a>
+                </label>
+                <article class="m-list list-theme4 bg-empty">
+                    <div class="list-item-wrap">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="son_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                        <div class="list-item">
+                            <a class="list-img" href="#">
+                                <img src="http://img14.360buyimg.com/n7/jfs/t2638/123/832145671/84225/48fda645/57286144N97397eac.jpg" data-url="http://img14.360buyimg.com/n7/jfs/t2638/123/832145671/84225/48fda645/57286144N97397eac.jpg">
+                            </a>
+                            <div class="list-mes">
+                                <a class="list-title " href="">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</a>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        颜色： 黑色; 尺码： 39码;
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default  count">
+                                    <div class="text-gray ">
+                                        &yen;
+                                        <span class="text-default font-size-16 price">
+                                            34.7</span>
+                                    </div>
+                                    <div>
+                                        <span class="m-spinner ">
+                                            <a href="javascript:;" class="J_Del"></a>
+                                            <input type="number" class="J_Input" value="1" placeholder="" />
+                                            <a href="javascript:;" class="J_Add"></a>
+                                        </span>
+                                    </div>
+                                    <div class="hidden ">
+                                        <input type="number" class="price_total" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </article>
+                <article class="m-list list-theme4 bg-empty">
+                    <div class="list-item-wrap">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="son_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                        <div class="list-item">
+                            <a class="list-img" href="#">
+                                <img src="http://img14.360buyimg.com/n7/jfs/t2638/123/832145671/84225/48fda645/57286144N97397eac.jpg" data-url="http://img14.360buyimg.com/n7/jfs/t2638/123/832145671/84225/48fda645/57286144N97397eac.jpg">
+                            </a>
+                            <div class="list-mes">
+                                <a class="list-title " href="">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</a>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        颜色： 黑色; 尺码： 39码;
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default  count">
+                                    <div class="text-gray ">
+                                        &yen;
+                                        <span class="text-default font-size-16 price">
+                                            34.7</span>
+                                    </div>
+                                    <div>
+                                        <span class="m-spinner ">
+                                            <a href="javascript:;" class="J_Del"></a>
+                                            <input type="number" class="J_Input" value="1" placeholder="" />
+                                            <a href="javascript:;" class="J_Add"></a>
+                                        </span>
+                                    </div>
+                                    <div class="hidden ">
+                                        <input type="number" class="price_total" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div> -->
+        </div>
+        <footer class="m-tabbar padded-0 border-no " id="J_total">
+            <div class="tabbar-item flex-row flex-start padded-l-15 flex-2">
+                <div class="checkbox margin-r-15 font-size-14">
+                    <input type="checkbox" name="checkbox" id="total_all_check" checked />
+                    <i class="cell-checkbox-icon margin-r-10 "></i>
+                    全选
+                </div>
+                <p class="prompt">
+                    <span>合计:</span>
+                    <span class="realcash text-default font-size-18"> ¥ 00.00 </span>
+                </p>
+            </div>
+
+            <a href="./orderConfirm.html" class="tabbar-item bg-default  font-size-16 text-light  go">
+                结算(0)
+            </a>
+        </footer>
+        <footer class="m-tabbar padded-15 border-no hidden" id="J_checkAll">
+            <div class="flex-1 font-size-14 text-gray">
+                <div class="checkbox margin-r-15">
+                    <input type="checkbox" name="checkbox" id="operate_all_check" />
+                    <i class="cell-checkbox-icon margin-r-10"></i>
+                    全选
+                </div>
+            </div>
+            <div class="margin-l-15">
+                <a href="#" pixel-border="all" class="btn  text-gray  btn-collect margin-r-15
+              ">收藏</a>
+                <a href="#" pixel-border="all" class="btn text-default  btn-del">删除</a>
+            </div>
+        </footer>
+    </section>
+
+
+
+</body>
+<!-- 遮罩 -->
+
+
+
+
+<script src="./js/jquery.3.0.0.min.js"></script>
+<script src="./ydui/build/js/ydui.js"></script>
+<script src="./js/addToCookie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js" type="text/javascript"></script>
+<script src="./js/cart.js"></script>
+<script type="text/x-handlebars-template" id="shopCar">
+     {{#each this}} 
+     <div class="m-cell lists">
+                <label class="cell-item " data-shop-id="{{ shop_id }}">
+                    <span class="cell-left">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="shop_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                    </span>
+                    <a href="#" class="cell-right flex-c-between cell-arrow">
+                        店铺名
+                    </a>
+                </label>
+                {{#each this.productList}}
+                <article class="m-list list-theme4 bg-empty" data-pro-id="{{pro_id}}">
+                    <div class="list-item-wrap">
+                        <div class="checkbox">
+                            <input type="checkbox" name="checkbox" class="son_check" />
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                        <div class="list-item">
+                            <a class="list-img" href="#">
+                                <img src="{{ img }}" data-url="http://img14.360buyimg.com/n7/jfs/t2638/123/832145671/84225/48fda645/57286144N97397eac.jpg">
+                            </a>
+                            <div class="list-mes">
+                                <a class="list-title " href="">{{ name }}</a>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        颜色： 黑色; 尺码： 39码;
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default  count">
+                                    <div class="text-gray ">
+                                        &yen;
+                                        <span class="text-default font-size-16 price">
+                                          {{ price }}</span>
+                                    </div>
+                                    <div>
+                                        <span class="m-spinner ">
+                                            <a href="javascript:;" class="J_Del"></a>
+                                            <input type="number" class="J_Input" value="{{ num }}" placeholder="" />
+                                            <a href="javascript:;" class="J_Add"></a>
+                                        </span>
+                                    </div>
+                                    <div class="hidden ">
+                                        <input type="number" class="price_total" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            {{/each}}
+                
+            </div>
+            {{/each}}
+</script>
+<script>
+    var productList = cart.getProductList();
+    var shopCarData = [];
+    // var shopList = {
+    //     "shop_id": productList.shop_id,
+    //     "productList": [{
+    //         "name": productList.name,
+    //         "num": productList.num,
+    //         'price': productList.price,
+    //         "img": productList.img,
+    //     }]
+    // }
+    // var product = {
+    //     "name": productList.name,
+    //     "num": productList.num,
+    //     'price': productList.price,
+    //     "img": productList.img,
+    // }
+
+    if (productList) {
+        for (let i in productList) {
+                if (shopCarData == "" || shopCarData == null) {
+                    shopCarData.push({
+                        "shop_id": productList[i].shop_id,
+                        "productList": [{
+                            'pro_id': productList[i].pro_id,
+                            "name": productList[i].name,
+                            "num": productList[i].num,
+                            'price': productList[i].price,
+                            "img": productList[i].img,
+                        }]
+                    })
+            }
+            for (let j in shopCarData) {
+                if (shopCarData[j].shop_id == productList[i].shop_id ) {
+                    for (const k in shopCarData[j].productList) {
+                       if (shopCarData[j].productList[k].pro_id !==  productList[i].pro_id) {
+                          shopCarData[j].productList.push({
+                               'pro_id': productList[i].pro_id,
+                               "name": productList[i].name,
+                               "num": productList[i].num,
+                               'price': productList[i].price,
+                               "img": productList[i].img,
+                           })
+                       }
+                    }
+                }
+                 else {
+                    shopCarData.push({
+                        "shop_id": productList[j].shop_id,
+                        "productList": [{
+                            'pro_id': productList[i].pro_id,
+                            "name": productList[i].name,
+                            "num": productList[i].num,
+                            'price': productList[i].price,
+                            "img": productList[i].img,
+                        }]
+                    })
+                }
+            }
+        }
+    }
+
+
+
+</script>
+<script>
+
+        var t = $("#shopCar").html();
+        //预编译模板
+        var f = Handlebars.compile(t);
+        //匹配json内容
+        var html = f(shopCarData);
+        //插入模板,
+        $('.g-scrollview').html(html);
+        
+
+
+</script>
+
+</html>

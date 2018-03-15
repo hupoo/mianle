@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>密码设置</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../css/setPassword.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_535835_4z4zx9r0dvrhpvi.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+
+        <header class="m-navbar border-no">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">密码设置</span>
+            </div>
+        </header>
+
+        <div class="g-scrollview border-no changePwd">
+            <form action="" method="post">
+            <div class="m-cell margin-t-10">
+                <div class="cell-item">
+                    <div class="cell-left">
+                        <i class="iconfont icon-lock trans-8"></i>
+                        </div>
+                    <div class=" cell-right ">
+                        <input type="password" required class="cell-input" name="expwd"  placeholder="输入原始密码"> <i class="iconfont icon-icon_eye-close icon-eye js-look"></i></div>
+                </div>
+                <div class="cell-item" href="">
+                    <div class="cell-left">
+                        <i class="iconfont icon-lock trans-8"></i>
+                        </div>
+                    <div class=" cell-right ">
+                        <input type="password" required class="cell-input" name="newpwd"  placeholder="输入新的密码"> <i class="iconfont icon-icon_eye-close icon-eye js-look"></i></div>
+                </div>
+
+                <div class="cell-item" href="">
+                    <div class="cell-left">
+                        <i class="iconfont icon-lock trans-8 "></i></div>
+                    <div class=" cell-right ">
+                        <input type="password" required class="cell-input" name="renewpwd"  placeholder="确认新密码">
+                        <i class="iconfont icon-icon_eye-close icon-eye js-look " ></i>
+                    </div>
+                </div>
+            </div>
+            <p class="margin-t-15 errormsg font-size-14 text-danger padded-lr-15">
+                <!-- 错误提示在这里显示 -->
+            </p>
+            <p
+              class="margin-t-15 text-center" >
+                <input type="submit" value="确定" class="btn ok">
+            </p>
+</form>
+        </div>
+    </section>
+</body>
+
+
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<!-- <script src="../js/Touch.js"></script> -->
+<script>
+  $(function () {
+      $('.js-look').click(function () {
+          var res =  $(this).hasClass('icon-icon_eye-close');
+          $(this).toggleClass('icon-icon_eye-close').siblings('input').attr('type', !res?'password':'text');
+      })
+  })
+</script>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商家入驻</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/sellerIn.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">商家入驻</span>
+            </div>
+            <a href="#" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview bg-empty">
+
+            <form action="" enctype="multipart/form-data" name="form">
+                <div class="m-cell m-form">
+                    <div class="m-celltitle font-size-18 text-gray  padded-15 margin-t-10">
+                        请填写有效的信息
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">店铺名称：</div>
+                        <div class="cell-right form-input ">
+                            <input type="number" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                    <div class="cell-item  ">
+                        <div class="cell-left">所属行业：</div>
+                        <div class="cell-right form-input flex-start ">
+                            <select class="b-select">
+                                <option value="">选择行业</option>
+                            </select> -
+                            <select class="b-select">
+                                <option value="">选择分类</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-cell m-form margin-t-10">
+                    <div class="cell-item padded-t-10  flex-column border-no">
+                        <div class="cell-left">所属地址:</div>
+                        <div class="cell-right form-input js-selcet flex-start" id="distpicker">
+                            <select class="b-select" name="prov"></select>&nbsp;&nbsp;
+                            <select class="b-select" name="city"></select>&nbsp;&nbsp;
+                            <select class="b-select" name="area"></select>
+                            <input type="hidden" id="hidden" name="address">
+                        </div>
+                    </div>
+                    <div class="cell-item  padded-t-10 flex-column border-no">
+                        <div class="cell-left">详细地址：</div>
+                        <div class="cell-right form-input">
+                            <input type="text" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                    <div class="map-container" id="J_map">
+
+
+                    </div>
+                </div>
+                <div class="m-cell m-form margin-t-10">
+                    <div class="m-celltitle font-size-18 text-gray  padded-15">
+                        负责人信息
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">负责人姓名：</div>
+                        <div class="cell-right form-input">
+                            <input type="text" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">身份证号码：</div>
+                        <div class="cell-right form-input">
+                            <input type="text" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">手机号码：</div>
+                        <div class="cell-right form-input">
+                            <input type="number" pattern="[0-9*]" maxlength="11" class="cell-input b-input" name="" required />
+                            <button type="button" class="btn text-default  padded-lr-5">获取验证码</button>
+                        </div>
+                    </div>
+                   
+                    <div class="cell-item">
+                        <div class="cell-left">验证码：</div>
+                        <div class="cell-right form-input">
+                            <input type="text" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                    <div class="cell-item filetype">
+                        <div class="cell-right form-input">
+                            <div class="box-item ">
+                                <div class="box-img flex-c-c pos">
+                                    <input type="file" name="pos" id="" accept="image/*" capture="camera">
+                                    <i class="icons">+</i>
+                                </div>
+                                <p class="text-center margin-t-10">请上传身份证正面</p>
+                            </div>
+                        </div>
+                        <div class="cell-right form-input">
+                            <div class="box-item ">
+                                <div class="box-img flex-c-c back">
+                                    <input type="file" name="back" id="" accept="image/*" capture="camera">
+                                    <i class="icons">+</i>
+                                </div>
+                                <p class="text-center margin-t-10">请上传身份证反面</p>
+                            </div>
+                        </div>
+                        <div class="cell-right form-input">
+                            <div class="box-item ">
+                                <div class="box-img flex-c-c license">
+                                    <input type="file" name="license" id="" accept="image/*" capture="camera">
+                                    <i class="icons">+</i>
+                                </div>
+                                <p class="text-center margin-t-10">请上传个体营业执照</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">邀请人信息:</div>
+                        <div class="cell-right form-input">
+                            <input type="text" class="cell-input b-input" name="" required />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="m-tabbar padded-0">
+            <a href="javascript:;" class="btn-block btn-primary margin-t-0 " id="sub">提交</a>
+        </footer>
+    </section>
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/distpicker.data.min.js"></script>
+<script src="../js/distpicker.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+
+    // 倒计时
+    var opts = {
+        disClass: 'disabled',
+        secs: 60,
+        run: false,
+        runStr: '{%s}秒后获取',
+        resetStr: '重新获取验证码'
+    };
+    var $getCodes = $('.getcodes');
+
+    /* 定义参数 */
+    $getCodes.sendCode(opts);
+    $getCodes.on('click', function () {
+        /* ajax 成功发送验证码后调用【start】 */
+        YDUI.dialog.loading.open('发送中');
+        setTimeout(function () {
+            YDUI.dialog.loading.close();
+            $getCodes.sendCode('start');
+            YDUI.dialog.toast('已发送', 'success', 1500);
+        }, 1500);
+    });
+
+
+
+    // 地址选择
+    var $distpicker = $('#distpicker');
+    $distpicker.distpicker({
+        autoSelect: false,
+        province: '-省-',
+        city: '-市-',
+        district: '-区-'
+    });
+    $distpicker.find('select').on('change', function () {
+        $('#hidden').val(getVal('#distpicker'));
+    })
+
+    // 地址取值
+    function getVal(tag) {
+        var res = '';
+        $(tag).find('select').each(function () {
+            res += $(this).val();
+        });
+        return res;
+    }
+
+    // 图片上传
+    // var oFiles = $("input[type='file']");
+    //     oFiles.each(function(){
+    //         oFiles.on('change',function(){
+    //             var $path = oFiles[0].files[0];  
+    //             var $fr = new FileReader();
+    //             var $img = new Image();
+    //             var $oEm = $(this).parents('.box-item ').find('p');
+    //             var $oDiv = $(this).parents('.box-img');
+    //             var $imgList = $oDiv.find('img');
+    //             if ($path) {
+    //                 var $imgSize = ($path.size / 1024).toFixed(2);
+    //                 if ($imgSize > 300) {
+    //                     $oEm.text('图片超过300K, 请重新选择').css('color','red');
+    //                     if ($imgList.length > 0) {
+    //                         $imgList.remove();
+    //                     }
+    //                 }else{
+    //                     $oEm.text('上传图片').css('color', 'black');
+    //                     if (window.FileReader) {
+    //                         $fr.onloadend=function(e){
+    //                             if ($imgList.length > 0) {
+    //                                 $imgList.remove();
+    //                             }
+    //                             $img.src = e.target.result;
+    //                             console.log($img)
+    //                            $($img).appendTo($oDiv);
+    //                         };
+    //                     $fr.readAsDataURL($path);
+                            
+    //                     }
+    //                 }
+    //             }else{
+    //                 return;
+    //             }
+    //         })
+    //     })
+
+    var oFiles = document.querySelectorAll("input[type='file']");
+    for (let i = 0; i < oFiles.length; i++) {
+        oFiles[i].onchange = function () {
+            var fs = oFiles[i].files[0];//图片路径
+            // 上传图片需要的一些元素和对象
+            var fr = new FileReader();
+            var img = new Image();
+            // p元素 用来提示图片信息
+            var oEm = oFiles[i].parentNode.parentNode.getElementsByTagName('p')[0];
+            // input父元素
+            var oDiv = oFiles[i].parentNode;
+            // 图片列表
+            var imgList = oDiv.getElementsByTagName('img');
+            if (fs) {
+                //图片大小
+                var imagSize = (fs.size / 1024).toFixed(1);
+                // 判断大小 大于300K重新选择
+                if (imagSize > 300) {
+                    oEm.innerHTML = '图片超过300K,请重新选择';
+                    oEm.style.color = 'red';
+                    if (imgList.length > 0) {
+                        oDiv.removeChild(imgList[0]);
+                    }
+                } else {
+                    oEm.innerHTML = '上传图片';
+                    oEm.style.color = 'black';
+                    if (window.FileReader) {
+                        fr.onloadend = function (e) {
+                            if (imgList.length > 0) {
+                                oDiv.removeChild(imgList[0]);
+                            }
+                            img.src = e.target.result;
+                            oDiv.appendChild(img);
+                        };
+                        fr.readAsDataURL(fs);
+                    }
+                }
+            } else {
+                return;
+            }
+        }
+    }
+</script>
+
+</html>

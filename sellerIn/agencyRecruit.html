@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>合作入驻</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/agencyRecruit.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+ 
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">招募说明</span>
+            </div>
+            <a href="#" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview bg-light">
+            <div class="m-girdstitle font-size-18 text-gray border-b" >
+                    代理商在线申请表
+            </div>
+            <form action="">
+            
+            <div class="m-cell m-form">
+                <div class="cell-item  flex-column">
+                    <div class="cell-left padded-tb-15">意向地区:</div>
+                    <div class="cell-right form-input js-selcet flex-start" id="distpicker">
+                        <select class="b-select" name="prov"></select>&nbsp;&nbsp;
+                        <select class="b-select" name="city"></select>&nbsp;&nbsp;
+                        <select class="b-select" name="area"></select>
+                        <input type="hidden" id="hidden" name="address">
+                    </div>
+                </div>
+              
+                <div class="cell-item">
+                    <div class="cell-left">可支配流动资金：</div>
+                    <div class="cell-right form-input">
+                       <input type="number" class="cell-input b-input" name="" required  /> &nbsp;元
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">姓名：</div>
+                    <div class="cell-right form-input">
+                       <input type="number" class="cell-input b-input" name="" required  />
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">手机号码：</div>
+                    <div class="cell-right form-input">
+                       <input type="number" pattern="[0-9*]" maxlength="11" class="cell-input b-input" name="" required  /> 
+                    <button type="button" class="btn getcode" >获取验证码</button>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">验证码：</div>
+                    <div class="cell-right form-input">
+                       <input type="text" class="cell-input b-input" name="" required  />
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">申请理由：</div>
+                    <div class="cell-right form-input">
+                    <textarea class="cell-textarea b-textarea" placeholder="理由...." 
+                    rows="5"
+                    ></textarea>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+
+
+
+
+
+        </div>
+        <footer class="m-tabbar padded-0">
+            <a href="" class="btn-block btn-primary margin-t-0 ">提交</a>
+        </footer>
+    </section>
+
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/distpicker.data.min.js"></script>
+<script src="../js/distpicker.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+        // 地区初始化
+      
+    });
+
+    var opts = {
+            disClass: 'disabled',
+            secs: 60,
+            run: false,
+            runStr: '{%s}秒后获取',
+            resetStr: '获取验证码'
+        };
+        var $getCode = $('.getcode');
+        $getCode.sendCode(opts);
+        $getCode.on('click', function () {
+            /* ajax 成功发送验证码后调用【start】 */
+            YDUI.dialog.loading.open('发送中');
+            setTimeout(function () {
+                YDUI.dialog.loading.close();
+                $getCode.sendCode('start');
+                YDUI.dialog.toast('已发送', 'success', 1500);
+            }, 1500);
+        });
+
+    // 地址选择
+
+        var $distpicker = $('#distpicker');
+        $distpicker.distpicker({
+            autoSelect: false,
+            province: '-省-',
+            city: '-市-',
+            district: '-区-'
+        });
+        $distpicker.find('select').on('change', function () {
+            $('#hidden').val(getVal('#distpicker'));
+        })
+         // 地址取值
+            function getVal(tag) {
+                var res = '';
+                $(tag).find('select').each(function () {
+                    res += $(this).val();
+                });
+                return res;
+            }
+
+    
+
+
+
+
+</script>
+
+</html>

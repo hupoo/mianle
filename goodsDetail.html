@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品详情</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="./css/goodsDetail.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="#" class="navbar-item">
+                <i class="m-icon icon-left-light "></i>
+            </a>
+            <div class="navbar-center">
+                <ul class="tab-nav border-no">
+                    <li class="tab-nav-item tab-active">
+                        <a href="javascript:;">商品</a>
+                    </li>
+                    <li class="tab-nav-item ">
+                        <a href="javascript:;">详情</a>
+                    </li>
+                    <li class="tab-nav-item ">
+                        <a href="javascript:;">评价</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="navbar-item">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+        <div class="g-scrollview border-no">
+            <div class="m-slider" id="J_Slider">
+                <div class="slider-wrapper">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/1.jpg">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="http://static.ydcss.com/uploads/ydui/3.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-pagination"></div>
+                <!-- 商品二维码 -->
+                <div class="fade-ercode flex-c-c" id="J_ercode">
+                    <i class="iconfont icon-ercode trans-15"></i>
+                </div>
+                <!-- 分页标识 -->
+            </div>
+            <!-- 价格详情 -->
+            <div class="price-detail">
+                <div class="list-mes">
+                    <h3 class="list-title less-2 pro-title" data-shop-id="02" data-pro-id ="0002" >2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                    <div class="list-mes-item margin-tb-15">
+                        <div>
+                            <span class="text-default font-size-18  ">
+                                ¥<em class="f-weight-600 " data-price>34.7</em> 
+                            </span>
+                            <span class="list-del-price">¥45.65</span>
+                        </div>
+                        <div class="font-size-12">
+                            库存: 30 件
+                        </div>
+                    </div>
+                    <div class="list-mes-item padded-t-5">
+                        <div class="font-size-12 text-default">商品参与免单日可免单
+                            <em>¥</em>
+                            <span>34.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-cell bg-empty param">
+                <div class="cell-item border-no">
+                    <div class="cell-left text-gray font-size-12">
+                        <i class="m-icon icon-success-fill-defalt"></i>免运费</div>
+                </div>
+                <div class="cell-item  " id="J_select">
+                    <div class="cell-left font-size-14">
+                        请选择颜色、种类、数量
+                    </div>
+                    <div class="cell-right cell-arrow">
+                    </div>
+                </div>
+                <!-- 线上不显示 -->
+                <!-- <div class="cell-item ">
+                    <div class="cell-left font-size-14">
+                        <i class="m-icon icon-local-green"></i>湖南省长沙市岳麓区....
+                    </div>
+                    <div class="cell-right cell-arrow">
+                    </div>
+                </div> -->
+            </div>
+            <!-- 店铺详情 -->
+            <div class="shopDetail m-list list-theme4">
+                <div class="list-item border-no">
+                    <div class="list-img">
+                        <img src="#" alt="">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title">XX店铺</h3>
+                        <div class="list-mes-item padded-t-15 text-gray font-size-12">
+                            <div>
+                                <span>初级店铺</span>
+                                <span>电话: 156****5654</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item flex-c-around">
+                    <a href="javascript:;" class="btn  font-size-16" pixel-border="all">
+                        <i class="m-icon icon-like-red"></i>
+                        收藏店铺</a>
+                    <a href="javascript:;" class="btn  font-size-16" pixel-border="all">
+                        <i class="m-icon icon-shop-default"></i>
+                        进入店铺</a>
+                </div>
+            </div>
+            <div class="recommend-content goodsdetail ">
+                <div class="recommenf-title  bg-empty">
+                    商品详情
+                </div>
+            </div>
+            <div class="m-tab goodsinfo " id="J_Tab">
+                <div class="m-grids-3 " id="J_top">
+                    <div class="grids-item tab-active">
+                        <div class="grids-txt">
+                            <span>商品介绍</span>
+                        </div>
+                    </div>
+                    <div class="grids-item">
+                        <div class="grids-txt">
+                            <span>规格参数</span>
+                        </div>
+                    </div>
+                    <div class="grids-item">
+                        <div class="grids-txt">
+                            <span>评价</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel">
+                    <div class="tab-panel-item tab-active">
+                        <div class="m-cell evaluate margin-b-0 ">
+                            <div class="m-celltitle">
+                                评价(3)
+                            </div>
+                            <div class="evaluateinfo border-b">
+                                <div class="cell-item border-no">
+                                    <div class="cell-left">
+                                        <span class="cell-icon  font-size-16">
+                                            <img src="http://static.ydcss.com/ydui/img/logo.png" class="img-round vator" />
+                                        </span>用户名</div>
+                                    <div class="cell-right text-gray font-size-10">
+                                        2018-01-09 15:56:21
+                                    </div>
+                                </div>
+                                <a href="" class="info">
+                                    <p class="star five"></p>
+                                    <div class="text">
+                                        可以好评不错 喜欢！
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="evaluateinfo border-b">
+                                <div class="cell-item border-no">
+                                    <div class="cell-left">
+                                        <span class="cell-icon  font-size-16">
+                                            <img src="http://static.ydcss.com/ydui/img/logo.png" class="img-round vator" />
+                                        </span>用户名</div>
+                                    <div class="cell-right text-gray font-size-10">
+                                        2018-01-09 15:56:21
+                                    </div>
+                                </div>
+                                <a href="" class="info">
+                                    <p class="star five"></p>
+                                    <div class="text">
+                                        可以好评不错 喜欢！
+                                    </div>
+
+                                </a>
+                            </div>
+                            <div class="evaluateinfo border-b">
+                                <div class="cell-item border-no">
+                                    <div class="cell-left">
+                                        <span class="cell-icon  font-size-16">
+                                            <img src="http://static.ydcss.com/ydui/img/logo.png" class="img-round vator" />
+                                        </span>用户名</div>
+                                    <div class="cell-right text-gray font-size-10">
+                                        2018-01-09 15:56:21
+                                    </div>
+                                </div>
+                                <a href="" class="info">
+                                    <p class="star five"></p>
+                                    <div class="text">
+                                        可以好评不错 喜欢！
+                                    </div>
+
+                                </a>
+                            </div>
+                            <div class="cell-item checkmore flex-c-c">
+                                <button class="btn " pixel-border="all">
+                                    查看全部评价 &gt;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="no-view flex-c-c flex-column hidden">
+                            <div class="content ">
+                                <img src="./img/no_evaluate.png" alt="">
+                            </div>
+                            <div class=" text-gray font-size-14 text-center">
+                                暂时没有评论哦~
+                            </div>
+                        </div>
+
+                        <div class="detail-img-contianer">
+                            <!-- 详情图片 -->
+                            <img src="http://img20.360buyimg.com/imgzone/jfs/t5851/78/1137687805/71324/aa3114a2/5923e003N2886bc3b.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t14566/346/2356902158/270865/506c670/5a961b04N0a5c0ca7.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t18460/10/563552199/221559/93ae044c/5a961b04Nc07c519c.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t18202/2/578860619/299267/bcec29c5/5a961b04N3b4e43c1.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t18943/235/509241061/115494/3c376a60/5a961b04N39b83b47.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t18817/15/550822055/83962/50287956/5a961b04Nee53c625.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t17644/143/546909490/52678/c23dd702/5a961b04N3bf5b987.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t17191/171/563714462/40183/157df030/5a961b04Nab61f324.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t16015/224/2169348800/57917/14e392e6/5a961b04Na7fb12f5.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t16573/205/2213779461/96840/56933680/5a961b04N996cb155.jpg">
+                            <img src="http://img10.360buyimg.com/imgzone/jfs/t15784/206/2184693919/89464/9f204be2/5a961b04Nc37367d0.jpg">
+                        </div>
+                    </div>
+                    <div class="tab-panel-item">
+                        <table class="table-border" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>辅助功能</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>常用功能</td>
+                                    <td>录音</td>
+                                </tr>
+                                <tr>
+                                    <td>常用功能</td>
+                                    <td>便签</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>主体</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上市年份</td>
+                                    <td>2017年</td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>手机特性</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>陀螺仪</td>
+                                    <td>支持</td>
+                                </tr>
+                                <tr>
+                                    <td>GPS</td>
+                                    <td>支持</td>
+                                </tr>
+                                <tr>
+                                    <td>指纹识别</td>
+                                    <td>支持</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>基本信息</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>机身宽度
+                                        <br> (mm）</td>
+                                    <td>73.4</td>
+                                </tr>
+                                <tr>
+                                    <td>机身厚度
+                                        <br> (mm）</td>
+                                    <td>6.98</td>
+                                </tr>
+                                <tr>
+                                    <td>机身长度
+                                        <br> (mm）</td>
+                                    <td>155</td>
+                                </tr>
+                                <tr>
+                                    <td>运营商标志或内容</td>
+                                    <td>无</td>
+                                </tr>
+                                <tr>
+                                    <td>机身重量
+                                        <br> (g）</td>
+                                    <td>158</td>
+                                </tr>
+                                <tr>
+                                    <td>机身颜色</td>
+                                    <td>细红线</td>
+                                </tr>
+                                <tr>
+                                    <td>机身材质分类</td>
+                                    <td>金属边框</td>
+                                </tr>
+                                <tr>
+                                    <td>机身材质分类</td>
+                                    <td>玻璃后盖</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>数据接口</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>充电接口类型</td>
+                                    <td>Type-C</td>
+                                </tr>
+                                <tr>
+                                    <td>耳机接口类型</td>
+                                    <td>Type-C</td>
+                                </tr>
+                                <tr>
+                                    <td>数据传输接口</td>
+                                    <td>蓝牙</td>
+                                </tr>
+                                <tr>
+                                    <td>NFC/NFC模式</td>
+                                    <td>不支持</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>电池信息</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>充电器</td>
+                                    <td>9V/2A</td>
+                                </tr>
+                                <tr>
+                                    <td>电池是否可拆卸</td>
+                                    <td>否</td>
+                                </tr>
+                                <tr>
+                                    <td>电池容量
+                                        <br> (mAh）</td>
+                                    <td>3500</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>前置摄像头</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>前置摄像头</td>
+                                    <td>1600万像素</td>
+                                </tr>
+                                <tr>
+                                    <td>前摄光圈大小</td>
+                                    <td>f/2.0</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>后置摄像头</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>摄像头数量</td>
+                                    <td>2个</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>存储</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>存储卡</td>
+                                    <td>支持MicroSD（TF）</td>
+                                </tr>
+                                <tr>
+                                    <td>ROM</td>
+                                    <td>64GB</td>
+                                </tr>
+                                <tr>
+                                    <td>RAM</td>
+                                    <td>4GB</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>网络支持</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3G/2G网络</td>
+                                    <td>3G：移动(TD-SCDMA)</td>
+                                </tr>
+                                <tr>
+                                    <td>3G/2G网络</td>
+                                    <td>3G：联通(WCDMA)</td>
+                                </tr>
+                                <tr>
+                                    <td>3G/2G网络</td>
+                                    <td>3G：电信(CDMA2000)</td>
+                                </tr>
+
+                                <tr>
+                                    <td>双卡机类型</td>
+                                    <td>双卡双待单通</td>
+                                </tr>
+                                <tr>
+                                    <td>SIM卡类型</td>
+                                    <td>Nano SIM</td>
+                                </tr>
+                                <tr>
+                                    <td>网络频率
+                                        <br> (2G/3G）</td>
+                                    <td>2G：GSM 850/900/1800/1900</td>
+                                </tr>
+                                <tr>
+                                    <td>网络频率
+                                        <br> (2G/3G）</td>
+                                    <td>2G：CDMA 800</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-panel-item bg-gray">
+
+                        <div class="goodRate border-b">
+                            好评率:
+                            <span>98</span>%
+                        </div>
+                        <div class="rds-group detail flex-c flex-c-between">
+                            <label for="" class="rds-list-item">
+                                <input type="radio" value="1" name="type1" checked>
+                                <span pixel-border="all">全部
+                                    <em>1200</em>
+                                </span>
+                            </label>
+                            <label for="" class="rds-list-item">
+                                <input type="radio" value="1" name="type1">
+                                <span pixel-border="all">好评
+                                    <em>1098</em>
+                                </span>
+                            </label>
+                            <label for="" class="rds-list-item">
+                                <input type="radio" value="1" name="type1">
+                                <span pixel-border="all">中评
+                                    <em>100</em>
+                                </span>
+                            </label>
+                            <label for="" class="rds-list-item">
+                                <input type="radio" value="1" name="type1">
+                                <span pixel-border="all">差评
+                                    <em>2</em>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="evaluate detail">
+                            <div class="evaluateinfo border-b">
+                                <div class="cell-item border-no">
+                                    <div class="cell-left">
+                                        <span class="cell-icon  font-size-16">
+                                            <img src="http://static.ydcss.com/ydui/img/logo.png" class="img-round vator" />
+                                        </span>用户名</div>
+                                    <div class="cell-right text-gray font-size-10">
+                                        2018-01-09 15:56:21
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>
+                                        <span class="star five">
+                                        </span>
+                                        <a href="#" class="btn btn-reply fr">回复</a>
+                                    </p>
+                                    <div class="text">
+                                        可以好评不错 喜欢！
+                                    </div>
+                                    <div class="img-wrap">
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="shop-reply ">
+                                        商家回复：感谢您的喜欢，
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                    </div>
+                                    <p class="msg-count flex-c flex-end">
+                                        <i class="m-icon icon-msg-gray "></i>
+                                        <span class="count">15</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="evaluateinfo border-b">
+                                <div class="cell-item border-no">
+                                    <div class="cell-left">
+                                        <span class="cell-icon  font-size-16">
+                                            <img src="http://static.ydcss.com/ydui/img/logo.png" class="img-round vator" />
+                                        </span>用户名</div>
+                                    <div class="cell-right text-gray font-size-10">
+                                        2018-01-09 15:56:21
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>
+                                        <span class="star five">
+                                        </span>
+                                        <a href="#" class="btn btn-reply fr">回复</a>
+                                    </p>
+                                    <div class="text">
+                                        可以好评不错 喜欢！
+                                    </div>
+                                    <div class="img-wrap">
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+                                        <div class="img-wrap-item">
+                                            <img src="http://static.ydcss.com/uploads/ydui/2.jpg" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="shop-reply ">
+                                        商家回复：感谢您的喜欢，
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+
+                                    </div>
+                                    <p class="msg-count flex-c flex-end">
+                                        <i class="m-icon icon-msg-gray "></i>
+                                        <span class="count">15</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="backTo">
+
+            </div>
+        </div>
+        <!-- 底部工具栏 -->
+        <footer class="m-tabbar padded-0">
+            <a href="#" class="tabbar-item">
+                <span class="tabbar-icon">
+                    <i class="m-icon icon-talk-gray trans-14"></i>
+                </span>
+                <span class="tabbar-txt">客服</span>
+            </a>
+            <div class="tabbar-item" id="J_star">
+                <span class="tabbar-icon">
+                    <i class="m-icon icon-star-line trans-14"></i>
+                </span>
+                <span class="tabbar-txt">收藏</span>
+            </div>
+            <a href="./shopCar.html" class="tabbar-item">
+                <span class="tabbar-icon">
+                    <i class="m-icon icon-shopcar-gray trans-14"></i>
+                    <span class="badge badge-danger">2</span>
+                </span>
+                <span class="tabbar-txt">购物车</span>
+            </a>
+            <a href="#" class="tabbar-item add flex-2" id="J_add">
+                加入购物车
+            </a>
+            <a href="#" class="tabbar-item new bg-default flex-2" id="J_buy">
+                立即购买
+            </a>
+        </footer>
+    </section>
+</body>
+<!-- 遮罩 -->
+<!-- 商品参数选择 -->
+<div class="m-mask fadeDeatial g-flexview " id="J_fadeDetail">
+    <div class="empty"></div>
+    <div class="content flex-1">
+        <article class="m-list list-theme4 bg-empty">
+            <div class="list-item border-no">
+                <div class="list-img" >
+                    <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-img>
+                </div>
+                <div class="list-mes bg-empty ">
+                    <h3 class="list-title text-default margin-t-15">
+                        <span>
+                            <em>¥</em>34.7</span>
+                    </h3>
+                    <div class="list-mes-item padded-t-15">
+                        <span class="text-gray font-size-12">
+                            库存:
+                            <em>20</em>件
+                        </span>
+                    </div>
+                    <div class="list-mes-item margin-t-10">
+                        请选择 颜色、尺码
+                    </div>
+                </div>
+            </div>
+            <i class="icon-error-outline font-size-18 text-gray js-close" id="J_close"></i>
+        </article>
+        <div class="box ">
+            <div class="box-title font-size-16 ">
+                颜色
+            </div>
+            <div class="rds-group">
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type1">
+                    <span>黑色</span>
+                </label>
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type1">
+                    <span>黑色</span>
+                </label>
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type1">
+                    <span>黑色</span>
+                </label>
+            </div>
+        </div>
+        <div class="box ">
+            <div class="box-title font-size-16 ">
+                尺码
+            </div>
+            <div class="rds-group">
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type2">
+                    <span>39码</span>
+                </label>
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type2">
+                    <span>39码</span>
+                </label>
+                <label for="" class="rds-list-item">
+                    <input type="radio" value="1" name="type2">
+                    <span>39码</span>
+                </label>
+            </div>
+        </div>
+        <div class="box ">
+            <div class="box-title font-size-16 ">
+                数量
+            </div>
+            <span class="m-spinner margin-t-15" data-ydui-spinner="{input: '.J_Input', add: '.J_Add', minus: '.J_Del'}">
+                <!-- 添加data-ydui-spinner属性并添加参数即可 -->
+                <a href="javascript:;" class="J_Del"></a>
+                <input type="text" class="J_Input" data-num placeholder="" value="1" />
+                <a href="javascript:;" class="J_Add"></a>
+            </span>
+        </div>
+    </div>
+    <footer class="m-tabbar  padded-0 ">
+        <a href="#" class="tabbar-item add " id="J_chooseAdd">
+            加入购物车
+        </a>
+        <a href="#" class="tabbar-item new bg-default ">
+            立即购买
+        </a>
+    </footer>
+</div>
+<div class="m-mask flex-c-c " id="J_mask" style="display:none;">
+    <div class="ercode-wrap">
+        <img src="#" alt="二维码">
+    </div>
+</div>
+<script src="./js/jquery.3.0.0.min.js"></script>
+<script src="./js/addToCookie.js"></script>
+<script src="./ydui/build/js/ydui.js"></script>
+<script>
+
+
+    var dialog = window.YDUI.dialog;
+    // 商品轮播
+
+    $('#J_Slider').slider({
+        speed: 200,
+        autoplay: 5000,
+        lazyLoad: true
+    });
+    // 商品二维显示隐藏
+    $('#J_ercode').click(function () {
+        $('#J_mask').fadeIn('fast');
+    });
+    $('#J_mask').click(function (e) {
+        if (!$(e.target).is($('.ercode-wrap'))) {
+            $(this).fadeOut('fast');
+        }
+    });
+    // 商品选择
+    $('#J_select').click(function () {
+        $('#J_fadeDetail').addClass('slideIn');
+    });
+    $('.empty , #J_close').click(function () {
+        $('#J_fadeDetail').removeClass('slideIn');
+    });
+    // 顶部点击切换关联
+    $('.tab-nav-item').click(function () {
+        var index = $(this).index();
+        $(this).addClass('tab-active').siblings().removeClass('tab-active');
+        switch (index) {
+            case 0:
+                // 回滚顶部
+                $('.g-scrollview').animate({ scrollTop: 0 }, 300);
+                //初始化
+                $('.grids-item').eq(0).addClass('tab-active').siblings().removeClass('tab-active');
+                $('.tab-panel-item').eq(0).addClass('tab-active').siblings().removeClass('tab-active');
+                break;
+            case 1:
+                $('.grids-item').eq(0).addClass('tab-active').siblings().removeClass('tab-active');
+                $('.tab-panel-item').eq(0).addClass('tab-active').siblings().removeClass('tab-active');
+                console.log(sTop)
+                isScroll();
+                break;
+            default:
+                $('.grids-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+                $('.tab-panel-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+                isScroll()
+                break;
+        }
+    });
+    // 详情点击切换
+    $('.grids-item').click(function () {
+        var index = $(this).index();
+        $(this).addClass('tab-active').siblings().removeClass('tab-active');
+        $('.tab-panel-item').eq(index).addClass('tab-active').siblings().removeClass('tab-active');
+        switch (index) {
+            case 0:
+                $('.tab-nav-item').eq(1).addClass('tab-active').siblings().removeClass('tab-active');
+                isScroll();
+                
+                break;
+            case 1:
+                $('.tab-nav-item').eq(1).addClass('tab-active').siblings().removeClass('tab-active');
+                isScroll()
+                
+                break;
+            default:
+                $('.tab-nav-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+                isScroll()
+                
+                break;
+        }
+    });
+
+    // 是否触发返回顶部
+    $('.g-scrollview').on('scroll', function () {
+        setTop();
+        if ($(this).scrollTop() > 500)
+            $(".backTo").fadeIn(500);
+        else $(".backTo").fadeOut(500);
+    });
+
+    // 返回顶部触发
+    $(".backTo").click(function () {
+        $('.g-scrollview').animate({ scrollTop: 0 }, 300);
+    });
+
+    // 是否滚动
+    function isScroll() {
+        var istop = $('#J_top').position().top == 0 ? false : true ;
+        if (istop) $('.g-scrollview').animate({scrollTop: sTop },300);
+    }
+    // 是否滚动开关
+    var sTop,
+        setTop = function () {
+            if ($('.g-scrollview').scrollTop() == 0) {
+                sTop = $('#J_top').position().top;
+            }
+        };
+        setTop();
+    // 收藏
+    var flag = true;
+    $('#J_star').on('click', function () {
+        collect(flag);
+        // dosomthing....
+    });
+    $('#J_add').on('click', function () {
+        addToShopCar();
+        // dosomthing....
+    });
+    $('#J_chooseAdd').on('click', function () {
+          
+      var  products = {
+                    shop_id: $('h3.pro-title').attr('data-shop-id'),
+                  name: $('h3.pro-title').text(),
+                  pro_id: $('h3.pro-title').attr('data-pro-id'),
+                  img: $('img[data-img]').attr('src'),
+                  price: $('em[data-price]').text(),
+                  num: $('input[data-num]').val(),
+        };
+
+        cart.addProduct(products);
+         dialog.toast('添加成功', 'none', 1000);
+    });
+
+
+    function addToShopCar() {
+        $('#J_fadeDetail').addClass('slideIn');
+    }
+    function collect(params) {
+        $('#J_star').find('i').toggleClass('icon-star-fill');
+        if (flag) {
+            $('#J_star').find('.tabbar-txt').text('已收藏');
+            flag = false;
+        }
+        else {
+            $('#J_star').find('.tabbar-txt').text('收藏');
+            flag = true;
+        }
+    }
+
+
+</script>
+
+</html>

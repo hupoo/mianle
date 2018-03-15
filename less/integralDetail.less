@@ -1,0 +1,46 @@
+.m-cell {
+    .cell-item {
+        line-height: 1.18rem;
+        .cell-left,
+        .cell-right {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            div:first-child {
+                line-height: .7rem;
+            }
+            div:last-child {
+                line-height: .5rem;
+            }
+            .detail,
+            .integralCount {
+                font-size: .32rem;
+                color: #000;
+            }
+            .times,
+            .totalCount {
+                font-size: .24rem;
+                color: #808080;
+            }
+        }
+        .cell-left {
+            text-align: left;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+        .cell-right {
+            text-align: right;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+        }
+        &:after{
+            margin-left: 0;
+        }
+    }
+}

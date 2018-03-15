@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的收货地址</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/addOrEdit.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">添加收货地址</span>
+            </div>
+            <a href="javascript:void(0)" class="navbar-item pull-right" id="submit">
+                <i class="icon-checkoff"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview">
+            <form action="" method="post" id="form">
+
+                <div class="m-gridstitle text-gray font-size-14 bg-empty border-no">
+                    联系人
+                </div>
+                <div class="m-cell ">
+                    <div class="cell-item ">
+                        <div class="cell-left">姓名：</div>
+                        <div class="cell-right">
+                            <input type="text"  class="cell-input" placeholder="请输入收货人的姓名" autocomplete="off" name="username" required />
+                        </div>
+                    </div>
+                    <div class="cell-item">
+                        <div class="cell-left">电话：</div>
+                        <div class="cell-right">
+                            <input type="tel" pattern="[0-9]*" class="cell-input" maxlength="11" placeholder="请输入收货人的手机号" autocomplete="off" name="telphone" required />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m-gridstitle text-gray font-size-14 bg-empty border-no">
+                    收货地址
+                </div>
+                <div class="m-cell ">
+                    <div class="cell-item ">
+                        <div class="cell-left">所在地区：</div>
+                        <div class="cell-right cell-arrow">
+                            <input type="text"  class="cell-input dress" placeholder="点击选择" autocomplete="off" readonly id="J_Address" name="area" value="" required/>
+                        </div>
+                    </div>
+                    <!-- <div class="cell-item">
+                        <div class="cell-left">小区/学校/大厦:</div>
+                        <div class="cell-right">
+                            <input type="text" class="cell-input"  placeholder="请输入收货人的手机号" autocomplete="off" />
+                        </div>
+                    </div> -->
+                    <div class="cell-item">
+                        <div class="cell-left">详细地址：</div>
+                        <div class="cell-right">
+                            <input type="text" class="cell-input"  placeholder="" autocomplete="off" name="detail" required />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="http://static.ydcss.com/uploads/ydui/ydui.citys.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+      var $target = $('#J_Address');
+    //   默认地址
+        // $target.citySelect({
+        //     provance: '湖南',
+        //     city: '长沙市',
+        //     area: '岳麓区'
+        // });
+
+        // 点击事件触发
+        $target.on('click', function (event) {
+            event.stopPropagation();
+            $target.citySelect('open');
+        });
+
+        // 数据填充
+        $target.on('done.ydui.cityselect', function (ret) {
+            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+        });
+
+        $('#submit').click(function(){
+            $("#form input").each(function (){
+                if($(this).val()==''){
+                     YDUI.dialog.toast('该项不能为空','none');
+                }
+                        return;
+            })
+         
+            // 表单序列化
+            var res =  $("#form").serialize();
+            res = decodeURIComponent(res, true);
+            //  $("#form").submit();
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,172 @@
+.process {
+  background-color: #fff;
+}
+.process h1 {
+  padding: .4rem 0 .2rem;
+  text-align: center;
+  color: #3199ff;
+}
+.process .m-grids-5 .grids-item {
+  color: #ccc;
+  padding-top: .2rem;
+}
+.process .m-grids-5 .grids-item:after {
+  width: 0;
+}
+.process .m-grids-5 .grids-item:not(:nth-child(5n)):before {
+  height: 0;
+}
+.process .m-grids-5 .grids-item:first-child .grids-txt:first-child::before {
+  width: 0;
+}
+.process .m-grids-5 .grids-item:last-child .grids-txt:first-child::after {
+  width: 0;
+}
+.bage {
+  color: #fff;
+  display: inline-block;
+  line-height: .3rem;
+  text-align: center;
+  height: .3rem;
+  width: .3rem;
+  font-size: .20rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative;
+  vertical-align: top;
+}
+.grids-txt {
+  padding: 0;
+  color: inherit;
+  overflow: inherit;
+}
+.grids-txt:first-child {
+  margin-bottom: .2rem;
+  position: relative;
+  text-align: center;
+  padding-top: .1rem;
+}
+.grids-txt:first-child:after,
+.grids-txt:first-child:before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  width: 50%;
+  background-color: #ccc;
+  z-index: -1;
+}
+.grids-txt:first-child:after {
+  right: 0;
+}
+.grids-txt:first-child::before {
+  left: 0;
+}
+.grids-txt p:nth-child(2n) {
+  margin-top: .1rem;
+}
+.grids-item.prve .grids-txt:first-child:after,
+.grids-item.prve .grids-txt:first-child:before {
+  background-color: #3199ff;
+}
+.grids-item.prve .bage {
+  background-color: #3199ff;
+}
+.grids-item.prve .grids-txt {
+  color: #000;
+}
+.grids-item.cur .bage {
+  -webkit-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+  background-color: #3199ff;
+}
+.grids-item.cur .grids-txt {
+  color: #3199ff;
+}
+.grids-item.cur .grids-txt:first-child:after {
+  background-color: #ccc;
+}
+.grids-item.cur .grids-txt:first-child:before {
+  background-color: #3199ff;
+}
+.grids-item.close .bage {
+  -webkit-transform: scale(1.4) rotate(45deg);
+  -ms-transform: scale(1.4) rotate(45deg);
+  transform: scale(1.4) rotate(45deg);
+  position: relative;
+  background-color: #ff7f00;
+  line-height: .26rem;
+  font-size: .32rem;
+}
+.grids-item.close .grids-txt {
+  color: #ff7f00;
+}
+.grids-item.close .grids-txt:first-child:after {
+  background-color: #ccc;
+}
+.grids-item.close .grids-txt:first-child:before {
+  background-color: #3199ff;
+}
+/* ==========question================ */
+.question,
+.message,
+.feedback {
+  padding: .24rem .24rem 0;
+}
+.question .title,
+.message .title,
+.feedback .title {
+  font-size: .32rem;
+  color: #808080;
+  margin-bottom: .24rem;
+}
+.question .detail,
+.message .detail,
+.feedback .detail {
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  padding: .15rem .24rem;
+}
+.question .detail p,
+.message .detail p,
+.feedback .detail p {
+  line-height: .38rem;
+  color: #000;
+  font-size: .28rem;
+  margin-bottom: .1rem;
+}
+.question .detail .times,
+.message .detail .times,
+.feedback .detail .times {
+  color: inherit;
+}
+/* ============message============= */
+.message .detail,
+.feedback .detail {
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-bottom: .2rem;
+}
+.message .detail:last-child,
+.feedback .detail:last-child {
+  margin-bottom: 0;
+}
+.detail.cur {
+  color: #3199ff;
+}
+.detail.cur p {
+  color: #3199ff;
+}
+.detail.close {
+  color: #ff7f00;
+}
+.detail.close p {
+  color: #ff7f00;
+}
+.m-tabbar {
+  padding: .24rem;
+}
+.m-tabbar a {
+  border-radius: 5px;
+}

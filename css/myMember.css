@@ -1,0 +1,56 @@
+.tab-nav::after {
+  width: 0;
+}
+.tab-nav .tab-nav-item {
+  font-size: .32rem;
+  line-height: 1rem;
+}
+.tab-nav .tab-nav-item:not(:last-child):after {
+  height: 40%;
+}
+.tab-nav .tab-nav-item.tab-active {
+  color: #3199ff;
+  position: relative;
+}
+.tab-nav .tab-nav-item.tab-active:before {
+  width: 40%;
+  height: 1px;
+  margin-left: -20%;
+}
+.tab-nav .tab-nav-item .tab-txt {
+  font-size: .30rem;
+  line-height: .45rem;
+}
+.tab-nav .tab-nav-item .tab-txt:last-child {
+  margin-top: .1rem;
+}
+.tables {
+  width: 100%;
+  font-size: .32rem;
+}
+.tables thead tr {
+  height: .9rem;
+  font-weight: 800;
+}
+.tables tbody tr td {
+  width: 33.33%;
+  height: .9rem;
+  text-align: center;
+  color: #979797;
+}
+.tables tbody tr:nth-child(2n) {
+  background: #edf2fa;
+}
+.no-view .box {
+  margin: 1.2rem auto 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #e6e6e6;
+}
+.no-view .box img {
+  width: 50%;
+}
+.no-view .text {
+  margin-top: .35rem;
+  text-align: center;
+}

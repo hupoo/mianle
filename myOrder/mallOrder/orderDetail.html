@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>订单详情</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/orderDetail.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">订单详情</span>
+            </div>
+
+        </header>
+
+        <div class="g-scrollview ">
+            <div class="order-status">
+                <p class="status-txt">
+                    等待商家发货
+                </p>
+                <!-- <p class="status-txt">
+                    正在运输中...
+                </p> -->
+                <!--   <p class="status-txt">
+                您的订单已免单
+            </p> -->
+                <!-- <p class="status-txt">
+                <i class="icon-shield-outline"></i>
+                <span>订单已完成</span>
+            </p> -->
+                <div class="wave">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <div class="m-celltitle bg-light border-no padded-b-0">
+                离自动收货还有：
+                <span class="day padded-lr-5 text-default">00</span>天
+                <span class="hour  padded-lr-5 text-default">00</span>时
+                <span class="minute  padded-lr-5 text-default">00</span>分
+            </div>
+            <div class="m-cell margin-t-10 reset">
+                <a class="cell-item express" href="javascript:;">
+                    <div class="cell-left">
+                        <i class="m-icon icon-express trans-14"></i>
+                    </div>
+                    <div class=" cell-right cell-arrow  font-size-14 less-2">
+                        订单状态订单状态
+                    </div>
+                </a>
+                <a class="cell-item address flex-column" href="javascript:;">
+                    <div class="cell-left text-dark">
+                        <i class="m-icon icon-local trans-14"></i>
+                        <span>李三</span>
+                        <span class="margin-l-10">15616223524</span>
+                    </div>
+                    <div class=" cell-right font-size-14 text-gray less-2">
+                        湖南省长沙市岳麓区麓谷街道中电软件园9栋 湖南省长沙市岳麓区麓谷街道中电软件园9栋
+                    </div>
+                </a>
+            </div>
+            <article class="m-list list-theme4">
+                <a href="" class="cell-item padded-l-0 margin-r-0">
+                    <div class="cell-left cell-arrow">
+                        <i class="m-icon icon-shop trans-14"></i>
+                        xxx店
+                    </div>
+                    <div class="cell-right"></div>
+                </a>
+                <div class="list-item">
+                    <div class="list-img">
+                        <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title less-2">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                        <div class="list-mes-item">
+                            <div>
+                                <span>颜色分类:
+                                    <em>黑色</em>;</span>
+                                <span>尺码:
+                                    <em>42</em>;</span>
+                            </div>
+                            <div>x
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="list-mes-item text-default">
+                            <div>
+                                <span class="list-price font-size-16 text-default">
+                                    <em>¥</em>34.7</span>
+
+                            </div>
+                            <div>
+                                <!-- 等待发货 -->
+                                <a href="" class="btn btn-hollow margin-l-5">提醒发货</a>
+                                <a href="" class="btn btn-hollow margin-l-5">联系卖家</a>
+
+                                <!-- 运输中... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>
+                                                <a href="" class="btn btn-hollow margin-l-5" >确认收货</a> -->
+
+                                <!-- 免单... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>  -->
+
+                                <!-- 完成... -->
+
+                                <!--   <a href="" class="btn btn-hollow margin-l-5">再次购买</a>
+                                                    <a href="" class="btn btn-hollow margin-l-5">评价晒单</a>
+                                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-item padded-l-0">
+                    <div class="cell-left ">
+                        <p class="text-default">恭喜您! 您的订单已免单</p>
+                        <!-- <p class="text-gray">您的订单已获得免单权利,请等待免单结果</p> 
+                        <p class="text-gray">很遗憾! 您的订单没有获得免单</p>  -->
+                    </div>
+                    <div class="cell-right ">
+                        <a href="" class="btn btn-hollow share">分享</a>
+                    </div>
+                </div>
+            </article>
+            <div class="m-cell margin-t-10 order-text">
+                <div class="cell-item">
+                    <div class="cell-left">订单编号:</div>
+                    <div class="cell-right ">
+                        <span id="orderNum" class="orderNum">121123876548842</span>
+                        <div class="btn btn-rds margin-l-15 " id="js-copy">复制</div>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">下单时间:</div>
+                    <div class="cell-right">2018-01-16 14:54</div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">支付方式:</div>
+                    <div class="cell-right">支付宝支付</div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">配送方式:</div>
+                    <div class="cell-right">顺丰快递</div>
+                </div>
+            </div>
+            <div class="m-cell margin-t-10 order-price ">
+                <div class="cell-item">
+                    <div class="cell-left">商品价格:</div>
+                    <div class="cell-right">
+                        &yen;
+                        <span>98.00</span>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left">运费:</div>
+                    <div class="cell-right"> &yen;
+                        <span>8.00</span>
+                    </div>
+                </div>
+                <!-- 免单显示 -->
+                <div class="cell-item">
+                    <div class="cell-left">免单:</div>
+                    <div class="cell-right"> &yen;
+                        <span>98.00</span>
+                    </div>
+                </div>
+                <div class="cell-item">
+                    <div class="cell-left"></div>
+                    <div class="cell-right">实付款:
+                        <span class="text-default margin-l-10"> &yen;8.00 </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="m-tabbar flex-around padded-lr-15">
+            <div class="cell-left text-gray">
+                删除订单</div>
+            <div class="cell-right">
+                <!-- 等待发货 -->
+                <a href="javascript:;" class="btn btn-hollow margin-l-15 js-delay">延长收货</a>
+                <a href="" class="btn btn-hollow margin-l-15">提醒发货</a>
+                <a href="" class="btn btn-hollow margin-l-15">联系卖家</a>
+                <!-- 运输中... -->
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                <a href="" class="btn btn-hollow margin-l-15" >确认收货</a> -->
+                <!-- 免单... -->
+
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>  -->
+                <!-- 完成... -->
+                <!--   <a href="" class="btn btn-hollow margin-l-15">再次购买</a>
+                    <a href="" class="btn btn-hollow margin-l-15">评价晒单</a>
+                -->
+
+            </div>
+        </footer>
+    </section>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../js/TweenMax.min.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+        wave();
+    });
+
+    var dialog = window.YDUI.dialog;
+    $('#js-copy').on('click', function () {
+        jsCopy('orderNum');
+        dialog.toast('复制成功！去粘贴吧', 'none', 1000);
+    });
+
+    $('.js-delay').on('click', function () {
+            dialog.confirm('提示', '本次延长3天，请谨慎操作！', [
+            {
+                txt: '取消',
+                color: false, /* false:黑色  true:绿色 或 使用颜色值 */
+                callback: function () {
+                    dialog.toast('你点了取消', 'none', 1000);
+                }
+            },
+         
+            {
+                txt: '确定',
+                color: '#fff',
+                callback: function () {
+                    dialog.toast('你点了确定', 'none', 1000);
+                }
+            }
+        ]);
+        });
+    // 倒计时
+    function countDown(day){
+        var oDate = new Date();
+        var addDay = day || 5;
+        oDate.setDate(oDate.getDate() +  addDay);
+        var timer = null;
+        var times ;
+        timer = setInterval(function () {
+            var diff = oDate.getTime() - new Date().getTime();
+            if (diff == 0) {
+                times = {
+                    days: 00,
+                    hours: 00,
+                    minutes: 00,
+                };
+                clearInterval(timer);
+            }else{
+            var d = parseInt(diff / 1000 / 60 / 60 / 24, 10);
+            var h = parseInt(diff / 1000 / 60 / 60 % 24, 10);
+            var m = parseInt(diff / 1000 / 60 % 60, 10);
+              times = {
+                    days: checkTime(d),
+                    hours:  checkTime(h),
+                    minutes:  checkTime(m),
+                };
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+   $('.day').text(times.days);
+    $('.hour').text(times.hours);
+   $('.minute').text(times.minutes);
+//    $('.second').text(times.seconds);
+        }, 1000);
+    };
+    countDown();
+
+</script>
+
+</html>

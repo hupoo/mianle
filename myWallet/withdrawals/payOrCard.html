@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>提现</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="../../css/payOrCard.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <div class="g-scrollview border-no">
+            <div class="m-tab js-tab " data-ydui-tab>
+                <a href="javascript:history.go(-1)" class="navbar-item">
+                    <i class="back-ico "></i>
+                </a>
+                <ul class="tab-nav border-no">
+                    <li class="tab-nav-item tab-active">
+                        <a href="javascript:;">支付宝</a>
+                    </li>
+                    <li class="tab-nav-item ">
+                        <a href="javascript:;">银行卡</a>
+                    </li>
+
+                </ul>
+                <!-- 支付宝 -->
+                <div class="tab-panel">
+                    <div class="tab-panel-item tab-active">
+                        <form action="" class="hidden">
+                            <div class="m-cell  margin-t-0">
+                                <div class="cell-item">
+                                    <div class="cell-left">手机号：</div>
+                                    <div class="cell-right">
+                                        <input type="number" pattern="[0-9]*" class="cell-input" autocomplete="off" maxlength="11" name="aliPhone" />
+                                    </div>
+                                </div>
+                                <div class="cell-item">
+                                    <div class="cell-left">支付宝账号:</div>
+                                    <div class="cell-right">
+                                        <input type="text" class="cell-input" name="aliId" />
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="sub">
+
+                                <input type="submit" class="btn-block btn-danger " value="提交">
+                            </p>
+                        </form>
+
+                        <div class="bank-list">
+                            <div class="bank-card-list">
+                                <!-- 支付宝 -->
+                                <!-- 有账号显示  支付宝列表 -->
+                                <div class="bankCard ALIPAY ">
+                                    <div class="card-info">
+                                        <div class="card-logo">
+                                        </div>
+                                        <div class="card-title ">
+                                            <p class="card-name font-size-18 margin-t-10">支付宝</p>
+                                            <p class="card-type font-size-12  margin-t-10">快捷支付</p>
+                                            <p class="card-num font-size-18 margin-t-15">
+                                                <span class="userphone">156*****424</span>
+                                                <span class="username margin-l-15">*三</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 银行卡 -->
+                    <div class="tab-panel-item ">
+                        <form action="" class="hidden " id="js-form">
+                            <div class="m-cell ">
+                                <div class="cell-item">
+                                    <div class="cell-left">账号：</div>
+                                    <div class="cell-right">
+                                        <input type="number" pattern="[0-9]*" class="cell-input" name="cardId" required />
+                                    </div>
+                                </div>
+                                <div class="cell-item">
+                                    <div class="cell-left">姓名：</div>
+                                    <div class="cell-right">
+                                        <input type="text" class="cell-input" name="username" required>
+                                    </div>
+                                </div>
+                                <div class="cell-item">
+                                    <div class="cell-left">所属银行：</div>
+                                    <label class="cell-right label">
+                                        <select class="cell-select b-select" name="bank" required>
+                                            <option value="">请选择</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="cell-item">
+                                    <div class="cell-left">开户银行：</div>
+                                    <div class="cell-right">
+                                        <input type="text" class="cell-input" name="createbank" required />
+                                    </div>
+                                </div>
+                                <div class="cell-item">
+                                    <div class="cell-left">手机号码:</div>
+                                    <div class="cell-right">
+                                        <input type="tel" pattern="[0-9]*" class="cell-input" maxlength="11" name="tel" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="sub">
+                                <input type="submit" class="btn-block  btn-disabled " value="提交" id="subs" disabled>
+                            </p>
+                        </form>
+                        <!-- 没有银行卡 显示否则隐藏 -->
+                        <div class="add-content  " id="add">
+                            <div class="add-button">
+                                <i class="">+</i>
+                                <p class="font-size-16">添加银行卡</p>
+                            </div>
+                            <p class="add-info margin-t-10 font-size-16 text-gray text-center">暂无银行卡信息</p>
+                        </div>
+                        <div class=" bank-list card  hidden">
+                            <div class="bank-card-list">
+                                <!-- 银行卡列表 -->
+                                <div class="bankCard flex-start flex-column PSBC">
+                                    <a href="">
+                                        <div class="card-info ">
+                                            <div class="card-logo">
+                                            </div>
+                                            <div class="card-title ">
+                                                <p class="card-name font-size-18 margin-t-10 ">中国邮政储蓄银行</p>
+                                                <p class="card-type font-size-12 margin-t-10">储蓄卡</p>
+                                                <p class="card-num font-size-18 margin-t-15">
+                                                    <span>****</span>
+                                                    <span>****</span>
+                                                    <span>****</span>
+                                                    <span>***</span>
+                                                    <span>1234</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- end -->
+                                <div class="bankCard flex-start flex-column ICBC">
+                                    <a href="">
+                                        <div class="card-info ">
+                                            <div class="card-logo">
+                                            </div>
+                                            <div class="card-title ">
+                                                <p class="card-name font-size-18 margin-t-10 ">中国建设银行</p>
+                                                <p class="card-type font-size-12 margin-t-10">储蓄卡</p>
+                                                <p class="card-num font-size-18 margin-t-15">
+                                                    <span>****</span>
+                                                    <span>****</span>
+                                                    <span>****</span>
+                                                    <span>***</span>
+                                                    <span>1234</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- end -->
+                             
+                                
+                            </div>
+                            <div class="explain">
+                                <p class="" id="fade" onclick="open()">关于银行卡绑定说明</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    var omask = document.getElementById('mask');
+    var oadd = document.getElementById('add');
+    var J_form = document.getElementById('js-form');
+    var subs = document.getElementById('subs');
+    oadd.onclick = function () {
+        J_form.classList.remove('hidden');
+       this.classList.add('hidden');
+    }
+    // 隐藏
+    function close() {
+        omask.classList.add('hidden');
+    }
+    // 显示
+    function open() {
+        omask.classList.remove('hidden');
+    }
+
+    var list = document.getElementById('js-form').querySelectorAll('input');
+    for (let i = 0; i < list.length - 1; i++) {
+        list[i].oninput = function () {
+            var str = [];
+            for (var i = 0; i < list.length - 1; i++) {
+                if (list[i].value != '') {
+                    str.push(i);
+                    if (str.length == list.length - 1) {
+                        subs.removeAttribute('disabled');
+                        subs.classList.remove('btn-disabled');
+                    } else {
+                        subs.setAttribute('disabled', 'disabled');
+                        subs.classList.add('btn-disabled');
+
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+</html>

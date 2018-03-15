@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的推荐</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/myRecommend.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">我的推荐</span>
+            </div>
+            <a href="#" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview margin-t-0 bg-light">
+            <div class="m-box ">
+                <div class="my-info text-light flex-c-between">
+                    <div class="img-box bg-light padded-10">
+                        <img src="../img/ercode.png" alt="">
+                    </div>
+                    <div class="box-right flex-column flex-c">
+                        <h2 class="font-size-18">我的UID:
+                            <span>XXX</span>
+                        </h2>
+                        <h1 class="money">35.00</h1>
+                        <h6 class="margin-t-10">总收益(元)</h6>
+                    </div>
+                </div>
+
+                <div class="wave">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <!--    内容区 -->
+            <div class="m-tab" >
+                <ul class="tab-nav">
+                    <a href="./myMember.html" class="tab-nav-item ">
+                        <div class="tab-txt">1</div>
+                        <div class="tab-txt">一级会员</div>
+                    </a>
+                    <a  href="./myMember.html" class="tab-nav-item">
+                        <div class="tab-txt">1</div>
+                        <div class="tab-txt">二级会员</div>
+                    </a>
+                    <a href="./myMember.html" class="tab-nav-item ">
+                        <div class="tab-txt">1</div>
+                        <div class="tab-txt">普通会员</div>
+                    </a>
+                    <a href="./myMember.html" class="tab-nav-item tab-active">
+                        <div class="tab-txt">3</div>
+                        <div class="tab-txt">我的会员</div>
+                    </a>
+                </ul>
+                <div class="tab-panel margin-t-10">
+                    <div class="tab-panel-item tab-active">
+                        <div class="m-tabtitle text-center margin-b-15">
+                            推荐成分说明
+                        </div>
+                        <div class="m-textcontent font-size-14 text-gray">
+                            默认为非响应式中的数据才是响应式的，动态添加进来的数据默认为非响应式中的数据才是响应式的，动态添加进来的数据默认为非响应式中的数据才是响应式的，动态添加进来的数据默认为非响应式中的数据才是响应式的，动态添加进来的数据默认为非响应式中的数据才是响应式的，动态添加进来的数据默认为非响应式
+
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js//TweenMax.min.js"></script>
+<script src="../js//index.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function(){
+        wave();
+    })
+    window.onresize = function(){
+        wave();
+    }
+</script>
+
+</html>

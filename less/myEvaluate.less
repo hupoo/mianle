@@ -1,0 +1,11 @@
+@import 'base.less';
+.tab-nav {
+    .tab-nav-item{
+    &.tab-active {
+        color: @baseColor; 
+    }
+    &:not(:last-child):after{
+            height: 0;
+    }
+    }
+}

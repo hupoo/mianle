@@ -1,0 +1,28 @@
+.m-cell .m-celltitle {
+  line-height: .88rem;
+}
+.m-cell + p {
+  padding: 0 .24rem;
+}
+.m-cell .iconfont {
+  font-size: .4rem;
+  margin-right: .2rem;
+}
+.btn-block {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3199ff), to(#3188ff));
+  background-image: -webkit-linear-gradient(bottom, #3199ff 0%, #3188ff 100%);
+  background-image: -o-linear-gradient(bottom, #3199ff 0%, #3188ff 100%);
+  background-image: linear-gradient(0deg, #3199ff 0%, #3188ff 100%);
+}
+.icon-balance {
+  color: #ff9900;
+}
+.icon-alipay {
+  color: #00a7ff;
+}
+.icon-wechat {
+  color: #19d100;
+}
+.icon-bank-card {
+  color: #7c24ff;
+}

@@ -1,0 +1,14 @@
+.answer {
+  padding: .5rem;
+}
+.answer h1 {
+  font-size: .36rem;
+  font-weight: 800;
+}
+.answer p {
+  margin-top: .2rem;
+  font-size: .28rem;
+}
+.m-tabbar {
+  height: 1rem;
+}

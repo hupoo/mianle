@@ -1,0 +1,156 @@
+.cell-item.way {
+  height: 1.3rem;
+}
+.cell-item {
+  height: .88rem;
+}
+.cell-icon {
+  width: .6rem;
+  height: .6rem;
+  overflow: hidden;
+}
+.info {
+  margin-left: .1rem;
+}
+.info .cardname {
+  font-size: .32rem;
+}
+.info .num {
+  font-size: .28rem;
+}
+.rmb {
+  font-size: .8rem;
+}
+.money {
+  position: relative;
+  font-size: .6rem;
+  color: #000;
+  text-indent: .2rem;
+}
+.subs {
+  padding: 0rem .24rem;
+}
+.subs .btn-block {
+  font-size: .28rem;
+}
+.cell-icon {
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  display: table;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-image: url(../img/bankbg/bank.svg);
+  background-size: 3rem;
+}
+/* 支付宝  */
+.ALIPAY .cell-icon {
+  background: url(../img/bankbg/alilogo.png) 50% no-repeat;
+  background-size: 1rem;
+}
+/* 中国邮政 */
+.PSBC .cell-icon {
+  background-position: -2rem 0rem;
+}
+/* 建设银行 */
+.CCB .cell-icon {
+  background-position: -1rem 0rem;
+}
+/* 中国银行 */
+.BOC .cell-icon {
+  background-position: 0rem 0rem;
+}
+/* 中信银行 */
+.CITIC .cell-icon {
+  background-position: -2rem -2rem;
+}
+/* 人民银行 */
+.PBC .cell-icon {
+  background-position: -1rem -2rem;
+}
+/* 招商银行 */
+.CMB .cell-icon {
+  background-position: 0rem -1rem;
+}
+/* 交通银行 */
+.BCM .cell-icon {
+  background-position: 0rem -2rem;
+}
+/* 农业银行 */
+.ABC .cell-icon {
+  background-position: -1rem -1rem;
+}
+/* 工商银行 */
+.ICBC .cell-icon {
+  background-position: -2rem -1rem;
+}
+.alert {
+  width: 70%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.alert .alert-title {
+  line-height: .8rem;
+  text-align: center;
+  position: relative;
+}
+.alert .alert-title .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: .2rem;
+}
+.alert .cell-right {
+  min-height: .6rem;
+}
+.alert .cell-right .cell-input {
+  height: .8rem;
+  width: 50%;
+  text-indent: .2rem;
+}
+.alert .cell-right a.btn {
+  line-height: .5rem;
+  height: .5rem;
+}
+.alert .m-cell {
+  margin-bottom: .1rem;
+}
+/* ---------------------------choosecard ------------*/
+.choosecard {
+  background: none;
+  margin-top: .1rem;
+}
+.choosecard .cell-item {
+  height: 1.3rem;
+  margin-bottom: .1rem;
+  background: #fff;
+  margin-right: 0;
+  padding-right: .2rem;
+}
+.choosecard .cell-item .cell-right input[type=radio] + .radio-icon,
+.choosecard .cell-item .cell-right input[type=checkbox]:not(.m-switch) + .radio-icon {
+  width: .5rem;
+  height: .5rem;
+  position: relative;
+}
+.choosecard .cell-item .cell-right input[type=radio] + .radio-icon:after,
+.choosecard .cell-item .cell-right input[type=checkbox]:not(.m-switch) + .radio-icon:after {
+  display: none;
+}
+.choosecard .cell-item .cell-right input[type=radio]:checked + .radio-icon:after,
+.choosecard .cell-item .cell-right input[type=checkbox]:not(.m-switch):checked + .radio-icon:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  -webkit-transform: rotate(-45deg) translateX(-50%);
+  -ms-transform: rotate(-45deg) translateX(-50%);
+  transform: rotate(-45deg) translateX(-50%);
+  width: 18px;
+  height: 10px;
+  border: 2px solid #3199ff;
+  border-top: 0;
+  border-right: 0;
+  left: 50%;
+  top: 0;
+}

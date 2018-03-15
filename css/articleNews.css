@@ -1,0 +1,29 @@
+.evaluate-item {
+  background: #fff;
+  margin-top: .12rem;
+  padding-bottom: .2rem;
+}
+.evaluate-item .vator {
+  width: .45rem;
+  height: .45rem;
+}
+.evaluate-item .cell-right {
+  min-height: .7rem;
+}
+.evaluate-item .info {
+  padding: 0 .24rem;
+}
+.evaluate-item .info .text {
+  padding: 0 .15rem 0 .5rem;
+  font-size: .28rem;
+  line-height: .4rem;
+  color: #000;
+}
+.evaluate-item .info .btn-reply {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  color: #808080;
+  line-height: .4rem;
+  height: .4rem;
+}

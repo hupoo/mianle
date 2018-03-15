@@ -1,0 +1,198 @@
+@import 'base.less';
+.process {
+    background-color: #fff;
+    h1 {
+        padding: .4rem 0 .2rem;
+        text-align: center;
+        color: @baseColor;
+    }
+    .m-grids-5 {
+        .grids-item {
+            color: #ccc;
+            padding-top: .2rem;
+            &:after {
+                width: 0;
+            }
+            &:not(:nth-child(5n)):before {
+                height: 0;
+            }
+            &:first-child {
+                .grids-txt:first-child::before {
+                    width: 0;
+                }
+            }
+            &:last-child {
+                .grids-txt:first-child::after {
+                    width: 0;
+                }
+            }
+        }
+    }
+}
+
+.bage {
+    color: #fff;
+    display: inline-block;
+    line-height: .3rem;
+    text-align: center;
+    height: .3rem;
+    width: .3rem;
+    font-size: .20rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    position: relative;
+    vertical-align: top;
+}
+
+.grids-txt {
+    padding: 0;
+    color: inherit;
+    overflow: inherit;
+    &:first-child {
+        margin-bottom: .2rem;
+        position: relative;
+        text-align: center;
+        padding-top: .1rem;
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            top: 50%;
+            width: 50%;
+            background-color: #ccc;
+            z-index: -1;
+        }
+        &:after {
+            right: 0;
+        }
+        &::before {
+            left: 0;
+        }
+    }
+    p:nth-child(2n) {
+        margin-top: .1rem;
+    }
+}
+
+.grids-item.prve {
+    .grids-txt:first-child {
+        &:after,
+        &:before {
+            background-color: @baseBgColor;
+        }
+    }
+    .bage {
+        background-color: @baseBgColor;
+    }
+    .grids-txt {
+        color: #000;
+    }
+}
+
+.grids-item.cur {
+    .bage {
+        -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        transform: scale(1.4);
+        background-color: @baseBgColor;
+    }
+    .grids-txt {
+        color: @baseColor;
+        &:first-child {
+            &:after {
+                background-color: #ccc;
+            }
+            &:before {
+                background-color: @baseBgColor;
+            }
+        }
+    }
+}
+
+.grids-item.close {
+    .bage {
+        -webkit-transform: scale(1.4) rotate(45deg);
+        -ms-transform: scale(1.4) rotate(45deg);
+        transform: scale(1.4) rotate(45deg);
+        position: relative;
+        background-color: #ff7f00;
+        line-height: .26rem;
+        font-size: .32rem;
+    }
+    .grids-txt {
+        color: #ff7f00;
+        &:first-child {
+            &:after {
+                background-color: #ccc;
+            }
+            &:before {
+                background-color: @baseBgColor;
+            }
+        }
+    }
+}
+
+
+/* ==========question================ */
+
+.question,
+.message,
+.feedback {
+    padding: .24rem .24rem 0;
+    .title {
+        font-size: .32rem;
+        color: #808080;
+        margin-bottom: .24rem;
+    }
+    .detail {
+        background-color: #e6e6e6;
+        border-radius: 5px;
+        padding: .15rem .24rem;
+        p {
+            line-height: .38rem;
+            color: #000;
+            font-size: .28rem;
+            margin-bottom: .1rem;
+        }
+        .times {
+            color: inherit;
+        }
+    }
+}
+
+
+/* ============message============= */
+
+.message,
+.feedback {
+    .detail {
+        border: 1px solid #ccc;
+        background: #fff;
+        margin-bottom: .2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.detail.cur {
+    p {
+        color: @baseColor;
+    }
+    color: @baseColor;
+}
+
+.detail.close {
+    p {
+        color: #ff7f00;
+    }
+    color: #ff7f00;
+}
+
+.m-tabbar {
+    padding: .24rem;
+    a {
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的钱包</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/myWallet.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar ">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">我的钱包</span>
+            </div>
+            <a href="" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview ">
+            <div class="wallet text-light">
+                <h1>1800.00
+                    <em class="font-size-12">元</em>
+                </h1>
+                <h6>账户余额</h6>
+                <div class="wave">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <div class="m-cell ">
+                <a class="cell-item " href="./shares.html">
+                    <div class="cell-left font-size-16">股金</div>
+                    <div class="cell-right cell-arrow font-size-16">2300</div>
+                </a>
+            </div>
+            <div class="m-cell list">
+                <a href="./fundsDetail.html" class="cell-item ">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-cashdetail"></i>
+                        资金明细</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a href="./withdrawals/withdrawals.html" class="cell-item ">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-comein"></i>
+                        提现</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a href="./recharge.html" class="cell-item ">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-comeout"></i>
+                        充值</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a href="./withdrawalsDetail.html" class="cell-item ">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-indetial"></i>
+                        提现明细</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <a href="./withdrawals/payOrCard.html" class="cell-item ">
+                    <div class="cell-left ">
+                        <i class="m-icon icon-bindinfo"></i>
+                        绑定提现信息</div>
+                    <div class="cell-right cell-arrow">
+                        未绑定
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+        wave();
+
+    });
+    window.onresize = function () {
+         wave();
+    }
+
+</script>
+
+</html>

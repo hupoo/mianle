@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: pink;
+            font-size:1em;
+             overflow-y:scroll;
+            -webkit-overflow-scroll: touch;
+        }
+
+        header {
+            width: 100%;
+            height: 100%;
+            background: yellow;
+            position: relative;
+        }
+
+        section {
+            width: 100%;
+            height: 200%;
+            background: green;
+            display: none;
+            position: relative;
+        }
+
+        div {
+            background: #fff;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+
+        div.header {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+        }
+
+        div.section {
+            top: -50px;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <div class="header">向下拖动查看详情</div>
+        <ul>
+            <li>商品简介</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+        </ul>
+    </header>
+    <section class="down">
+        <div class="section">向上拖动查看简介</div>
+        <ul>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+            <li>圣诞节圣诞节</li>
+        </ul>
+    </section>
+    <script src="../js/jquery.3.0.0.min.js"></script>
+    <script>
+
+
+        var oBody = document.getElementsByTagName("body")[0];
+        var oHeader = document.getElementsByTagName("header")[0];
+        var oSection = document.getElementsByTagName("section")[0];
+        var oDiv1 = document.getElementsByTagName("div")[0];
+        var oDiv2 = document.getElementsByTagName("div")[1];
+        var startX = 0;
+        var startY = 0;
+        var diffX = 0;
+        var diffY = 0;
+        var flag = true;
+        oBody.addEventListener("touchstart", function (e) {
+            /*console.log(e);
+            var touches = e.touches;
+            console.log("按下的时候");
+            console.log("按下时的坐标 X:"+touches[0].pageX + "Y:" + touches[0].pageY)*/
+            var touches = e.touches;
+            startX = touches[0].pageX;
+            startY = touches[0].pageY;
+        }, false);
+        oBody.addEventListener("touchmove", function (e) {
+            /*var touches = e.touches;
+            console.log("移动的时候");
+            console.log("移动时的坐标 X:"+touches[0].pageX + "Y:" + touches[0].pageY)*/
+            var touches = e.touches;
+            diffY = startY - touches[0].pageY;
+            diffX = startX - touches[0].pageX;
+            /*if(flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 200){
+            oDiv1.style.display = "block";
+            }else if(!flag && document.body.scrollTop < 10 && diffY < -200){
+            oDiv2.style.display = "block";
+            }*/
+        }, false);
+        oBody.addEventListener("touchend", function (e) {/*
+var touches = e.touches;
+console.log("离开的时候");
+console.log("离开时的坐标 X:"+touches[0].pageX + "Y:" + touches[0].pageY)*/
+            /*console.log("Y:"+diffY + ";X:" + diffX);
+            console.log(document.body.scrollHeight - document.body.clientHeight);
+            console.log("离开时的坐标 X:"+document.body.scrollTop)*/
+            if (flag && document.body.scrollHeight - document.body.clientHeight <= document.body.scrollTop + 14 && diffY > 100) {
+                //oHeader.style.display = "none";
+                $(".top").slideUp(300);
+                oSection.style.display = "block";
+                document.body.scrollTop = 50;
+                flag = false;
+            } else if (!flag && document.body.scrollTop < 10 && diffY < -100) {
+                $(".top").slideDown(300, function () {
+                    oSection.style.display = "none";
+                });
+
+                flag = true;
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+.lists {
+  margin-top: .12rem;
+}
+.lists .cell-item:not(:last-child):after,
+.lists .cell-item:after {
+  margin-left: 0;
+}
+.lists .list-item-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lists .list-item-wrap .checkbox {
+  margin-right: .15rem;
+}
+.m-list.list-theme4 {
+  padding: 0 .24rem;
+}
+.m-list.list-theme4 .list-img {
+  width: 1.6rem;
+  padding: .8rem 0;
+}
+.m-list.list-theme4 .count {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.m-tabbar {
+  height: 1rem;
+}
+.m-tabbar .go {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+.m-tabbar .prompt {
+  line-height: 1;
+}
+.m-tabbar .btn-collect,
+.m-tabbar .btn-del {
+  border-radius: 8px;
+  font-size: .28rem;
+  height: .45rem;
+  line-height: .45rem;
+}
+.m-tabbar .btn-collect {
+  border-color: #808080;
+}
+.m-tabbar .btn-del {
+  border-color: #3199ff;
+}

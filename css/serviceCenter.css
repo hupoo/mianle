@@ -1,0 +1,32 @@
+.search {
+  height: 1rem;
+  width: 100%;
+  background-color: #fff;
+  padding: .2rem 0;
+}
+.search .search-box {
+  height: .6rem;
+  margin: 0 .75rem;
+  border-radius: .6rem;
+  padding: 0 .2rem;
+  background-color: rgba(49, 152, 255, 0.3);
+}
+.search .search-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  height: .6rem;
+  vertical-align: top;
+  display: inline-block;
+}
+.m-cell .cell-item {
+  font-size: .32rem;
+}
+.m-cell .cell-item .cell-right {
+  min-height: .8rem;
+}
+.m-tabbar .btn-block {
+  border-radius: 5px;
+}

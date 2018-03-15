@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的会员</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/myMember.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">我的会员</span>
+            </div>
+            <a href="#" class="navbar-item pull-right">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+
+        <div class="g-scrollview">
+            <div class="m-tab" data-ydui-tab>
+                <!-- 这里添加data-ydui-tab就可以啦 -->
+                <ul class="tab-nav">
+                    <li class="tab-nav-item tab-active">
+                        <a href="javascript:;">一级会员(2)</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">二级会员(2)</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">普通会员(3)</a>
+                    </li>
+
+                </ul>
+                <div class="tab-panel margin-t-10">
+                    <div class="tab-panel-item tab-active">
+                        <table class="tables ">
+                            <thead class="border-b bg-light">
+                                <tr>
+                                    <th>用户ID</th>
+                                    <th>用户名</th>
+                                    <th>推荐时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>123456</td>
+                                    <td>xxxx</td>
+                                    <td>2018-01-12</td>
+                                </tr>
+                                <tr>
+                                    <td>123456</td>
+                                    <td>xxxx</td>
+                                    <td>2018-01-12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                       
+                    </div>
+                    <div class="tab-panel-item">222222</div>
+                    <div class="tab-panel-item">333333</div>
+                </div>
+
+            </div>
+
+<!-- 没有会员相关信息   就显示 -->
+    <div class="no-view  hidden">
+        <div class="box img-round flex-c-c">
+            <img src="../img/no-member.png" alt="">
+        </div>
+        <h2 class="text text-gray font-size-16">没有相关记录明细~</h2>
+    </div>
+
+        </div>
+
+    </section>
+
+</body>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script>
+
+</script>
+
+</html>

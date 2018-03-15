@@ -1,0 +1,21 @@
+.address .cell-left,
+.express .cell-left {
+  color: #808080;
+}
+.address .cell-right,
+.express .cell-right {
+  min-height: .88rem;
+  height: .88rem;
+  padding-left: .1rem;
+}
+.address .cell-right .cell-input,
+.express .cell-right .cell-input {
+  color: #808080;
+}
+.address .cell-right ::-webkit-input-placeholder,
+.express .cell-right ::-webkit-input-placeholder {
+  color: #ccc;
+}
+.btn-box {
+  padding: .24rem;
+}

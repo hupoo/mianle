@@ -1,0 +1,121 @@
+.m-navbar {
+  background: initial;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.integral {
+  height: 3.77rem;
+  padding-top: .88rem;
+  position: relative;
+  background: #fff url('../img/count_bg.png') no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.integral h2 {
+  margin-top: .7rem;
+  font-size: .28rem;
+}
+.integral .counts {
+  font-size: .56rem;
+}
+.list-content {
+  padding: .4rem .24rem;
+}
+.list-content .list-item {
+  color: #fff;
+  font-size: .32rem;
+  line-height: 1.2rem;
+  width: 3.2rem;
+  border-radius: 6px;
+  text-align: center;
+}
+.list-content .list-item:first-child {
+  background: url('../img/change_bg.png') no-repeat;
+  background-position: 100% 100%;
+  background-size: contain;
+}
+.list-content .list-item:last-child {
+  background: url('../img/counts_bg.png') no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+.m-cell {
+  margin-top: .12rem;
+}
+.m-cell .m-celltitle {
+  line-height: .8rem;
+  color: #808080;
+  padding-left: .24rem;
+  padding-bottom: 0;
+  font-size: .28rem;
+}
+.m-cell .cell-item {
+  line-height: 1.18rem;
+}
+.m-cell .cell-item .cell-left,
+.m-cell .cell-item .cell-right {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.m-cell .cell-item .cell-left div:first-child,
+.m-cell .cell-item .cell-right div:first-child {
+  line-height: .7rem;
+}
+.m-cell .cell-item .cell-left div:last-child,
+.m-cell .cell-item .cell-right div:last-child {
+  line-height: .5rem;
+}
+.m-cell .cell-item .cell-left .detail,
+.m-cell .cell-item .cell-right .detail,
+.m-cell .cell-item .cell-left .integralCount,
+.m-cell .cell-item .cell-right .integralCount {
+  font-size: .32rem;
+  color: #000;
+}
+.m-cell .cell-item .cell-left .detail em,
+.m-cell .cell-item .cell-right .detail em,
+.m-cell .cell-item .cell-left .integralCount em,
+.m-cell .cell-item .cell-right .integralCount em {
+  font-size: 0.7em;
+}
+.m-cell .cell-item .cell-left .times,
+.m-cell .cell-item .cell-right .times,
+.m-cell .cell-item .cell-left .totalCount,
+.m-cell .cell-item .cell-right .totalCount {
+  font-size: .24rem;
+  color: #808080;
+}
+.m-cell .cell-item .cell-left {
+  text-align: left;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.m-cell .cell-item .cell-right {
+  text-align: right;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.m-cell .cell-item:after {
+  margin-left: 0;
+}
+.more {
+  margin-top: .4rem;
+}
+.more .btn-more {
+  line-height: .6rem;
+  border-radius: 8px;
+  color: #808080;
+  width: 2rem;
+  border-color: #ccc;
+}

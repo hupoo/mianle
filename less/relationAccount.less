@@ -1,0 +1,89 @@
+.relation-box {
+    height: 3.3rem;
+    background-color: #fff;
+    padding: 0 .7rem;
+    .vator {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0 auto;
+        background-color: #ccc;
+        overflow: hidden;
+        img {
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+    .vator-wrap {
+        text-align: center;
+    }
+}
+
+.relation-wrap {
+    margin-top: -.5rem;
+    width: 1.65rem;
+    height: .7rem;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+.wechat-wrap {
+    .wechat {
+        width: 1.3rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.sub {
+    padding: 0 .24rem;
+}
+
+.agreement {
+    .check {
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        position: relative;
+        input[type=checkbox] {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+        }
+        nput[type=checkbox]+.radio-icon,
+        {
+            width: .5rem;
+            height: .5rem;
+            position: relative;
+            &:after {
+                display: none;
+            }
+        }
+        input[type=checkbox]:not(.m-switch):checked+.radio-icon:after {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            -webkit-transform: rotate(-45deg) translateX(-50%);
+            -ms-transform: rotate(-45deg) translateX(-50%);
+            transform: rotate(-45deg) translateX(-50%);
+            margin-left: -2px;
+            width: 10px;
+            height: 5px;
+            border: 1px solid #3199ff;
+            border-top: 0;
+            border-right: 0;
+            left: 50%;
+            top: 0;
+        }
+    }
+    .js-text {
+        line-height: .3rem;
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,11 @@
+.m-list.list-theme4 {
+  padding: 0;
+}
+.m-list.list-theme4 .list-item {
+  padding-left: .24rem;
+  padding-right: .24rem;
+}
+.m-list.list-theme4 .list-img {
+  width: 1.6rem;
+  padding: .8rem 0;
+}

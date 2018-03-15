@@ -1,0 +1,162 @@
+.m-navbar {
+  background: none;
+}
+.m-navbar:after {
+  height: 0;
+  width: 0;
+}
+.m-navbar i {
+  font-size: .50rem;
+}
+.m-navbar {
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+/*导航栏动画效果*/
+.m-navbar.change {
+  background: rgba(255, 255, 255, 0.514);
+  -webkit-box-shadow: 0px 0px 10px #757575;
+  box-shadow: 0px 0px 10px #757575;
+}
+.userHeader {
+  height: 3.5rem;
+  text-align: center;
+  background: url(../img/user_bg.png) no-repeat;
+  background-size: cover;
+  padding-top: .35rem;
+  position: relative;
+  overflow: hidden;
+}
+.userHeader .vator img {
+  margin: 0 auto;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.userHeader .bow {
+  position: absolute;
+  width: 100%;
+  height: .5rem;
+  bottom: 0;
+  overflow: hidden;
+  background: url(../img/bow.png) no-repeat;
+  background-size: cover;
+}
+.userHeader .grade {
+  display: inline-block;
+  border-radius: .2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.08rem .2rem;
+}
+.userHeader .grade p {
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: .25rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.agent {
+  width: 1.5rem;
+  height: 1.7rem;
+  overflow: hidden;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+  position: absolute;
+  -webkit-animation: move 1s ease infinite alternate;
+  animation: move 1s ease infinite alternate;
+  left: -0.2rem;
+  bottom: -0.2rem;
+}
+.agent img {
+  width: 100%;
+}
+@-webkit-keyframes move {
+  from {
+    left: -0.2rem;
+    bottom: -0.2rem;
+  }
+  to {
+    left: 0rem;
+    bottom: 0rem;
+  }
+}
+@keyframes move {
+  from {
+    left: -0.2rem;
+    bottom: -0.2rem;
+  }
+  to {
+    left: 0rem;
+    bottom: 0rem;
+  }
+}
+.manage {
+  position: absolute;
+  right: 0;
+  top: 1.25rem;
+}
+.manage .info-tag {
+  line-height: .24rem;
+  height: .24rem;
+  padding: .05rem .2rem;
+  background: #3dbfff;
+  color: #fff;
+  border-bottom-left-radius: 0.24rem;
+  border-top-left-radius: 0.24rem;
+}
+.grade .iconfont {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  margin-right: .05rem;
+}
+.orderInfo div[class*='m-grids-'] .grids-item:before {
+  height: 0!important;
+}
+.orderInfo div[class*='m-grids-'] .grids-item:after {
+  width: 0;
+}
+div[class*='m-grids-'] .grids-item:after {
+  width: 0;
+}
+.g-view::before {
+  height: 0;
+}
+.grids-item .grids-txt {
+  font-size: 0.26rem;
+}
+.grids-item .grids-txt:last-child {
+  margin-top: .05rem;
+}
+.userInfo .grids-item {
+  padding: 0;
+  margin: .2rem 0;
+}
+.userInfo .grids-txt:first-child {
+  font-size: .3rem;
+  font-weight: 800;
+}
+.orderInfo .iconfont {
+  -webkit-transform: scale(1.8);
+  -ms-transform: scale(1.8);
+  transform: scale(1.8);
+}
+.userView .grids-item {
+  padding: 0;
+  margin: .2rem 0;
+}
+.userView .grids-item .grids-txt:first-child {
+  font-size: .3rem;
+  font-weight: 800;
+  margin-bottom: .1rem;
+}

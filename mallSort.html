@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商城分类</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
+    <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <link rel="stylesheet" href="./css/goodsList.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mallSort.css">
+    <script src="./ydui/build/js/ydui.flexible.js"></script>
+</head>
+
+<body>
+    <section class="g-flexview">
+
+        <header class="m-navbar ">
+            <a href="javascript:history.go(-1)" class="left">
+                <i class="m-icon icon-left-light"></i>
+            </a>
+            <div class="center flex-1 flex-c">
+                <div class="flase-form flex-c flex-c-between padded-l-15">
+                    <i class="m-icon icon-search-light "></i>
+                    <input type="search" class="cell-input text-light font-size-16">
+                </div>
+            </div>
+            <a href="javascript:;" class="right margin-l-0">
+                <i class="icon-more"></i>
+            </a>
+        </header>
+        <div class="g-scrollview ">
+            <div class="sticky">
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper " id="tab">
+                        <div class=" swiper-slide tab-active ">
+                            <i class="mall-icon ma-all"></i>
+                            <p>全部</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-snacks"></i>
+                            <p>休闲零食</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-fresh"></i>
+                            <p>生鲜食品</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-womenshoes"></i>
+                            <p>女鞋</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-skirts"></i>
+                            <p>女装</p>
+                        </div>
+                        <div class=" swiper-slide  ">
+                            <i class="mall-icon ma-quilts"></i>
+                            <p>家纺</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-underwear"></i>
+                            <p>家居/内衣</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-bottles"></i>
+                            <p>母婴/儿童</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-necklaces"></i>
+                            <p>饰品</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-teacups"></i>
+                            <p>养生保健</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-suitcases"></i>
+                            <p>箱包</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-lights"></i>
+                            <p>居家生活</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-leathershoes"></i>
+                            <p>男鞋</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-shirts"></i>
+                            <p>男装</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-showerbaths"></i>
+                            <p>洗护</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-washingmachines"></i>
+                            <p>家电</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-lipstick"></i>
+                            <p>美妆</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-barbell"></i>
+                            <p>运动</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-books"></i>
+                            <p>图书/玩具</p>
+                        </div>
+                        <div class=" swiper-slide ">
+                            <i class="mall-icon ma-office"></i>
+                            <p>办公用品</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="filterbar-container border-b">
+                    <div class="filter-bar J_sortTab">
+                        <ul class="sort-tab flex-c flex-c-around ">
+                            <li class="droplist-trigger all selected">
+                                <span class="text">综合</span>
+                                <span class="arrow"></span>
+                            </li>
+                            <li class="sort">销量
+                            </li>
+                            <li id="J_Sift" class="price">
+                                <span>价格</span>
+                                <span class="arrow trans-180d margin-t-5"></span>
+                                <span class="arrow"></span>
+                            </li>
+                        </ul>
+                        <div class="droplist hidden" id="J_droplist">
+                            <div class="m-cell  border-t">
+                                <label class="cell-item">
+                                    <span class="cell-left">综合排序</span>
+                                    <label class="cell-right">
+                                        <input type="radio" value="woman" name="radio">
+                                        <i class="radio-icon"></i>
+                                    </label>
+                                </label>
+                                <label class="cell-item">
+                                    <span class="cell-left">新品优先</span>
+                                    <label class="cell-right">
+                                        <input type="radio" value="auto" name="radio">
+                                        <i class="radio-icon"></i>
+                                    </label>
+                                </label>
+                                <label class="cell-item">
+                                    <span class="cell-left">评论数从高到低</span>
+                                    <label class="cell-right">
+                                        <input type="radio" value="man" name="radio" checked="">
+                                        <i class="radio-icon"></i>
+                                    </label>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel">
+                <div class="tab-panel-item tab-active">
+                    <article class="m-list list-theme4">
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="javascript:;" class="list-item">
+                            <div class="list-img">
+                                <img src="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg" data-url="http://img1.shikee.com/try/2016/06/19/09430120929215230041.jpg_180x180.jpg">
+                            </div>
+                            <div class="list-mes">
+                                <h3 class="list-title ">2016夏天新款男士短袖t恤青少年韩版修身印花圆领半袖男装衣服潮</h3>
+                                <div class="list-mes-item padded-t-5">
+                                    <span class="text-gray font-size-10">
+                                        已售:
+                                        <em>20</em>件
+                                    </span>
+                                </div>
+                                <div class="list-mes-item text-default">
+                                    <div>
+                                        <span class="text-default font-size-14">
+                                            <em>¥</em>34.7</span>
+                                    </div>
+                                    <div class="font-size-12">商品参与免单日可免单
+                                        <em>¥</em>
+                                        <span>98.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </article>
+                </div>
+
+                <div class="tab-panel-item">1</div>
+                <div class="tab-panel-item">2</div>
+                <div class="tab-panel-item">3</div>
+                <div class="tab-panel-item">4</div>
+                <div class="tab-panel-item">5</div>
+                <div class="tab-panel-item">6</div>
+                <div class="tab-panel-item">7</div>
+                <div class="tab-panel-item">8</div>
+                <div class="tab-panel-item">9</div>
+                <div class="tab-panel-item">10</div>
+                <div class="tab-panel-item">11</div>
+                <div class="tab-panel-item">12</div>
+                <div class="tab-panel-item">13</div>
+                <div class="tab-panel-item">14</div>
+                <div class="tab-panel-item">15</div>
+                <div class="tab-panel-item">13</div>
+                <div class="tab-panel-item">14</div>
+                <div class="tab-panel-item">15</div>
+                <div class="tab-panel-item">16</div>
+                <div class="tab-panel-item">17</div>
+            </div>
+        </div>
+    </section>
+    <!-- 固定购物车 -->
+
+    <div class="shopcar  bg-default flex-c-c">
+        <i class="m-icon icon-shopcar-light"></i>
+        <span class="badge badge-danger">3</span>
+    </div>
+
+    <div class="backTo">
+    </div>
+    <!-- 遮罩 -->
+    <div class="m-mask hidden" id="J_mask" style="z-index:0"></div>
+    <script type="text/javascript" src="./js/jquery.3.0.0.min.js"></script>
+    <script type="text/javascript" src="./ydui/build/js/ydui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            initialSlide: 0,
+            slidesPerView: 'auto',
+            freeModeSticky: true,
+            slideToClickedSlide: true,// 点击当前滑块会居中
+            freeModeMomentumRatio: 1,
+            observer: true,
+            on: {
+                click: function (event) {
+                    $('.swiper-slide').eq(this.clickedIndex).addClass('tab-active').siblings().removeClass('tab-active');
+                    $('.tab-panel-item').eq(this.clickedIndex).addClass('tab-active').siblings().removeClass('tab-active');
+                }
+            },
+        });
+
+
+        // 综合
+        $('.droplist-trigger').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('#J_mask,#J_droplist').toggleClass('hidden');
+        });
+
+        $('body').on('click', function (e) {
+            if (!$(e.target).is($('.droplist-trigger')) && !$(e.target).is($('.text')) && !$(e.target).is($('.arrow'))) {
+                $('#J_mask,#J_droplist').addClass('hidden');
+            }
+            // 综合
+            $('.sort').on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                // dosomething...
+            });
+            $('#J_Sift').on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                // dosomething...
+            });
+        });
+        //监听页面滚动事件
+        // function scrollEvent() {
+        var p = 0, t = 0;
+        $('.g-scrollview').on('scroll', function (e) {
+            p = $(this).scrollTop();
+            if (p > 500)
+                $(".backTo").css('display', 'block');
+            else $(".backTo").css('display', 'none');
+
+            if (t <= p) {
+                //下滚  
+                $('.m-navbar,.shopcar').addClass('scroll');
+            }
+            else {
+                //上滚  
+                $('.m-navbar,.shopcar').removeClass('scroll');
+            }
+            setTimeout(function () { t = p; }, 0);
+        })
+        // 返回顶部触发
+        $(".backTo").click(function () {
+            $('.g-scrollview').animate({ scrollTop: 0 }, 300);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+.m-navbar {
+  position: relative;
+  z-index: 2;
+}
+.m-navbar .right,
+.m-navbar .left {
+  line-height: .88rem;
+}
+.m-navbar .right .m-icon,
+.m-navbar .left .m-icon {
+  vertical-align: middle;
+}
+.m-navbar .left {
+  min-width: 15%;
+  padding-left: .2rem;
+}
+.m-navbar .left .m-icon {
+  margin-left: -0.1rem;
+}
+.m-navbar .right {
+  padding: 0 .1rem;
+  position: relative;
+}
+.m-navbar .flase-form {
+  height: .6rem;
+  width: 100%;
+  padding: 0 .1rem;
+  border-radius: .6rem;
+  line-height: .6rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.m-navbar .flase-form .cell-input {
+  line-height: .6rem;
+  height: .6rem;
+}
+.search {
+  position: relative;
+}
+.search .m-icon {
+  margin-top: -3px;
+  vertical-align: middle;
+}
+.hotsearch .m-celltitle,
+.search-history .m-celltitle {
+  line-height: .88rem;
+  padding-bottom: 0;
+}
+.search-history .cell-left {
+  color: #808080;
+  line-height: .88rem;
+}
+.search-history .cell-item:not(:last-child):after {
+  margin-left: 0;
+}
+.search-warp {
+  padding: 0 .14rem;
+}
+.search-warp .search-items {
+  display: inline-block;
+  margin: .1rem;
+  font-size: .28rem;
+  padding: .1rem .2rem;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  color: #808080;
+}
+.delete-history {
+  padding: .35rem 0;
+}
+.delete-history .btn {
+  border-radius: 8px;
+  border-color: #808080;
+}
+.delete-history .btn .m-icon {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.input-tab-nav {
+  position: absolute;
+  width: 1.24rem;
+  bottom: -1.25rem;
+  left: -0.2rem;
+}
+.input-tab-nav .m-cell {
+  -webkit-box-shadow: 0px 3px 6px 0px #808080;
+  box-shadow: 0px 3px 6px 0px #808080;
+  border-radius: 5px;
+  position: relative;
+}
+.input-tab-nav .m-cell:after {
+  position: absolute;
+  left: 20px;
+  top: -8px;
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  z-index: -1;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.input-tab-nav .cell-items {
+  line-height: .6rem;
+  height: .6rem;
+  text-align: center;
+  color: #000;
+}
