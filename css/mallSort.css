@@ -1,12 +1,13 @@
 .m-navbar {
   position: relative;
   z-index: 2;
-  -webkit-transition: all 100ms linear;
-  -o-transition: all 100ms linear;
-  transition: all 100ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .m-navbar.scroll {
   height: 0;
+  overflow: hidden;
 }
 .m-navbar .right,
 .m-navbar .left {
@@ -39,8 +40,11 @@
   line-height: .6rem;
   height: .6rem;
 }
-.g-scrollview {
+.hairline.ios .g-scrollview {
   position: relative;
+}
+.hairline.ios .g-scrollview:after {
+  height: 0;
 }
 .sticky {
   position: -webkit-sticky;
@@ -50,9 +54,6 @@
 }
 .swiper-container {
   background-color: #fff;
-}
-.swiper-container .swiper-wrapper {
-  height: 1rem;
 }
 .swiper-container .swiper-wrapper .swiper-slide {
   background: #f5f5f5;
@@ -140,6 +141,9 @@
 }
 .filter-bar {
   border-bottom: none;
+  -webkit-transform: translateZ(100px);
+  transform: translateZ(100px);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .m-list.list-theme4 .list-img {
   width: 1.6rem;
@@ -152,9 +156,9 @@
   bottom: 1.2rem;
   right: .24rem;
   border-radius: 50%;
-  -webkit-transition: all 100ms linear;
-  -o-transition: all 100ms linear;
-  transition: all 100ms linear;
+  -webkit-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear;
 }
 .shopcar.scroll {
   -webkit-transform: translateX(100%);
@@ -173,4 +177,8 @@
 }
 .backTo {
   bottom: 2.2rem;
+}
+.tab-panel-item {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }

@@ -287,7 +287,9 @@ article .article-container .artice-content-img img {
   top: .05rem;
   right: 0;
   background: 0;
-  color: #ff0000;
+  border-radius: 50%;
+  background: #EF4F4F;
+  color: #fff;
   font-weight: 600;
   z-index: 2;
   font-size: .24rem;

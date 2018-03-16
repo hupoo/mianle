@@ -246,7 +246,7 @@
                         </div>
                     </div>
                 <div class="footer text-center">
-                    <a href="#" class="btn  text-gray">
+                    <a href="" class="btn  text-gray">
                         查看全部评论&nbsp;&gt;
                     </a>
                 </div>
@@ -305,14 +305,12 @@
         $('.g-scrollview').on('scroll',function () {
             isTop();
         });
-
         function isTop(){
             if ($('.g-scrollview').scrollTop() > $('.m-navbar').height()) {
                 $('.article-header').addClass('slideUp');
                 addCls($('.article-header'),'slideUp');
             } else {
                 removeCls($('.article-header'), 'slideUp');
-                
             }
         }
         $('.js_click').click(function(){
@@ -329,8 +327,8 @@
         });
 
          $('.msg_input').blur(function () {
-             console.log(111)
                $('.js_group').removeClass('hidden').siblings('.js_send').addClass('hidden');
+              $('.msg_input').val("");
                
          });
        

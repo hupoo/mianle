@@ -56,6 +56,17 @@
                             </select>
                         </div>
                     </div>
+                    <div class="cell-item  ">
+                        <div class="cell-left">店铺类型：</div>
+                        <div class="cell-right form-input flex-start ">
+                            <select class="b-select">
+                                <option value="">选择行业</option>
+                                <option value="">线上</option>
+                                <option value="">线下</option>
+                            </select> 
+                           
+                        </div>
+                    </div>
                 </div>
                 <div class="m-cell m-form margin-t-10">
                     <div class="cell-item padded-t-10  flex-column border-no">
@@ -152,8 +163,7 @@
     </section>
 </body>
 <script src="../js/jquery.3.0.0.min.js"></script>
-<script src="../js/distpicker.data.min.js"></script>
-<script src="../js/distpicker.min.js"></script>
+<script src="../js/distpicker.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script>
 
@@ -184,13 +194,12 @@
     // 地址选择
     var $distpicker = $('#distpicker');
     $distpicker.distpicker({
-        autoSelect: false,
         province: '-省-',
         city: '-市-',
         district: '-区-'
     });
     $distpicker.find('select').on('change', function () {
-        $('#hidden').val(getVal('#distpicker'));
+             getVal($('#distpicker'))
     })
 
     // 地址取值

@@ -50,10 +50,6 @@
 
         // 根据实际情况自定义获取数据方法
         var page = 1, pageSize = 10;
-        var loadMore = function (callback) {
-           
-        };
-
         $('#J_List').infiniteScroll({
             binder: '#J_List',
             pageSize: pageSize,
@@ -69,7 +65,6 @@
                         pagesize: pageSize
                     },
                     success: function (ret) {
-                        // typeof callback == 'function' && callback(ret);
                          var html = template('J_ListHtml', { list: ret });
                         $('#J_ListContent').append(html).find('img').lazyLoad({ binder: '#J_List' });
                         def.resolve(ret);
@@ -77,15 +72,6 @@
                     }
                 });
                 return def.promise();
-
-                // loadMore(function (ret) {
-                    // var html = template('J_ListHtml', {list: ret});
-                    // $('#J_ListContent').append(html).find('img').lazyLoad({binder: '#J_List'});
-                    // def.resolve(ret);
-
-                    // ++page;
-                // });
-                // return def.promise();
             }
         });
     }();
