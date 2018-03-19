@@ -25,7 +25,7 @@
             </a>
             <div class="center flex-1 flex-c">
                 <div class="flase-form flex-c flex-c-between padded-l-15">
-                    <div class="search font-size-14 flex-c " id="JS_toggle" data-types="0">
+                    <div class="search font-size-16 " id="JS_toggle" data-types="0">
                         <span class="types">商品</span> 
                         <i class="m-icon icon-down-light trans-8"></i>
                         <div class="input-tab-nav  hidden" id="J_TabNav">
@@ -41,7 +41,7 @@
                     <i class="m-icon icon-search-light "></i>
                 </div>
             </div>
-            <a href="javascript:;" class="right margin-l-0">
+            <a href="javascript:;" class="right margin-l-0 font-size-16">
                 搜索
             </a>
         </header>
@@ -129,7 +129,6 @@
                 if (!$(e.target).is($('.icon-down-light')) && !$(e.target).is($('.types'))){
                     $('#J_TabNav').addClass('hidden');
                 }
-                
             });
             $('#J_TabNav li').on('click', function(e){
                 var type =$(this).attr('data-type');

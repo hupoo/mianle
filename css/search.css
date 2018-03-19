@@ -11,7 +11,7 @@
   vertical-align: middle;
 }
 .m-navbar .left {
-  min-width: 15%;
+  min-width: 10%;
   padding-left: .2rem;
 }
 .m-navbar .left .m-icon {
@@ -30,15 +30,19 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 .m-navbar .flase-form .cell-input {
-  line-height: .6rem;
+  line-height: .4rem;
   height: .6rem;
 }
 .search {
   position: relative;
+  width: auto;
 }
 .search .m-icon {
   margin-top: -3px;
   vertical-align: middle;
+}
+.search .types {
+  display: inline-block;
 }
 .hotsearch .m-celltitle,
 .search-history .m-celltitle {

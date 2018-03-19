@@ -1,0 +1,97 @@
+.m-tabbar {
+  height: .9rem;
+}
+.goods-evaluate .vator {
+  width: .4rem;
+  height: .4rem;
+}
+.goods-evaluate .cell-item .cell-right {
+  padding-left: .4rem;
+}
+.yd-rate {
+  display: block;
+  line-height: .4rem;
+  margin-top: 3px;
+}
+.yd-rate .yd-star {
+  display: inline-block;
+  vertical-align: middle;
+}
+.yd-rate .yd-star .rate {
+  display: inline-block;
+  width: .4rem;
+  height: .4rem;
+  background: #fff url('../img/evaluate_Star.svg') no-repeat;
+  background-size: .4rem .8rem;
+  background-position: 0 0;
+}
+.yd-rate .yd-star .rate.rate-active {
+  background-position: 0 -0.4rem;
+}
+.yd-rate .yd-rate-text {
+  font-size: .32rem;
+}
+.wrapper {
+  margin-top: .24rem;
+  border-radius: 5px;
+  background: #fff;
+}
+.wrapper .detail {
+  padding: .24rem;
+}
+.wrapper .detail textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: .32rem;
+  color: #000;
+  resize: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.camrea-box {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.camrea-box .camrea-box-item {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-block;
+  margin: .05rem .05rem 0;
+  border-color: #ccc;
+  overflow: hidden;
+}
+.camrea-box .camrea-box-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.uploader {
+  border-color: #ccc;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: .05rem .05rem 0;
+  position: relative;
+}
+.uploader i {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50%;
+  background: none;
+  -webkit-transform: translateY(-50%) scale(2);
+  -ms-transform: translateY(-50%) scale(2);
+  transform: translateY(-50%) scale(2);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.uploader i:after,
+.uploader i:before {
+  background-color: #ccc;
+}
+.shop-evaluate .vator {
+  width: .4rem;
+  height: .4rem;
+}

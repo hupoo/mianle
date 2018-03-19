@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>首页</title>
+    <title>搜索宝贝</title>
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#31ff99">
     <link rel="stylesheet" type="text/css" media="screen" href="./ydui/build/css/ydui.css" />
     <link rel="stylesheet" href="./css/goodsList.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/common.css">
     <script src="./ydui/build/js/ydui.flexible.js"></script>
     <style>
@@ -18,8 +19,9 @@
 </head>
 
 <body>
+    <!-- 主体 -->
     <section class="g-flexview">
-
+<!-- 头部 -->
         <header class="m-navbar ">
             <a href="javascript:history.go(-1)" class="navbar-item ">
                 <i class="back-ico"></i>
@@ -29,16 +31,14 @@
                     <div class="search font-size-14 ">
                         <i class="m-icon icon-search-light"></i>
                     </div>
-                    <input type="text" class="cell-input text-light">
-
+                    <input type="search" id="J_search" class="cell-input text-light" readonly>
                 </div>
             </div>
             <a href="#" class="navbar-item margin-l-0">
                 <i class="icon-more"></i>
             </a>
-
-
         </header>
+     <!-- 内容 -->
         <div class="g-scrollview ">
             <div class="filterbar-container">
                 <div class="filter-bar J_sortTab">
@@ -135,6 +135,102 @@
             </article>
             <p class="text-gray text-center font-size-14 padded-tb-15">没有更多了~</p>
         </div>
+        <!-- 搜索页 -->
+        <section class="g-flexview search-view hidden">
+            <!-- 搜索头部 -->
+            <header class="m-navbar ">
+                <a href="javascript:;"  search-back class="left">
+                    <i class="m-icon icon-left-light"></i>
+                </a>
+                <div class="center flex-1 flex-c">
+                    <div class="flase-form flex-c flex-c-between padded-l-15">
+                        <div class="search font-size-16 " id="JS_toggle" data-types="0">
+                            <span class="types">商品</span>
+                            <i class="m-icon icon-down-light trans-8"></i>
+                            <div class="input-tab-nav  hidden" id="J_TabNav">
+                                <ul class="m-cell margin-b-0">
+                                    <li class="cell-items all border-b" data-type="0">
+                                        商品</li>
+                                    <li class="cell-items shop" data-type="1">
+                                        店铺</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="search" class="cell-input text-light font-size-16">
+                    </div>
+                </div>
+                <a href="javascript:;"  class="right margin-l-0 font-size-16">
+                    搜索
+                </a>
+            </header>
+            <!-- 搜索内容 -->
+            <div class="g-scrollview bg-gray ">
+                <div class="hotsearch bg-light">
+                    <div class="m-celltitle font-size-16 text-dark f-weight-600">
+                        热搜
+                    </div>
+                    <ul class="search-warp">
+                        <li class="search-items">
+                            <a href="">
+                                羽绒服
+                            </a>
+                        </li>
+                        <li class="search-items">
+                            <a href="">
+                                丑苹果
+                            </a>
+                        </li>
+                        <li class="search-items">
+                            <a href="">
+                                山鸡蛋
+                            </a>
+                        </li>
+                        <li class="search-items">
+                            <a href="">
+                                羽绒服
+                            </a>
+                        </li>
+                        <li class="search-items">
+                            <a href="">
+                                丑苹果
+                            </a>
+                        </li>
+                        <li class="search-items">
+                            <a href="">
+                                山鸡蛋
+                            </a>
+                        </li>
+        
+                    </ul>
+                </div>
+                <div class=" margin-t-10 search-history  bg-light">
+                    <div class="m-cell">
+                        <div class="m-celltitle font-size-16 text-dark f-weight-600">
+                            热搜
+                        </div>
+                        <a class="cell-item" href="#">
+                            <div class="cell-left">搜索历史记录</div>
+                        </a>
+                        <a class="cell-item" href="#">
+                            <div class="cell-left">搜索历史记录</div>
+                        </a>
+                        <a class="cell-item" href="#">
+                            <div class="cell-left">搜索历史记录</div>
+                        </a>
+                        <a class="cell-item" href="#">
+                            <div class="cell-left">搜索历史记录</div>
+                        </a>
+                    </div>
+        
+                    <div class="delete-history text-center">
+                        <button type="button" class="btn text-gray " pixel-border="all">
+                            <i class="m-icon icon-del-gray"></i>
+                            搜索历史记录
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
 <div class="m-mask hidden" id="J_mask" style="z-index:0"></div>
     <script type="text/javascript" src="./js/jquery.3.0.0.min.js"></script>
@@ -149,7 +245,6 @@
             });
             
              $('body').on('click', function (e) {
-
                 if (!$(e.target).is($('.droplist-trigger')) && !$(e.target).is($('.text'))&& !$(e.target).is($('.arrow'))) {
                  $('#J_mask,#J_droplist').addClass('hidden');
                 }
@@ -162,6 +257,28 @@
                       $(this).addClass('active').siblings().removeClass('active');
                         // dosomething...
                  });
+            });
+            // 搜索款显示
+            $('#J_search').on('click',function(){
+                $('.search-view').removeClass('hidden');
+            })
+            // 搜索回退
+            $('a[search-back]').on('click',function(){
+                $('.search-view').addClass('hidden');
+            })
+             $('#JS_toggle').on('click', function () {
+                $('#J_TabNav').toggleClass('hidden');
+            });
+
+            $('body').on('click', function (e) {
+                if (!$(e.target).is($('.icon-down-light')) && !$(e.target).is($('.types'))) {
+                    $('#J_TabNav').addClass('hidden');
+                }
+            });
+            $('#J_TabNav li').on('click', function (e) {
+                var type = $(this).attr('data-type');
+                var inner = $(this).text();
+                $('#JS_toggle').attr('data-type', type).find('span').html(inner);
             });
         })
     </script>

@@ -134,6 +134,7 @@
 </body>
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
+<script type="text/javascript" src="../js/mock-min.js"></script>
 
 <script>
     $(function () {
@@ -152,7 +153,6 @@
                     if (/^image/.test(fileType)) {
                         // 读取结果在fileReader.result里面
                         $(`<div class="camrea-box-item" pixel-border="all"><img src="${this.result}"></div>`).prependTo(".camrea-box");
-
                     }
                 }
                 // 打印原始File对象

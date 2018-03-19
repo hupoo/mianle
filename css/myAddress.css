@@ -57,6 +57,12 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
+.cell-right .badge-default {
+  border-radius: 8px;
+  border-color: #ccc;
+  padding: 0 .1rem;
+  line-height: .4rem;
+}
 .edit-cell {
   width: 0;
   overflow: hidden;
@@ -80,5 +86,5 @@
   opacity: 1;
 }
 .default-address {
-  line-height: .88rem;
+  line-height: .8rem;
 }

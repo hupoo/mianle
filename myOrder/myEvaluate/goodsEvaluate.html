@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品评价</title>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
+    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/goodsEvaluate.css">
+    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <section class="g-flexview">
+        <header class="m-navbar">
+            <a href="javascript:history.go(-1)" class="navbar-item ">
+                <i class="back-ico"></i>
+            </a>
+            <div class="navbar-center">
+                <span class="navbar-title">商品评价</span>
+            </div>
+            <a href="" class="navbar-item pull-right">
+             发布
+            </a>
+        </header>
+        <div class="g-scrollview ">
+
+                <div class="goods-evaluate">
+                    <div class="cell-item bg-light border-no">
+                        <div class="cell-left">
+                            <span class="cell-icon font-size-16">
+                                <img class="vator " src="//static.ydcss.com/ydui/img/logo.png" />
+                            </span>评价</div>
+                        <div class="cell-right flex-c  flex-start">
+                                <div class="yd-rate">
+                                    <span class="yd-star">
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                    </span>
+                                    <span class="yd-rate-text "></span>
+                                    <!-- 很差  一般  还行 挺好  非常好 -->
+                                </div>
+                        </div>
+                    </div>
+                    <div class="wrapper border-b">
+                        <div class="detail">
+                            <textarea name="" id="" class="border-no" cols="30" rows="5" maxlength="500" placeholder="请输入您对商品的评价..."></textarea>
+                        </div>
+                        <div class="uploader-file padded-10">
+                            <div class="camrea-box flex-c ">
+                                <div class="uploader " pixel-border="all">
+                                    <input type="file" name="files" accept="image/*" multiple="">
+                                    <i class="icon-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-evaluate bg-light">
+                    <div class="cell-item">
+                        <div class="cell-left font-size-18">
+                            <span class="cell-icon ">
+                                <img  class="vator" src="//static.ydcss.com/ydui/img/logo.png" />
+                            </span>店铺评分</div>
+                        <div class="cell-right "></div>
+                    </div>
+                        <div class="cell-item">
+                            <div class="cell-left">服务态度:</div>
+                             <div class="cell-right flex-c  flex-start">
+                                <div class="yd-rate">
+                                    <span class="yd-star">
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                    </span>
+                                    <span class="yd-rate-text "></span>
+                                    <!-- 很差  一般  还行 挺好  非常好 -->
+                                </div>
+                        </div>
+                    </div>
+                        <div class="cell-item">
+                            <div class="cell-left">物流服务:</div>
+                             <div class="cell-right flex-c  flex-start">
+                                <div class="yd-rate">
+                                    <span class="yd-star">
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                        <a href="javascript:;" class="rate"></a>
+                                    </span>
+                                    <span class="yd-rate-text "></span>
+                                    <!-- 很差  一般  还行 挺好  非常好 -->
+                                </div>
+                        </div>
+                    </div>
+                  
+                </div>
+
+        </div>
+        <footer class="m-tabbar padded-0  ">
+            <div class="tabbar-item flex-row flex-start padded-l-15 ">
+                <div class="checkbox margin-r-15 font-size-14">
+                    <input type="checkbox" name="checkbox"   >
+                    <i class="cell-checkbox-icon margin-r-10 "></i>
+                    匿名
+                </div>
+            </div>
+            <div  class="tabbar-item  flex-2 font-size-16 text-gray">
+                您的评价会已匿名的形式展现
+            </div>
+        </footer>
+    </section>
+</body>
+<script src="../../js/jquery.3.0.0.min.js"></script>
+<script src="../../ydui/build/js/ydui.js"></script>
+<script>
+    $(function () {
+
+    });
+    //图片上传
+     var imgLength = 0;
+        var imgNum = 4;
+        $("input[type='file']").on("change", function () {
+            imgLength += this.files.length;
+            if (this.files.length > imgNum || imgLength > imgNum) {
+                window.YDUI.dialog.toast('只能上传四张图片', 'none', 1000);
+                return;
+            }
+            for (let i = 0; i < this.files.length; i++) {
+                let fileReader = new FileReader(),
+                    fileType = this.files[i].type;
+                fileReader.onload = function () {
+                    if (/^image/.test(fileType)) {
+                        // 读取结果在fileReader.result里面
+                        $(`<div class="camrea-box-item" pixel-border="all"><img src="${this.result}"></div>`).prependTo(".camrea-box");
+                    }
+                }
+                // 打印原始File对象
+                // base64方式读取
+                fileReader.readAsDataURL(this.files[i]);
+            }
+
+        });
+
+    (function () {
+        var $stars = $('.yd-rate .rate');
+           $stars.on('click',function(){
+                var index = $(this).index() + 1;
+                $(this).prevAll().addClass('rate-active');
+                 $(this).nextAll().removeClass('rate-active');
+               for (var i = 1; i <= index ; i++) {
+                   $(this).parents('.yd-rate').find('.rate:nth-child(' + i + ')').addClass('rate-active');
+               }
+                switch(index){
+                    case 1:
+                 $(this).parents('.yd-rate').find('.yd-rate-text').text('很差');
+                    break;
+                    case 2:
+                 $(this).parents('.yd-rate').find('.yd-rate-text').text('一般');
+                    break;
+                    case 3:
+                 $(this).parents('.yd-rate').find('.yd-rate-text').text('还好');
+                    break;
+                    case 4:
+                 $(this).parents('.yd-rate').find('.yd-rate-text').text('很好');
+                    break;
+                    case 5:
+                 $(this).parents('.yd-rate').find('.yd-rate-text').text('非常好');
+                    break;
+                }
+            })
+    })()
+
+ 
+</script>
+
+</html>

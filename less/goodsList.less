@@ -1,13 +1,17 @@
          @import 'base.less';
-         .m-navbar {
+         .g-flexview{
+             position: relative;
+             overflow: hidden;
+         }
+          .m-navbar {
              position: relative;
              z-index: 2;
              .navbar-item {
-                 min-width: 15%;
+                 min-width: 10%;
                  -webkit-box-flex: 0;
-                 -webkit-flex: 0 0 15%;
-                 -ms-flex: 0 0 15%;
-                 flex: 0 0 15%;
+                 -webkit-flex: 0 0 10%;
+                     -ms-flex: 0 0 10%;
+                         flex: 0 0 10%;
              }
              .navbar-center {
                  width: 80%;
@@ -104,4 +108,12 @@
              position: absolute;
              top: .88rem;
              width: 100%;
+         }
+
+         .search-view {
+             position: absolute;
+             top: 0;
+             width: 100%;
+             z-index: 100;
+             
          }
