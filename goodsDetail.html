@@ -218,7 +218,7 @@
                                 </a>
                             </div>
                             <div class="cell-item checkmore flex-c-c">
-                                <button class="btn " pixel-border="all">
+                                <button class="btn all-comment" pixel-border="all">
                                     查看全部评价 &gt;
                                 </button>
                             </div>
@@ -501,7 +501,10 @@
                                         <a href="#" class="btn btn-reply fr">回复</a>
                                     </p>
                                     <div class="text">
-                                        可以好评不错 喜欢！
+                                        <em>商家回复：</em>
+                                        <span>
+                                            感谢您的喜欢，
+                                        </span>
                                     </div>
                                     <div class="img-wrap">
                                         <div class="img-wrap-item">
@@ -520,8 +523,10 @@
                                     </div>
 
                                     <div class="shop-reply ">
-                                        商家回复：感谢您的喜欢，
-                                      
+                                        <em>商家回复：</em>
+                                        <span>
+                                            感谢您的喜欢，
+                                        </span>
                                     </div>
                                     <p class="msg-count flex-c flex-end">
                                         <i class="m-icon icon-msg-gray "></i>
@@ -565,9 +570,10 @@
                                     </div>
 
                                     <div class="shop-reply ">
-                                        商家回复：感谢您的喜欢，
-                                    
-
+                                        <em>商家回复：</em>
+                                            <span>
+                                                感谢您的喜欢，
+                                            </span>
                                     </div>
                                     <p class="msg-count flex-c flex-end">
                                         <i class="m-icon icon-msg-gray "></i>
@@ -851,7 +857,13 @@
             flag = true;
         }
     }
-
+        // 查看所有评价
+        $('.all-comment').on('click',function(){
+             $('.grids-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+            $('.tab-nav-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+            $('.tab-panel-item').eq(2).addClass('tab-active').siblings().removeClass('tab-active');
+            isScroll()
+        })
 
 </script>
 

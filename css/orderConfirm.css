@@ -13,7 +13,7 @@
 .reset .address .cell-right.cell-arrow:after {
   position: absolute;
   top: 50%;
-  margin-top: -0.17rem;
+  margin-top: -0.3rem;
   right: .24rem;
 }
 .reset .tag {
@@ -71,11 +71,12 @@
   width: 20px;
   height: 20px;
 }
-label.cell-right {
+.cell-right {
   position: relative;
 }
-label.cell-right input[type=radio],
-label.cell-right input[type=checkbox]:not(.m-switch) {
+.cell-right input[type=radio],
+.cell-right input[type=checkbox]:not(.m-switch) {
+  top: 0;
   left: 0;
   border: none;
   width: 100%;
@@ -160,7 +161,6 @@ label.cell-right input[type=checkbox]:not(.m-switch) {
   outline: 'none';
   z-index: 999;
   opacity: 0;
-  filter: alpha(opacity=0);
 }
 .keyboard-password {
   margin: 0 auto;
@@ -240,4 +240,11 @@ label.cell-right input[type=checkbox]:not(.m-switch) {
 }
 .m-mask.inputPassword.fadeIn {
   bottom: 0;
+}
+.useable {
+  margin-right: .2rem;
+}
+.disabled .cell-left,
+.disabled .cell-right {
+  color: #d0d0d0;
 }

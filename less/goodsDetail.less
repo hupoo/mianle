@@ -398,7 +398,6 @@
             border-radius: 6px;
             font-size: .28rem;
             line-height: .36rem;
-            color: #E8574e;
             background: #f5f5f5;
             position: relative;
             &::after {
@@ -412,6 +411,12 @@
                 border-bottom: 8px solid #f5f5f5;
                 border-left: 8px solid transparent;
             }
+            em{
+                color: #E8574e;
+            }
+            span{
+                font-size: inherit;
+            }
         }
 
         .msg-count {
@@ -419,5 +424,11 @@
             .count {
                 font-size: .32rem;
                 color: #808080;
+            }
+        }
+        .m-tabbar{
+            .tabbar-item{
+                padding: 0;
+                height: 1rem;
             }
         }

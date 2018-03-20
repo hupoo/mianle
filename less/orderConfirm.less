@@ -15,7 +15,7 @@
             &.cell-arrow:after {
                 position: absolute;
                 top: 50%;
-                margin-top: -.17rem;
+                margin-top: -.3rem;
                 right: .24rem;
             }
         }
@@ -85,10 +85,11 @@
     }
 }
 
-label.cell-right {
+.cell-right {
     position: relative;
     input[type=radio],
     input[type=checkbox]:not(.m-switch) {
+        top: 0;
         left: 0;
         border: none;
         width: 100%;
@@ -146,7 +147,6 @@ label.cell-right {
     width: 100%;
 }
 
-
 .alieditContainer {
     position: relative;
     text-align: center;
@@ -183,7 +183,6 @@ label.cell-right {
     outline: 'none';
     z-index: 999;
     opacity: 0;
-    filter: alpha(opacity=0);
 }
 
 .keyboard-password {
@@ -265,7 +264,18 @@ label.cell-right {
     -webkit-transition: bottom 500ms ease;
     -o-transition: bottom 500ms ease;
     transition: bottom 500ms ease;
-    &.fadeIn{
+    &.fadeIn {
         bottom: 0;
+    }
+}
+
+.useable {
+    margin-right: .2rem;
+}
+
+.disabled {
+    .cell-left,
+    .cell-right {
+        color: #d0d0d0;
     }
 }

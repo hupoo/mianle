@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <!-- 免单显示 -->
-                <div class="cell-item hidden"  id="J_free">
+                <div class="cell-item hidden" id="J_free">
                     <div class="cell-left">免单差价</div>
                     <div class="cell-right"> ¥
                         <span class="free-cash">0.00</span>
@@ -105,18 +105,14 @@
                     </label>
                 </div>
             </div>
-            </div>
-
-
-
+        </div>
         <footer class="m-tabbar padded-0 border-no settlement">
             <div class="tabbar-item flex-row flex-start padded-l-15 flex-2">
                 <p class="prompt">
                     <span class="text-dark font-size-14">实付款:</span>
-                    <span class="realcash text-default font-size-18" data-accountprice > ¥ 0.00 </span>
+                    <span class="realcash text-default font-size-18" data-accountprice> ¥ 0.00 </span>
                 </p>
             </div>
-
             <a href="#" class="tabbar-item bg-default  font-size-16 text-light  go" id="J_pay">
                 立即付款
             </a>
@@ -126,7 +122,7 @@
 
 
 </body>
-<!-- 遮罩 -->
+<!-- 遮罩支付选择 -->
 <div class="payMethods pos-f" id="j_payways">
     <div class="">
         <div class="m-celltitle text-gray font-siz-18 border-b bg-light padded-b-0 ">
@@ -150,14 +146,87 @@
                     <i class="cell-checkbox-icon"></i>
                 </label>
             </label>
-            <label class="cell-item">
+            <label class="cell-item J_balance">
                 <span class="cell-left">
                     <i class="iconfont icon-balance"></i> 余额支付</span>
                 <label class="cell-right">
-                    <input type="radio" value="" name="radio" class="J_balance">
-                    <i class="cell-checkbox-icon"></i>
+                    <div class="alert-text hidden">余额不足</div>
+                    <div class="changeCheck">
+                        <input type="radio" name="radio">
+                        <i class="cell-checkbox-icon"></i>
+                    </div>
                 </label>
             </label>
+            <label class="cell-item  shoppingBalance">
+                <span class="cell-left">
+                    <i class="iconfont icon-balance"></i>购物余额支付</span>
+                <label class="cell-right">
+                    <div class="alert-text hidden">余额不足</div>
+                    <div class="changeCheck">
+                        <input type="radio" name="radio">
+                        <i class="cell-checkbox-icon"></i>
+                    </div>
+                </label>
+            </label>
+            <div class="combina hidden">
+                <label class="cell-item">
+                    <span class="cell-left">
+                        组合支付</span>
+                    <div class="cell-right cell-arrow ">
+                    </div>
+                </label>
+                <!-- 组合支付 -->
+                <div class="m-cell">
+                    <label class="cell-item">
+                        <span class="cell-left">
+                            <i class="iconfont icon-balance"></i>余额支付</span>
+                        <div class="cell-right">
+                            <span class="useable">可用:
+                                <em>98.00</em>
+                            </span>
+                            <input type="checkbox" value="" name="cks">
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                    </label>
+                    <label class="cell-item">
+                        <span class="cell-left">
+                            <i class="iconfont icon-balance"></i>购物余额支付</span>
+                        <div class="cell-right">
+                            <span class="useable">可用:
+                                <em>98.00</em>
+                            </span>
+                            <input type="checkbox" value="" name="cks">
+                            <i class="cell-checkbox-icon"></i>
+                        </div>
+                    </label>
+                </div>
+                <!-- 密码输入 -->
+                <div class="password-content bg-gray hidden pwdInput flex-c-c">
+                    <div class="i-block six-password">
+                        <input class="sixDigitPassword " id="combinaPwd" type="tel" autocomplete="off" required maxlength="6" minlength="6">
+                        <ul class="keyboard-password combinaPay ">
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                            <li>
+                                <i style="display: none;"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--  -->
@@ -165,17 +234,17 @@
     </div>
     <p>
         <a class="btn-block btn-primary js-pay margin-t-0">立即支付</a>
-
     </p>
 </div>
-
+<!-- 键盘 -->
 <div class="m-mask flex-c flex-column inputPassword">
+
+    <!-- 密码框 -->
     <div class="password-content flex-1 flex-c-c">
         <div id="payPassword_container" class="alieditContainer ">
             <p class="text-center font-size-14" pixel-border="bottom">请输入6位数字支付密码</p>
             <div class="i-block six-password">
-                <input class="i-text sixDigitPassword" id="" type="password" autocomplete="off" required value="" name="" maxlength="6" minlength="6"
-                    readonly>
+                <input class="sixDigitPassword" type="password" autocomplete="off" required value="" maxlength="6" minlength="6" readonly>
                 <ul class="keyboard-password J_FillPwdBox">
                     <li>
                         <i style="display: none;"></i>
@@ -241,20 +310,47 @@
 
     // 立即付款操作
     $(function () {
+        freeCash.calcTotal();
+        Zpay.isClickable($balance, YUE, $total);
+        Zpay.isClickable($shoppingBalance, GOUWUYUE, $total);
         $('#J_pay').click(function () {
             fadeIn();
         });
         $('.icon-close').click(function () {
             fadeOut();
-        });
+            $('input[name="radio"],input[name="checkbox"]').prop('checked', false)
+            
 
-        $('.J_balance').click(function () {
+        });
+        // 选择余额
+        $('.J_balance').on('click', function () {
+            // if ($(this).find('input').is(':checked')) {
+            //     $('.inputPassword').addClass('fadeIn');
+            //     $('#j_payways').removeClass('fadeIn');
+            // }
+        })
+        //  组合支付弹出密码框
+        $('input[name="cks"]').on('click', function () {
             if ($(this).is(':checked')) {
-               $('.inputPassword').addClass('fadeIn');
-                $('#j_payways').removeClass('fadeIn');
+                $('.pwdInput').removeClass('hidden');
             }
         })
-    })
+    });
+    // 
+
+    $('#combinaPwd').on('input',function () {
+        while ($(this).val().length == 6) {
+            console.log($(this).val())
+        }
+    });
+    function inputVal(val) {
+          var obj = $('.combinaPay i');
+        obj.css({ 'display': 'none' });
+        for (let i = 0; i < val.length; i++) {
+            obj.eq(i).css({ 'display': 'block' });
+        }
+    }
+    // 免单计价=============================================
     var $J_switch = $('#J_switch');  //是否开启免单
     var $J_free = $('#J_free');  //免单显示 
     var $freeshow = $J_free.find('.free-cash');  //免单显示的价格
@@ -263,88 +359,126 @@
     var $freight = $('span[data-freight]');  //运费
     var $accountPrice = $('span[data-accountprice]'); //结算总额
     var $total;
+    // 免单计价
     freeCash = {
-        calcTotal :function(){
-                $total = parseFloat($totalPrice.text())+parseFloat($freight.text());
-                $accountPrice.html('&yen;'+ parseFloat($total).toFixed(2));
-            },
-            freeSwitch:function(flag){
-               if(flag){
-                   $J_free.removeClass('hidden');
-                   var freeCashs;
-                   freeCashs = $freeCash.html().trim().substr(1, $freeCash.html().trim().length);
-                    console.log($total)
-                    $total = parseFloat($totalPrice.text()) + parseFloat($freight.text()) + parseFloat(freeCashs)  ;
-                    $accountPrice.html('&yen;' + parseFloat($total).toFixed(2));
-                    $freeshow.text(freeCashs)
-               }else{
-                   this.calcTotal();
-                   $J_free.addClass('hidden');
-                    $freeshow.text('0.00')
-                   
-               }
+        // 计算总价
+        calcTotal: function () {
+            $total = parseFloat($totalPrice.text()) + parseFloat($freight.text());
+            $accountPrice.html('&yen;' + parseFloat($total).toFixed(2));
+        },
+        // 是否开启免单开关
+        freeSwitch: function (flag) {
+            if (flag) {
+                $J_free.removeClass('hidden');
+                var freeCashs;
+                freeCashs = $freeCash.html().trim().substr(1, $freeCash.html().trim().length);
+                $total = parseFloat($totalPrice.text()) + parseFloat($freight.text()) + parseFloat(freeCashs);
+                $accountPrice.html('&yen;' + parseFloat($total).toFixed(2));
+                $freeshow.text(freeCashs)
+            } else {
+                this.calcTotal();
+                $J_free.addClass('hidden');
+                $freeshow.text('0.00')
+
             }
+        }
     }
-    $J_switch.on('click',function(){
-            freeCash.freeSwitch($('.m-switch-old').is(':checked'))
+    $J_switch.on('click', function () {
+        freeCash.freeSwitch($('.m-switch-old').is(':checked'))
     })
+    //================================================================
 
-
-    //弹出
+    //-支付组合----------------------------------------------------------------
+    var $balance = $('.J_balance');   //余额支付
+    var $shoppingBalance = $('.shoppingBalance');   //购物余额支付
+    var $combina = $('.combina');   //购物余额盒子
+    var YUE = 200;
+    var GOUWUYUE = 100;
+    Zpay = {
+        //  余额是否足够
+        isClickable: function (obj, balance, countTotal) {
+            var isenough = (parseFloat(balance) > parseFloat(countTotal)) ? true : false;
+            if (!isenough) {
+                console.log(obj)
+                obj.addClass('disabled').find('.alert-text').removeClass('hidden').next('.changeCheck').addClass('hidden').find('input').attr('disabled', true);
+                $combina.removeClass('hidden');
+            }
+        }
+    }
+    //----------------------------------------------------------------
+    //支付方式弹出
     function fadeIn() {
         $('#j_payways').addClass('fadeIn');
     }
-    //回收
+    //支付方式回收
     function fadeOut() {
         $('#j_payways').removeClass('fadeIn');
     }
-    // 键盘事件
-    $(".keyboard-numbers a").click(function (e) {
+    // 阻止键盘默认事件
+    $(".keyboard-numbers a").on('click',function (e) {
         e.stopPropagation();
     })
-    
-    var carNum = "";
-    $(".keyboard-numbers a").not('.J_Cancel,.J_Backspace').click(function () {
-        if (carNum.length < 6) {
-            carNum = carNum + $(this).html();
-            $(".sixDigitPassword").val(carNum);
-            dot(carNum);
+    // 键盘相关事件
+    var carNum = "";// 密码值
+    Keyboard = {
+        // 初始化；
+        init: function () {
+            carNum = "";
+            $("#payPassword_container .sixDigitPassword").val('');
+            $('.J_FillPwdBox i').css({ 'display': 'none' });
+        },
+        //    键盘回收
+        KeyboardBack: function () {
+            this.init();
+            $('.inputPassword').removeClass('fadeIn');
+            $('input[name="radio"],input[name="checkbox"]').prop('checked', false);
+            $('#combinaPwd').addClass('hidden')
+        },
+        //  密码样式显示
+        dot: function (pr) {
+            var obj = $('.J_FillPwdBox i');
+            obj.css({ 'display': 'none' });
+            for (let i = 0; i < pr.length; i++) {
+                obj.eq(i).css({ 'display': 'block' });
+            }
+        },
+        // 回退
+        del: function () {
+            if (carNum.length != 0) {
+                var num = carNum.substr(0, carNum.length - 1);
+                $("#payPassword_container .sixDigitPassword").val(num);
+                carNum = num;
+                this.dot(carNum);
+            }
+        },
+        // 六位数
+        valInput: function (obj) {
+            if (carNum.length < 6) {
+                carNum = carNum + obj.html();
+                $("#payPassword_container .sixDigitPassword").val(carNum);
+                this.dot(carNum);
+            }
         }
+    }
+
+    // 键盘输入
+    $(".keyboard-numbers a").not('.J_Cancel,.J_Backspace').click(function () {
+        
+        Keyboard.valInput($(this));
     });
     // 回退
     $(".keyboard-numbers a.J_Backspace").click(function () {
-        if (carNum.length != 0) {
-            var num = carNum.substr(0, carNum.length - 1);
-            $(".sixDigitPassword").val(num);
-            carNum = num;
-            dot(carNum);
-        }
+        Keyboard.del();
     });
     // 取消按钮
     $(".keyboard-numbers a.J_Cancel").click(function () {
-        init();
-           });
-        //    键盘回收
-    $(".J_back").click(function () {
-        init();
-        $('.inputPassword').removeClass('fadeIn');
-        $('input[name="radio"]').prop('checked',false)
-
+        Keyboard.init();
     });
-    //  密码样式显示
-    function dot(pr) {
-        var obj = $('.J_FillPwdBox i');
-        obj.css({ 'display': 'none' });
-        for (let i = 0; i < pr.length; i++) {
-            obj.eq(i).css({ 'display': 'block' });
-        }
-    }
-    // 初始化；
-    function init() {
-         carNum = "";
-        $(".sixDigitPassword").val('');
-        $('.J_FillPwdBox i').css({ 'display': 'none' });
-    }
+    //    键盘回收
+    $(".J_back").click(function () {
+        Keyboard.KeyboardBack();
+    });
+
 </script>
 
 </html>
