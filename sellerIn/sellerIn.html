@@ -71,7 +71,7 @@
                 <div class="m-cell m-form margin-t-10">
                     <div class="cell-item padded-t-10  flex-column border-no">
                         <div class="cell-left">所属地址：</div>
-                        <div class="cell-right form-input js-selcet flex-start" id="distpicker">
+                        <div class="cell-right form-input js-selcet flex-start" data-value-type="code" id="distpicker">
                             <select class="b-select" name="prov"></select>&nbsp;&nbsp;
                             <select class="b-select" name="city"></select>&nbsp;&nbsp;
                             <select class="b-select" name="area"></select>
@@ -189,8 +189,6 @@
         }, 1500);
     });
 
-
-
     // 地址选择
     var $distpicker = $('#distpicker');
     $distpicker.distpicker({
@@ -200,6 +198,7 @@
     });
     $distpicker.find('select').on('change', function () {
              getVal($('#distpicker'))
+
     })
 
     // 地址取值

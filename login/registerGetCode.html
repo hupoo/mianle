@@ -42,11 +42,10 @@
                             <button type="button" class="btn font-size-16 getcode"> 获取验证码</button>
                         </div>
                     </div>
-                    <a href="./setPwd.html" class="btn-block next" >下一步</a>
+                    <a href="" class="btn-block next" >下一步</a>
                 </div>
             </form>
         </div>
-
         <footer class="m-tabbar bg-empty border-no">
             <p class="tro">
                 手机号仅用于登录和保护账户安全
@@ -100,7 +99,6 @@
                     createCode();
                     break;
             }
-
         });
         var $getCode = $('.getcode');
         /* 定义参数 */
@@ -129,6 +127,19 @@
                         dialog.toast('密码不能为空', 'none', 1000);
                         return false;
                     } else {
+                        $.ajax({
+                            // 判断手机是否已经存在
+                            method:'',
+                            url:'',
+                            data:'',
+                            dataType:'',
+                            success:function(ret){
+
+                            },
+                            fail:function(){
+
+                            }
+                        })
                         /* ajax 成功发送验证码后调用【start】 */
                         dialog.loading.open('发送中');
                         setTimeout(function () {
