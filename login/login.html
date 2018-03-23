@@ -21,7 +21,7 @@
     <div class="logo img-round">
         <img src="../img/login/mlm_round.png" alt="">
     </div>
-    <form action="" method="post" name="forms" onsubmit="return login()">
+    <form action="http://192.168.0.113:8080/wxshop/user_login" method="post" name="forms" >
         <div class="m-cell bg-empty">
             <div class="cell-item ">
                 <div class="cell-left">
@@ -47,9 +47,9 @@
 
             </div>
             <p class="forget font-size-18 text-light ">
-                <a href="./registerGetCode.html">忘记密码?</a>
+                <a href="./registerGetCode.html#forgetPassword" >忘记密码?</a>
             </p>
-            <input type="submit" class="btn-block btn-login" value="登录">
+            <input type="button" class="btn-block btn-login" value="登录">
             <a href="./registerGetCode.html" class="btn-block register">新用户注册</a>
         </div>
     </form>
@@ -65,11 +65,16 @@
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/getdata.js"></script>
 <script>
     $(function () {
-
+        $('.btn-login').on('click',function () {
+            login() ;
+        })
     })
-
+    $('.forget a').on('click',function () {
+       cookie.set('mobile', $('[name="phone"]').val(),1); 
+    });
     function login() {
         var dialog = window.YDUI.dialog;
         var phone = $('[name="phone"]');
@@ -90,22 +95,17 @@
                     dialog.toast('密码不能为空', 'none', 1000);
                     return false;
                 } else {
-                    return true;
+                    obj = {
+                        'userMobile': res,
+                        'password': pwd.val()
+                    }
+                    MLM.login(obj,function(ret){
+                        console.log(ret)
+                    })
+                  
                 }
     }
 
-    login = {
-        init: function () {
-            this.checkPhone();
-            this.checkPwd();
-        },
-        checkPhone: function (obj) {
-
-        },
-        checkPwd: function (obj) {
-
-        },
-    }
 
 
 

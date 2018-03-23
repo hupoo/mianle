@@ -414,9 +414,20 @@
          'adPosition':'test',
             'adposName':'ad'  
         }
-       
-       console.log(MLM.adData(obj))
+       MLM.adData(obj,function(ret){
+           console.log(ret);
+       })
+       obj1 = { 
+    'pageNum': 1,
+    'pageSize': 8, 
+    'queryMain': 1,
+        'query2': 0 
+  }
+       MLM.goodsClassifyData(obj1,function(ret){
+           console.log(ret)
+       })
+
+    
     </script>
 </body>
-
-</html>
+3</html>

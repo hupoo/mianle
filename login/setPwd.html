@@ -31,7 +31,7 @@
                     </span>
                 </div>
                 <div class="cell-right">
-                    <input type="password" pattern="[0-9]*" class="cell-input" placeholder="请设置登入密码" autocomplete="off" maxlength="11" name="phone">
+                    <input type="password"  class="cell-input" placeholder="请设置登入密码" autocomplete="off"  name="password">
                 </div>
             </div>
             <div class="cell-item pwd  ">
@@ -41,10 +41,10 @@
                     </span>
                 </div>
                 <div class="cell-right ">
-                    <input type="password" class="cell-input" placeholder="请重复登入密码" autocomplete="off" name="password">
+                    <input type="password" class="cell-input" placeholder="请重复登入密码" autocomplete="off" name="repassword">
                 </div>
             </div>
-            <input type="submit" class="btn-block btn-login" value="立即注册">
+            <input type="button" class="btn-block btn-login" value="立即注册">
         </div>
     </form>
 
@@ -52,7 +52,19 @@
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script>
-
+        $(function(){
+         var dialog =  window.YDUI.dialog;
+            var pwd = $('input[name="password"]')
+            var repwd = $('input[name="repassword"]');
+            $('.btn-login').on('click',function(){
+                if (pwd!==repwd) {
+                      dialog.toast('两次密码输入不同，请重新设置', 'none', 1000);
+                }
+                else{
+                    // ajax
+                }
+            })
+        })
 </script>
 
 </html>

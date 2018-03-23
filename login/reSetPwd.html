@@ -31,7 +31,7 @@
                     </span>
                 </div>
                 <div class="cell-right">
-                    <input type="password" pattern="[0-9]*" class="cell-input" placeholder="请设置登入密码" autocomplete="off" maxlength="11" name="phone">
+                    <input type="password"  class="cell-input" placeholder="请设置登入密码" autocomplete="off"  name="password">
                 </div>
             </div>
             <div class="cell-item pwd  ">
@@ -41,13 +41,13 @@
                 </span>
                 </div>
                 <div class="cell-right ">
-                    <input type="password" class="cell-input" placeholder="请重复登入密码" autocomplete="off" name="password">
+                    <input type="password" class="cell-input" placeholder="请重复登入密码" autocomplete="off" name="repassword">
                 </div>
 
 
             </div>
 
-            <input type="submit" class="btn-block btn-login" value="确定">
+            <input type="button" class="btn-block btn-login" value="确定">
         </div>
     </form>
 
@@ -55,7 +55,32 @@
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script>
-
+    $(function () {
+        var dialog = window.YDUI.dialog;
+        $('.btn-login').on('click', function () {
+            var pwd = $('input[name="password"]').val();
+            var repwd = $('input[name="repassword"]').val();
+            var exp = /^[a-z0-9]+$/i;
+            if(pwd == ''){
+                console.log(pwd.length)
+                dialog.toast('请输入登入密码', 'none', 1000);
+                 return false; 
+                 pwd.length > 6
+                 exp.test(pwd)
+            }else if ( !exp.test(pwd) && (pwd.length < 6)) {
+                dialog.toast('密码由不少于6位的字母和数字组成,请重新设置', 'none', 1000);
+                return false; 
+            }else if (pwd !== repwd) {
+                dialog.toast('两次密码输入不同，请重新设置', 'none', 1000);
+                return false;
+            }
+            else {
+                // ajax
+                console.log(0)
+                window.location.href='./perInfoSetting.html'
+            }
+        })
+    })
 </script>
 
 </html>

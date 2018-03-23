@@ -249,7 +249,9 @@
             'queryMain': 1,
             'query2': 0
         }
-        MLM.goodsClassifyData(obj);
+        MLM.goodsClassifyData(obj,function (ret) {
+            console.log(ret);
+        });
 
 
         obj1 = {
@@ -257,38 +259,9 @@
             pageSize: 10,
             categoryId: 1,
         }
-        MLM.goodsListData(obj1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        MLM.goodsListData(obj1, function (ret) {
+                console.log(ret);
+            });
 
 
 
@@ -319,22 +292,7 @@
                 initLoad: true,
                 loadingHtml: '<strong>加载中...</strong>',
                 loadListFn: function () {
-                    var def = $.Deferred();
-                    $.ajax({
-                        url: 'http://list.ydui.org/getdata.php?type=backposition',
-                        dataType: 'jsonp',
-                        data: {
-                            page: page,
-                            pagesize: pageSize
-                        },
-                        success: function (ret) {
-                            var html = f(ret);
-                            $('#J_ListContent').append(html).find('img').lazyLoad();
-                            def.resolve(ret);
-                            ++page;
-                        }
-                    });
-                    return def.promise();
+            
                 }
             });
         });

@@ -38,11 +38,11 @@
                     <div class="cell-items pwd">
 
                         <div class="cell-right  code border-b">
-                            <input type="text" pattern="[0-9]*" class="cell-input" placeholder="请输入验证码" autocomplete="off">
+                            <input type="text" pattern="[0-9]*" class="cell-input verify" placeholder="请输入验证码" autocomplete="off">
                             <button type="button" class="btn font-size-16 getcode"> 获取验证码</button>
                         </div>
                     </div>
-                    <a href="" class="btn-block next" >下一步</a>
+                    <a href="#" class="btn-block next" >下一步</a>
                 </div>
             </form>
         </div>
@@ -74,13 +74,15 @@
 <script src="../js/jquery.3.0.0.min.js"></script>
 <script src="../ydui/build/js/ydui.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/getdata.js"></script>
 
 <script>
     $(function () {
         // createCode();
+        if((window.location.href.split("#")[1])){
+            $('input[name="phone"]').val(cookie.get('mobile')||'');
+        }
         var dialog = window.YDUI.dialog;
-        var phone = $('input[name="phone"]');
-        var pwd = $('input[name="password"]');
 
         $('.js-ok').on('click', function () {
             var res = $('#code').val().toLowerCase();
@@ -100,8 +102,17 @@
                     break;
             }
         });
+        $('.next').on('click',function(){
+            if ('') {
+                window.location.href='./setPwd.html'
+            }
+            else{
+                window.location.href='./reSetPwd.html'
+            }
+        })
+
+
         var $getCode = $('.getcode');
-        /* 定义参数 */
         $getCode.sendCode({
             disClass: 'btn-disabled',
             secs: 60,
@@ -123,28 +134,19 @@
                     if (!isPhone(res)) {
                         dialog.toast('请输入有效的手机号码！', 'none', 1000);
                         return false;
-                    } else if (pwd.val() == '' || pwd.val == null) {
-                        dialog.toast('密码不能为空', 'none', 1000);
-                        return false;
                     } else {
-                        $.ajax({
-                            // 判断手机是否已经存在
-                            method:'',
-                            url:'',
-                            data:'',
-                            dataType:'',
-                            success:function(ret){
-
-                            },
-                            fail:function(){
-
-                            }
-                        })
-                        /* ajax 成功发送验证码后调用【start】 */
                         dialog.loading.open('发送中');
                         setTimeout(function () {
                             dialog.loading.close();
                             $getCode.sendCode('start');
+                            var type = (window.location.href.split("#")[1]) || '';
+                            obj={
+                                'userMobile': res,
+                                'type': type
+                            }
+                            MLM.getCode(obj,function(ret){
+                                    console.log(ret)
+                            })
                             dialog.toast('已发送', 'success', 1500);
                         }, 1500);
                     }

@@ -290,13 +290,22 @@
 
 </body>
 <div class="m-mask hidden" style="z-index:2"></div>
-<script src="../../js/jquery.3.0.0.min.js"></script>
-<script src="../../js/index.js"></script>
-<script src="../../ydui/build/js/ydui.js"></script>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
+<script src="../js/getdata.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js">
 </script>
-
+<script>
+    obj = {
+    articleInfo:'text',
+    id:01
+}
+MLM.getArticleDetail(obj,function(ret){
+    console.log(ret)
+})
+</script>
 <script>
     $(function(){
         $('body').on('touchmove',function () {

@@ -9,10 +9,10 @@
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#3199ff">
-    <link rel="stylesheet" href="../../ydui/build/css/ydui.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/perInfoSetting.css">
-    <script src="../../ydui/build/js/ydui.flexible.js"></script>
+    <link rel="stylesheet" href="../ydui/build/css/ydui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/perInfoSetting.css">
+    <script src="../ydui/build/js/ydui.flexible.js"></script>
     <style>
     </style>
 </head>
@@ -38,14 +38,14 @@
                 <div class="cell-item avtor border-no" data-ydui-actionsheet="{target:'#actionSheet',closeElement:'#cancel'}">
                     <div class="cell-left ">
                         <span class="cell-icon img-round ">
-                            <img src="//static.ydcss.com/ydui/img/logo.png " />
+                            <img src="../img/login/mlm_round.png" />
                         </span>头像设置</div>
                     <div class="cell-right cell-arrow "></div>
                 </div>
                 <div class="cell-item margin-t-10 border-no">
                     <div class="cell-left">昵称设置</div>
                     <div class="cell-right padded-l-15">
-                        <input type="text" class="cell-input" placeholder="为您的帐号取个名字吧" autocomplete="off" maxlength="7" />
+                        <input type="text" class="cell-input" placeholder="为您的帐号取个名字吧" autocomplete="off" maxlength="7" name="username" />
                     </div>
                 </div>
                 <div class="cell-item margin-t-10 border-no flex-column ">
@@ -55,13 +55,13 @@
                             <label for="" class="rds-list-item ">
                                 <input type="radio" value="1" name="gender">
                                 <span pixel-border="all" class="man">
-                                    男<i class="lo-icon icon-man trans-8"></i>
+                                    男 ♂
                                 </span>
                             </label>
                             <label for="" class="rds-list-item">
                                 <input type="radio" value="2" name="gender">
                                 <span pixel-border="all" class="woman">
-                                    女<i class="lo-icon  icon-woman  trans-8"></i>
+                                    女 ♀
                                 </span>
                             </label>
                         </div>
@@ -84,18 +84,19 @@
     <a href="javascript:;" class="actionsheet-action" id="cancel">取消</a>
 </div>
 </body>
-<script src="../../js/jquery.3.0.0.min.js"></script>
-<script src="../../js/index.js"></script>
-<script src="../../ydui/build/js/ydui.js"></script>
+<script src="../js/jquery.3.0.0.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../ydui/build/js/ydui.js"></script>
 <script>
     $(function () {
-        $('input[type="radio"]').click(function(){
-            $(this).siblings('span').find('i').toggleClass('icon-man_w icon-woman_w ');
+        var exp= /^[A-Za-z\u4e00-\u9fa5]{1,7}$/;   //汉字字母1-7位
+      
+        var files = $('input[type="file"]');
+        files.on('change',function(e){
+            console.log(e.target.files[0])
         })
     });
-
     var dialog = window.YDUI.dialog;
-
 
 
 </script>

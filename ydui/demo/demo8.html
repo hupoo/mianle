@@ -28,21 +28,35 @@
         </header>
     
         <section class="g-scrollview" id="J_List">
-            <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="375" height="300"  poster="https://www.sydz35.com/themes/68ecshopcom_360buy/images/logo.gif"
-                data-setup="{}">
-               <source src="https://mini.cadillac.com.cn/wap/active/2018atsldouyin/v0.mp4" type="video/mp4" />
-            </video>
+          
+                <div id="btn" class="btn">点击拍照</div>
+                <div class="album"></div>
         </section>
     </section>
 
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://vjs.zencdn.net/c/video.js"></script>
 
 <script src="./js/ydui.js"></script>
+<script src="../../js/cslCamera.js"></script>
 <script>
-    !function () {
-
-    }();
+    $(function () {
+        
+		var img=$(".img");
+		var callBack=function(album){
+			//alert(album);
+			console.log(album);
+			console.log(img);
+			album.forEach(function(val,idx){
+				var div=$("<div></div>");
+				var img=$("<img/>");
+				img.attr("src",val.data);
+				div.append(img);
+				$(".album").append(div);
+			});
+		}
+        var carera=new $.Pgater($("#btn"),callBack);
+    })
+        
 </script>
 </body>
 
